@@ -43,7 +43,7 @@
 <section class="card">
   <h2>Before you start</h2>
   <ul class="check">
-    <li><input type="checkbox" id="c0"><label for="c0">Read Broman &amp; Woo, "Data Organization in Spreadsheets"; Wickham, "Tidy Data," §§ 1–3; and Mollick, "Centaurs and Cyborgs," with their <a href="../readings/#online1">reading guides</a>.</label></li>
+    <li><input type="checkbox" id="c0"><label for="c0">Read Broman &amp; Woo, "Data Organization in Spreadsheets"; Wickham, "Tidy Data," §§ 1–3; Mollick, "Centaurs and Cyborgs"; and Mollick, "Thinking Like an AI," with their <a href="../readings/#online1">reading guides</a>.</label></li>
     <li><input type="checkbox" id="c1"><label for="c1">Download <a href="../../riverbend/data/staff_quarters.csv" download>staff_quarters.csv</a> and <a href="../../riverbend/data/site_weeks.csv" download>site_weeks.csv</a>, and skim the <a href="../../riverbend/">data dictionary</a>.</label></li>
     <li><input type="checkbox" id="c2"><label for="c2">Open <a href="https://gemini.google.com">Gemini</a> signed in with your <strong>Willamette</strong> account, not a personal Gmail.</label></li>
     <li><input type="checkbox" id="c3"><label for="c3">Start a new chat and upload both CSV files.</label></li>
@@ -93,7 +93,7 @@
     <p class="think">Engagement is a 1–5 survey rating. What did the AI assume when it averaged it? What did it do with the blanks? If it gave you more than one average, which one is "the" answer?</p>
     <details><summary>What we found</summary>
       <p>Gemini reported a mean of <strong>3.11</strong> and a median of 3. It noted 1,116 blank rows (35%), and averages leave blanks out. It also offered a second average, <strong>2.80</strong>, computed per employee rather than per row.</p>
-      <p>Both are correct, and they answer different questions: "what is a typical quarter like?" versus "what is a typical employee like?" They differ because people who stay longer are more engaged and appear in more rows. Staff present 6–8 quarters average 3.68, while staff present 1–2 quarters average 2.40. And would you tell your board engagement is "3.1096"? A 1–5 rating is an <em>ordered label</em>. Counts by level, or the median, are usually more honest than a mean.</p>
+      <p>Both are correct, and they answer different questions: "what is a typical quarter like?" versus "what is a typical employee like?" They differ because people who stay longer and answer the survey more often are more engaged, and they appear in more of the rows being averaged. Staff who answered in 6–8 quarters average 3.68; staff who answered in only 1–2 quarters average 2.40. And would you tell your board engagement is "3.1096"? A 1–5 rating is an <em>ordered label</em>. Counts by level, or the median, are usually more honest than a mean.</p>
       <p><strong>The lesson:</strong> the AI was careful and still made choices for you. Choosing is your job.</p>
     </details>
   </div>
@@ -192,6 +192,17 @@
     <li><strong>Decide your data source.</strong> <em>Real:</em> a sample, or a written description of what the system holds. <em>Simulated:</em> a plain-language specification of what your model says the data should look like.</li>
     <li><strong>Module 1 exercise:</strong> Parts 1, 2, and 5 are ready to finish this weekend. Parts 3 and 4 come after In-person 2. Due <strong>Sunday, November 1, 11:59 pm</strong>.</li>
   </ul>
+</section>
+
+<section class="card" id="watch">
+  <h2>Optional: watch or listen</h2>
+  <p>Short pieces from outside the classroom, from the worlds of business, government, and nonprofits. None is required; each comes with one thing to watch or listen for.</p>
+  <div class="tw"><table>
+    <tr><th>Piece</th><th>Sector</th><th>Watch or listen for</th></tr>
+    <tr><td><a href="https://www.npr.org/sections/money/2015/02/25/389027988/episode-606-spreadsheets">"Episode 606: Spreadsheets!"</a><br><span class="muted">Planet Money podcast, NPR, 2015</span></td><td><span class="badge">Business</span></td><td>The spreadsheet automated the bookkeeper and made "what if?" cheap, and the accountants who asked better questions came out ahead. Is the AI analyst the same story? Which part of your own work is the bookkeeper's, and which is the accountant's?</td></tr>
+    <tr><td><a href="https://www.pushkin.fm/podcasts/cautionary-tales/wrong-tools-cost-lives">"Wrong Tools Cost Lives"</a><br><span class="muted">Cautionary Tales podcast, Tim Harford, May 2021</span></td><td><span class="badge">Government</span></td><td>In autumn 2020, England's contact-tracing pipeline loaded positive tests into an old Excel format that runs out of rows, and about 16,000 cases fell off the bottom of the sheet. What is a row, and what happens when a table quietly stops adding them? Which of the checks you wrote for "Thinking Like an AI" would have caught it? Harford followed up with an essay, <a href="https://timharford.com/2021/07/the-tyranny-of-spreadsheets/">"The Tyranny of Spreadsheets"</a> (July 2021), on why we keep trusting them.</td></tr>
+  </table></div>
+  <p class="muted">Also good: Planet Money, <a href="https://www.npr.org/sections/money/2013/04/19/177999020/episode-357-how-much-should-we-trust-economics">"How Much Should We Trust Economics?"</a> (2013). A graduate student finds rows left out of an average in a famous study cited in debates over government austerity, and the error turns out not to be the study's only problem.</p>
 </section>
 
 <nav class="pager"><a class="prev" href="../../module1/in-person-1/"><span class="dir">← Previous · Tue Oct 20 (Salem) · Wed Oct 21 (Portland)</span><span class="t">Module 1 kick-off</span></a><a class="next" href="../../module1/in-person-2/"><span class="dir">Next · Tue Oct 27 (Salem) · Wed Oct 28 (Portland) →</span><span class="t">In-person 2</span></a></nav>
