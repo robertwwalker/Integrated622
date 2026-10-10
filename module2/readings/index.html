@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 2 readings | Integrated 622</title>
+<script>try{var t=localStorage.getItem('i622-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Figtree:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<header>
+<div class="masthead"><div class="inner">
+<a href="../../"><img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA"></a>
+<span class="rule"></span>
+<a class="course" href="../../"><span class="s">GSMPR 622 · Fall 2026</span><span class="t">Data, Statistics, and Decision Science</span></a>
+<span class="spacer"></span>
+<button class="theme-toggle" type="button" aria-label="Switch day or night theme">Night</button>
+</div></div>
+<div class="sitebar"><div class="inner"><nav class="nav"><a href="../../" class="">Home</a><a href="../../start/" class="">Start</a><a href="../../models/" class="">Models</a><a href="../../syllabus/" class="">Syllabus</a><a href="../../project/" class="">Project</a><a href="../../riverbend/" class="">Riverbend</a><a href="../../module1/" class="">Module 1</a><a href="../../module2/" class="active">Module 2</a><a href="../../module3/" class="">Module 3</a></nav></div></div>
+</header>
+<main class="page">
+<nav class="crumbs"><a href="../../">Home</a> › <a href="../../module2/">Module 2</a> › Readings</nav>
+<div class="page-head"><div class="eyebrow">Module 2 · Readings</div>
+<h1>Module 2 readings</h1><p class="lede">About two hours of reading before each session, with an active reading guide for every reading.</p></div>
+
+<section class="card">
+  <h2>How to use these guides</h2>
+  <p>The same three-part guide as Module 1: <strong>before</strong> you read, write a prediction or a question from your own project; <strong>while</strong> you read, find four or five things and answer each in your own words; <strong>after</strong> you read, write a short piece for your project. In Module 2, every "after" feeds your <strong>Results draft</strong>. Keep them in your reading notebook.</p>
+  <p>One book runs through the module the way Hubbard ran through Module 1: Roger D. Peng and Elizabeth Matsui, <em>The Art of Data Science</em> (2015), <a href="https://bookdown.org/rdpeng/artofdatascience/">free online</a>. Three of its chapters take you from the question, to exploring the data, to the difference between explaining and predicting. The online book puts each section of a chapter on its own page; click "next" until you reach the following chapter. The book's R code is hidden, so you'll see only the text, the output, and the charts.</p>
+  <div class="notice"><strong>Read ahead.</strong> Everything is posted now. Portland especially: do the Online 1 and Online 2 readings before your Wednesday nights, not after.</div>
+  <h3>Unfamiliar references: keep reading with your AI analyst</h3>
+  <p>These readings, too, assume things you haven't met. Mark them, ask Gemini about the ones that matter, and <strong>check one of its answers against a second source.</strong></p>
+  <div class="prompt">I'm reading [title and author] for an MBA course on data and decision science. I ran into this reference and don't know it: [the name, model, or term, with the sentence it appears in]. Explain what it is in plain language, why the author might mention it here, and give me one source I could check your answer against.<button class="copy">Copy</button></div>
+  <p class="muted"><strong>Open</strong> readings are free online. <strong>Library</strong> readings are through the Willamette University Library; Canvas shows where. Each session page also offers a few optional podcasts or videos under "Optional: watch or listen."</p>
+</section>
+
+<section class="card">
+  <h2>At a glance</h2>
+  <div class="tw"><table>
+    <tr><th>Read before</th><th>Readings</th><th>Time</th></tr>
+    <tr><td><a href="#kickoff">Module 2 kick-off</a><br><span class="muted">Tue Nov 3 · Wed Nov 4</span></td><td>
+      <a href="#k-ft">Financial Times, <em>Visual Vocabulary</em></a> <span class="muted">(open)</span><br>
+      <a href="#k-few">Few, "Selecting the Right Graph for Your Message"</a> <span class="muted">(open)</span><br>
+      <a href="#k-healy">Healy, <em>Data Visualization</em>, ch. 1</a> <span class="muted">(open)</span><br>
+      <a href="#k-peng">Peng &amp; Matsui, ch. 3, "Stating and Refining the Question"</a> <span class="muted">(open)</span><br>
+      <span class="muted">Optional: Anscombe, "Graphs in Statistical Analysis"</span></td><td>About 2 hours</td></tr>
+    <tr><td><a href="#online1">Online 1</a><br><span class="muted">Thu Nov 5</span></td><td>
+      <a href="#o1-peng">Peng &amp; Matsui, ch. 4, "Exploratory Data Analysis"</a> <span class="muted">(open)</span><br>
+      <a href="#o1-bickel">Bickel, Hammel &amp; O'Connell, "Sex Bias in Graduate Admissions"</a> <span class="muted">(library)</span><br>
+      <a href="#o1-freedman">Freedman, "Ecological Inference and the Ecological Fallacy"</a> <span class="muted">(open)</span></td><td>About 1½ hours</td></tr>
+    <tr><td><a href="#inperson2">In-person 2</a><br><span class="muted">Tue Nov 10 · Wed Nov 11</span></td><td>
+      <a href="#i2-shmueli">Shmueli, "To Explain or to Predict?" §§ 1–2</a> <span class="muted">(open)</span><br>
+      <a href="#i2-kleinberg">Kleinberg et al., "Prediction Policy Problems"</a> <span class="muted">(open)</span><br>
+      <a href="#i2-peng">Peng &amp; Matsui, ch. 8, "Inference vs. Prediction"</a> <span class="muted">(open)</span><br>
+      <span class="muted">Optional: Dawes on simple models, with Harford's 2026 column; Mullainathan &amp; Spiess</span></td><td>About 1¾ hours</td></tr>
+    <tr><td><a href="#online2">Online 2</a><br><span class="muted">Thu Nov 12</span></td><td>
+      <a href="#o2-anderson">Anderson, "The End of Theory"</a> <span class="muted">(open)</span><br>
+      <a href="#o2-harford">Harford, "Big Data: Are We Making a Big Mistake?"</a> <span class="muted">(open)</span><br>
+      <a href="#o2-lazer">Lazer et al., "The Parable of Google Flu"</a> <span class="muted">(open)</span><br>
+      <a href="#o2-hernan">Hernán, "The C-Word"</a> <span class="muted">(open)</span><br>
+      <a href="#o2-vigen">Vigen, <em>Spurious Correlations</em></a> <span class="muted">(open)</span><br>
+      <span class="muted">Optional: D'Ignazio &amp; Klein, "The Numbers Don't Speak for Themselves"</span></td><td>About 1½ hours</td></tr>
+  </table></div>
+</section>
+
+<!-- ============================== KICK-OFF ============================== -->
+<section class="card" id="kickoff">
+  <div class="eyebrow">Read before the Module 2 kick-off · Tue Nov 3 (Salem) · Wed Nov 4 (Portland)</div>
+  <h2>What question does each chart answer?</h2>
+  <p>Module 1 described one variable at a time. Module 2 relates two, and the first tool is a chart. The kick-off's rule is <strong>question first, chart second</strong>. The first two readings are field guides that match questions to charts; the third is why you should always look before you summarize; the fourth starts the book that runs through the module, on what kind of question you're asking.</p>
+
+  <h3 id="k-ft" style="margin-top:1.4rem">1. The Financial Times: <em>Visual Vocabulary</em></h3>
+  <p>Financial Times Visual Journalism Team, <a href="https://github.com/Financial-Times/chart-doctor/blob/main/visual-vocabulary/README.md"><em>Visual Vocabulary</em></a>, a poster and guide in the FT's Chart Doctor collection. The poster is at the top of that page; <a href="https://github.com/Financial-Times/chart-doctor/blob/main/visual-vocabulary/Visual-vocabulary-en.pdf">the English PDF</a> is easier to read.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 15 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> A newsroom's chart chooser, organized not by chart type but by the <em>relationship</em> you want to show: deviation, correlation, ranking, distribution, change over time, magnitude, part-to-whole, spatial, and flow. Each family is a kind of question.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>Rewrite each of the nine families as a question a manager would ask, starting "How…" or "Which…"</li>
+      <li>Which families need a <em>measurement</em> on at least one axis, and which work with <em>labels</em> or <em>ordered labels</em>? Use our six kinds of variable.</li>
+      <li>Pick the one family your Project Brief's question belongs to.</li>
+    </ol>
+  </div>
+
+  <h3 id="k-few" style="margin-top:1.4rem">2. Few: selecting the right graph</h3>
+  <p>Stephen Few, "<a href="https://www.perceptualedge.com/articles/ie/the_right_graph.pdf">Eenie, Meenie, Minie, Moe: Selecting the Right Graph for Your Message</a>," <em>Perceptual Edge</em>, September 2004.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 20 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> The FT poster from a business analyst's side. Few argues that nearly every quantitative business message is one of seven types, and that each type calls for particular charts.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>His seven message types. Line them up against the FT's nine families. Which match, and which does each leave out?</li>
+      <li>For one type, the encodings he recommends and the ones he warns against. Why?</li>
+      <li>One Riverbend question for each of three types: for example, a <em>time series</em> of turnover, a <em>ranking</em> of sites, a <em>correlation</em> between overtime and engagement.</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Your finding's message type (5 minutes)</h3></div>
+    <p>Which of the seven is the finding your Results section will report? Name the chart it calls for. Bring it to the chart match.</p>
+  </div>
+
+  <h3 id="k-healy" style="margin-top:1.4rem">3. Healy: look at data</h3>
+  <p>Kieran Healy, <em>Data Visualization: A Practical Introduction</em> (Princeton University Press, 2019), chapter 1, "Look at Data." Free online at <a href="https://socviz.co/lookatdata.html">socviz.co</a>. Skip anything about code; the book teaches R later, and you won't need it.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 60 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Why a chart can show what a summary number hides, why some charts mislead, and what our eyes are good and bad at judging. It is the argument for the kick-off's first rule: look before you summarize.</p>
+  <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Your first chart (5 minutes)</h3></div>
+    <p>Without looking anything up, sketch on paper the one chart you think your Results section needs. Label the axes. Keep it; you'll revise it.</p>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li><strong>Anscombe's quartet.</strong> Four datasets with the same summary numbers. What does a chart show that the numbers don't? What does that mean for a correlation your AI analyst reports without a chart?</li>
+      <li><strong>Bad charts.</strong> Healy sorts what goes wrong with charts into kinds: problems of taste, of data, and of perception. Find an example of each.</li>
+      <li><strong>What eyes judge well.</strong> Find his discussion of which visual comparisons people make accurately (position along a common scale, length) and which they don't (angle, area, color shade). What does that say about pie charts?</li>
+      <li><strong>Honesty and judgment.</strong> Find his discussion of when a chart's axis should start at zero. Is it a rule, or a judgment?</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Revise your sketch (10 minutes)</h3></div>
+    <p>Redraw your first chart. Write one sentence above it: "This chart answers: …" That sentence opens section 2 of your Results draft.</p>
+  </div>
+
+  <h3 id="k-peng" style="margin-top:1.4rem">4. Peng and Matsui: stating and refining the question</h3>
+  <p>Roger D. Peng and Elizabeth Matsui, <em>The Art of Data Science</em> (Leanpub, 2015), chapter 3, "<a href="https://bookdown.org/rdpeng/artofdatascience/chapter-question.html">Stating and Refining the Question</a>." Read through the case study at the end of the chapter.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 30 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Six types of question, and the most common mistake in data analysis: answering one type when you needed another. Module 2 works with descriptive and exploratory questions; In-person 2 adds inferential and predictive ones; Module 3 takes on causal questions.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li><strong>The six types</strong>: descriptive, exploratory, inferential, predictive, causal, mechanistic. One line each, in your own words, with a Riverbend example of each.</li>
+      <li><strong>Characteristics of a good question.</strong> Which of them does your Brief's question meet? Which does it miss?</li>
+      <li><strong>Translating a question into a data problem.</strong> What has to be true of the data before a question can be answered with it? Compare with your Data &amp; Methods draft.</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Which type is your question? (10 minutes)</h3></div>
+    <p>Classify your Brief's question (element 3) into one of the six types. Then ask: is the type you <em>asked</em> the type your decision <em>needs</em>? Most projects ask a causal question and can answer an exploratory one. Write one sentence saying which, and keep it for the Results draft.</p>
+  </div>
+
+  <details><summary>Optional: Anscombe's original (about 15 minutes)</summary>
+    <p>F. J. Anscombe, "Graphs in Statistical Analysis," <em>The American Statistician</em> 27, no. 1 (1973): 17–21. Through the library (JSTOR). The four datasets, in the statistician's own words. Read his first two pages: what did he think statisticians believed about graphs, and why did he disagree?</p>
+  </details>
+</section>
+
+<!-- ============================== ONLINE 1 ============================== -->
+<section class="card" id="online1">
+  <div class="eyebrow">Read before Online 1 · Thu Nov 5</div>
+  <h2>Exploring data, and what a group average hides</h2>
+  <p>Thursday is hands-on: charts and comparisons on Riverbend, then on your own data. The first reading is a checklist for exploring any dataset. The other two are about grouping: how an average for a whole group can point one way while its parts point another, and how a relationship between groups can differ from the relationship between people.</p>
+
+  <h3 id="o1-peng" style="margin-top:1.4rem">1. Peng and Matsui: exploratory data analysis</h3>
+  <p>Peng and Matsui, chapter 4, "<a href="https://bookdown.org/rdpeng/artofdatascience/exploratory-data-analysis.html">Exploratory Data Analysis</a>." The worked example compares ozone levels in New York and Los Angeles.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 30 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> A checklist you can hand your AI analyst: formulate your question, read in your data, check the packaging, look at the top and the bottom, always be checking your "n"s, validate against an outside source, make a plot, try the easy solution first, challenge your solution, follow up. You did most of it in Module 1 without the names.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>Which checklist steps did you already do in Module 1? Which one did the AI's audit of Riverbend skip?</li>
+      <li><strong>"ABC: always be checking your n's."</strong> What goes wrong when you don't? Where did a count surprise you in Module 1?</li>
+      <li><strong>Validate with an external source.</strong> For your project, what outside number could you check your data against?</li>
+      <li><strong>Try the easy solution first, then challenge it.</strong> What is the easy answer to your project's question? What would challenge it?</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Run the checklist on your own data (15 minutes)</h3></div>
+    <p>Before Thursday, or during the session, ask Gemini to walk your data through the checklist one step at a time. Write down one check that failed or surprised you. It goes in the Results draft as a sentence about what you checked.</p>
+  </div>
+
+  <h3 id="o1-bickel" style="margin-top:1.4rem">2. Bickel, Hammel, and O'Connell: a famous grouping</h3>
+  <p>P. J. Bickel, E. A. Hammel, and J. W. O'Connell, "Sex Bias in Graduate Admissions: Data from Berkeley," <em>Science</em> 187 (1975): 398–404. Through the library (JSTOR). Read the opening pages and the tables; skim the statistics.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Library</span><span class="badge">About 30 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> In 1973, Berkeley's graduate school admitted about 44 percent of men who applied and about 35 percent of women. Did the admissions process discriminate? The answer changed when the data were grouped by department. This is the standard example of Simpson's paradox, and it is an organizational question: is a process fair?</p>
+  <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Your verdict (3 minutes)</h3></div>
+    <p>From the two overall numbers alone, write your verdict and how confident you are.</p>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>What happens to the gap when admissions are compared department by department?</li>
+      <li>Why can the overall rates and the department rates disagree? Explain it in two sentences, using where men and women applied.</li>
+      <li>The authors don't stop at "no bias." Where do they think the difference comes from instead? Is that question one the admissions data can answer?</li>
+    </ol>
+  </div>
+
+  <h3 id="o1-freedman" style="margin-top:1.4rem">3. Freedman: the ecological fallacy</h3>
+  <p>David A. Freedman, "<a href="https://www.stat.berkeley.edu/~census/549.pdf">Ecological Inference and the Ecological Fallacy</a>," Technical Report 549, Department of Statistics, University of California, Berkeley (1999), written for the <em>International Encyclopedia of the Social and Behavioral Sciences</em>. Four pages; skip the formulas.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 20 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Bickel splits a group into parts. Freedman goes the other way: a relationship among groups (states, sites, months) need not hold among the people in them. Riverbend has three levels: people, sites, and weeks. On Thursday you'll see an association appear at one level and vanish at another.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>Robinson's 1950 example: the 1930 census, 48 states, the share of people born abroad, and literacy. What was the relationship across states, and what was it across people?</li>
+      <li>State the ecological fallacy in one sentence of your own.</li>
+      <li>Freedman reviews ways to make inferences about individuals from group data. Why does each one need an assumption the data can't check?</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Your levels (10 minutes, for both readings)</h3></div>
+    <p>Name the levels in your own data: people, teams, sites, weeks, months. At which level does your model make its claim? Could the answer reverse at another level? Two or three sentences for your Results draft.</p>
+  </div>
+  <p class="muted">Also re-read the two checks you wrote for Mollick's "Thinking Like an AI" in Module 1, and your jagged-frontier tripwire. On Thursday, run your two checks on every chart Gemini draws.</p>
+</section>
+
+<!-- ============================== IN-PERSON 2 ============================== -->
+<section class="card" id="inperson2">
+  <div class="eyebrow">Read before In-person 2 · Tue Nov 10 (Salem) · Wed Nov 11 (Portland)</div>
+  <h2>Explaining or predicting?</h2>
+  <p>A model can do two different jobs with the same data: explain why something happens, or predict what will happen. The best model for one is often not the best for the other, and a manager's decision usually needs only one of them. These readings take the distinction in turn: the statistician's account, the policy economist's, and the book's.</p>
+
+  <h3 id="i2-shmueli" style="margin-top:1.4rem">1. Shmueli: to explain or to predict?</h3>
+  <p>Galit Shmueli, "<a href="https://arxiv.org/pdf/1101.0891">To Explain or to Predict?</a>" <em>Statistical Science</em> 25, no. 3 (2010): 289–310. Read sections 1 and 2; skim the rest. Skip the formulas.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 60 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> The clearest statement of the distinction, written for researchers in every field. Her argument: fields that build models to explain often assume those models also predict well, and they often don't.</p>
+  <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>What is your model for? (3 minutes)</h3></div>
+    <p>On the <a href="../../models/">Models</a> page, models do two jobs: testing and forecasting. Which does your white paper's recommendation need most?</p>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>Her definitions of <em>explanatory</em>, <em>predictive</em>, and <em>descriptive</em> modeling. One sentence each.</li>
+      <li>Why the best explanatory model need not be the best predictive model. Find the ways she says the two differ (for example, causation against association, and looking back against looking ahead).</li>
+      <li>Where she argues that predictive models are useful even to people who want to explain.</li>
+      <li>Which kind of model does your Project Brief describe?</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>One sentence (5 minutes)</h3></div>
+    <p>"My decision needs a model that [explains / predicts], because…" It goes in section 5 of your Results draft.</p>
+  </div>
+
+  <h3 id="i2-kleinberg" style="margin-top:1.4rem">2. Kleinberg, Ludwig, Mullainathan, and Obermeyer: prediction policy problems</h3>
+  <p>Jon Kleinberg, Jens Ludwig, Sendhil Mullainathan, and Ziad Obermeyer, "<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4869349">Prediction Policy Problems</a>," <em>American Economic Review</em> 105, no. 5 (2015): 491–495. Free author copy. Five pages.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 25 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Two decision-makers. One, facing a drought, asks whether a rain dance would bring rain: that's a causal question. The other, seeing clouds, only needs to know whether to carry an umbrella: that's a prediction. Many real decisions are umbrellas, and for those, machine learning and AI are good tools.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>The umbrella and the rain dance. In your own words, what makes a decision an "umbrella" decision?</li>
+      <li>Their health example: which joint-replacement surgeries are futile because the patient will soon die anyway. Why is that a prediction problem, not a causal one?</li>
+      <li>What could go wrong when a prediction is used to make a decision? Find one caution in the paper.</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Umbrella or rain dance? (5 minutes)</h3></div>
+    <p>Is the decision in your white paper an umbrella or a rain dance? Many projects turn out to be both: a rain dance (will this change work?) with an umbrella inside it (where will it matter most?).</p>
+  </div>
+
+  <h3 id="i2-peng" style="margin-top:1.4rem">3. Peng and Matsui: inference vs. prediction</h3>
+  <p>Peng and Matsui, chapter 8, "<a href="https://bookdown.org/rdpeng/artofdatascience/inference-vs.-prediction-implications-for-modeling-strategy.html">Inference vs. Prediction: Implications for Modeling Strategy</a>."</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 15 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> One dataset, air pollution and deaths in New York, analyzed twice: once to estimate a single association, adjusting for other factors, and once to find the model that predicts deaths best. It is the distinction from Shmueli, worked on real data, and it previews Module 3.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>For an inferential question, what is the goal? How many predictors matter, and why do the others get included?</li>
+      <li>For a prediction question, what is the goal? Do the authors care which predictors are in the model?</li>
+      <li>The other factors adjusted for in the inferential models are called <em>confounders</em>. Use the unfamiliar-references prompt if you need to. You'll meet the word again at the Module 3 kick-off.</li>
+    </ol>
+  </div>
+
+  <details><summary>Optional: simple models against expert judgment (about 50 minutes)</summary>
+    <p>Robyn M. Dawes, "<a href="https://www.cmu.edu/dietrich/sds/docs/dawes/the-robust-beauty-of-improper-linear-models-in-decision-making.pdf">The Robust Beauty of Improper Linear Models in Decision Making</a>," <em>American Psychologist</em> 34 (1979): 571–582. A classic: even a crude model that adds up a few relevant factors with equal weights tends to predict better than experts' judgment. Pair it with Tim Harford, "<a href="https://timharford.com/2026/06/the-surprising-power-of-simple-predictions/">The Surprising Power of Simple Predictions</a>" (June 2026).</p>
+    <ol>
+      <li>What makes a linear model "improper"? Why does it still work?</li>
+      <li>Find his example of predicting marital happiness from two counts. Why is it funny, and why does it work anyway?</li>
+      <li>If a simple equal-weight checklist predicted your project's outcome as well as an expert, what would your organization gain, and what would it lose?</li>
+    </ol>
+  </details>
+  <details><summary>Optional: machine learning in economics (about 40 minutes)</summary>
+    <p>Sendhil Mullainathan and Jann Spiess, "<a href="https://doi.org/10.1257/jep.31.2.87">Machine Learning: An Applied Econometric Approach</a>," <em>Journal of Economic Perspectives</em> 31, no. 2 (2017): 87–106, free from the American Economic Association. Read the introduction and the conclusion. Their shorthand: machine learning is good at predicting the outcome, not at estimating what each factor does. Which of the two does a Gemini analysis of your data give you?</p>
+  </details>
+</section>
+
+<!-- ============================== ONLINE 2 ============================== -->
+<section class="card" id="online2">
+  <div class="eyebrow">Read before Online 2 · Thu Nov 12</div>
+  <h2>The limits of correlation</h2>
+  <p>In 2008, a magazine editor argued that with enough data, correlation is enough and models are obsolete. That is a direct challenge to this course. These readings are the debate, the most famous case that settled it, and a rule for writing your own findings honestly.</p>
+
+  <h3 id="o2-anderson" style="margin-top:1.4rem">1. Anderson: the end of theory</h3>
+  <p>Chris Anderson, "The End of Theory: The Data Deluge Makes the Scientific Method Obsolete," <em>Wired</em>, June 23, 2008. Read it in <a href="https://sites.pitt.edu/~jdnorton/teaching/Phil_Sci_Core/Phil_Sci_Core_2022/docs/ML_revolution/Anderson_End_Theory_2008.pdf">this PDF copy</a>.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 10 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> It opens with George Box, whom you read in Module 1, and argues that we no longer need his models. Read it as the strongest case against the idea that data is the measurement of models.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>How does he use Box's "all models are wrong"? Is that what Box meant?</li>
+      <li>His claim about correlation and causation, in one sentence.</li>
+      <li>His examples from Google. Which are prediction problems, the umbrella kind? Does any of them need to know what would happen if someone acted?</li>
+    </ol>
+  </div>
+
+  <h3 id="o2-harford" style="margin-top:1.4rem">2. Harford: are we making a big mistake?</h3>
+  <p>Tim Harford, "<a href="https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.1740-9713.2014.00778.x">Big Data: Are We Making a Big Mistake?</a>" <em>Significance</em> 11, no. 5 (2014). The written version of his 2014 Significance Lecture to the Royal Statistical Society; the lecture itself is under "Optional: watch or listen" on the Online 2 page.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 25 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> The reply to Anderson, from the presenter of <em>More or Less</em> and <em>Cautionary Tales</em>. Harford names the claims made for big data "articles of faith" and tests each one against old statistical lessons.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>The articles of faith. List them. Which ones does Anderson hold?</li>
+      <li>"Found data": what does he mean, and why does it matter who is in it? Connect it to <em>selected</em>, one of the five ways data lies.</li>
+      <li>His argument that a theory-free correlation breaks without warning. Why can't you tell when it will stop working if you don't know why it worked?</li>
+      <li>Which of his examples is closest to your own project's data?</li>
+    </ol>
+  </div>
+
+  <h3 id="o2-lazer" style="margin-top:1.4rem">3. Lazer and colleagues: the parable of Google Flu</h3>
+  <p>David Lazer, Ryan Kennedy, Gary King, and Alessandro Vespignani, "<a href="https://dash.harvard.edu/server/api/core/bitstreams/7312037d-0e0d-6bd4-e053-0100007fdf3b/content">The Parable of Google Flu: Traps in Big Data Analysis</a>," <em>Science</em> 343 (2014): 1203–1205. Harvard's open copy.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 20 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Google Flu Trends predicted flu from searches and was celebrated, and then it overestimated flu badly. This is the case Harford and other critics of Anderson point to, told by the researchers who took it apart.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>"Big data hubris." What do the authors mean?</li>
+      <li>"Algorithm dynamics." Google kept changing its search engine. Which of the five ways data lies is that? (Compare Riverbend's HR system change.)</li>
+      <li>What do they recommend instead of big data alone?</li>
+    </ol>
+  </div>
+
+  <h3 id="o2-hernan" style="margin-top:1.4rem">4. Hernán: say what you mean</h3>
+  <p>Miguel A. Hernán, "<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5888052">The C-Word: Scientific Euphemisms Do Not Improve Causal Inference from Observational Data</a>," <em>American Journal of Public Health</em> 108, no. 5 (2018): 616–619.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 20 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Researchers who want to know what <em>causes</em> what often write "is associated with" to stay safe. Hernán argues that hiding the causal question makes the work worse. Say plainly that your question is causal, then be honest about how far your data gets you. That is the rule for your Results draft.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>The "C-word." What is it, and why do researchers avoid it?</li>
+      <li>His reasons that the euphemism makes research worse, not safer.</li>
+      <li>What he asks authors to do instead.</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Two sentences for your Results draft (10 minutes)</h3></div>
+    <p>First: "My question is [causal / predictive / descriptive]." Second: your main finding, written so it says exactly what the data shows and does not claim more. If you used "drives," "reduces," or "because," check whether your evidence supports it.</p>
+  </div>
+
+  <h3 id="o2-vigen" style="margin-top:1.4rem">5. Vigen: spurious correlations</h3>
+  <p>Tyler Vigen, <a href="https://www.tylervigen.com/spurious-correlations"><em>Spurious Correlations</em></a>. Browse for ten minutes.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 15 minutes</span></div>
+  <p style="margin-top:.8rem">Page after page of pairs of things that rose and fell together for no reason anyone believes. Pick one. Which of the five reasons two things move together explains it? You'll meet the five at the start of Online 2; for now, write your own explanation.</p>
+
+  <details><summary>Optional: the numbers don't speak for themselves (about 50 minutes)</summary>
+    <p>Catherine D'Ignazio and Lauren F. Klein, <em>Data Feminism</em> (MIT Press, 2020), "<a href="https://mitpressonpubpub.mitpress.mit.edu/data-feminism">The Numbers Don't Speak for Themselves</a>." Free online, by the authors of the In-person 2 reading in Module 1. A reply to Anderson from another direction: context and theory decide what data means. Which of their examples would Harford use too?</p>
+  </details>
+</section>
+
+<nav class="pager"><a class="prev" href="../../module2/"><span class="dir">← Module 2</span><span class="t">Module 2: Analytical Techniques</span></a><a class="next" href="../../module2/in-person-1/"><span class="dir">First session →</span><span class="t">Module 2 kick-off</span></a></nav>
+</main>
+<footer class="site"><div class="inner">
+<img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA">
+<div>Integrated 622 · Data, Statistics, and Decision Science · Fall 2026<br>
+Willamette University · Atkinson Graduate School of Management<br>
+Robert W. Walker · <a href="mailto:rwalker@willamette.edu">rwalker@willamette.edu</a> · I eagerly await your puzzles.</div>
+</div></footer>
+</body>
+</html>

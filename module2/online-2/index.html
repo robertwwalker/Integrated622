@@ -25,7 +25,218 @@
 <nav class="crumbs"><a href="../../">Home</a> › <a href="../../module2/">Module 2</a> › Online 2: the limits of correlation</nav>
 <div class="page-head"><div class="eyebrow">Module 2 · Online · both cohorts</div>
 <h1>Online 2: the limits of correlation</h1><p class="lede">Work session; the limits of correlation</p><div class="badges"><span class="badge">Thu Nov 12, online</span><span class="badge">6:00–8:15 pm (may run to 8:30)</span><span class="badge"><a href="https://meet.google.com/knh-gxyw-uwr">Google Meet</a></span><span class="badge">Recording: posted after the session</span></div></div>
-<section class="card"><h2>Session plan</h2><p>The plan for this session is posted the week before it begins.</p><h3>Topics</h3><p>Work session; the limits of correlation</p><h3>Due</h3><ul><li>Pod post</li><li>Module 2 exercise, Sun Nov 15, 11:59 pm</li></ul></section>
+<section class="card">
+  <h2>Tonight in one sentence</h2>
+  <p>Two things can move together for five reasons, and only one of them is that one causes the other. Tonight you name the reasons your finding can't yet rule out, and you draft your <strong>Results</strong> section.</p>
+  <div class="grid2">
+    <div class="tile">
+      <h3>Joining live</h3>
+      <p>Have Gemini open with your <strong>Willamette</strong> account and the Riverbend files uploaded, and your own finding from In-person 2 at hand: the chart, the association, and the Skeptic's strongest objection. Most of the session is a work session, with breakout rooms for pairs.</p>
+    </div>
+    <div class="tile">
+      <h3>Catching up later</h3>
+      <p>Watch the first 50 minutes of the recording, the framing and the demo, then work through this page at your own pace. <strong>Post to your pod's thread by Sunday night</strong> and reply to one pod-mate. The Results draft is due at the Module 3 kick-off.</p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Before you start</h2>
+  <ul class="check">
+    <li><input type="checkbox" id="c0"><label for="c0">Read Anderson, "The End of Theory"; Harford, "Big Data: Are We Making a Big Mistake?"; Lazer et al., "The Parable of Google Flu"; and Hernán, "The C-Word," and browse Vigen's spurious correlations, with their <a href="../readings/#online2">reading guides</a>.</label></li>
+    <li><input type="checkbox" id="c1"><label for="c1">Have your chart, your association, your verdict against your model, and your pod's strongest objection from In-person 2.</label></li>
+    <li><input type="checkbox" id="c2"><label for="c2">Open <a href="https://gemini.google.com">Gemini</a> with your <strong>Willamette</strong> account, with the Riverbend files and your own data uploaded.</label></li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Tonight's plan</h2>
+  <div class="tw"><table>
+    <tr><th>Time</th><th>What</th><th>If you're catching up</th></tr>
+    <tr><td><strong>6:00</strong></td><td>Framing: five reasons two things move together</td><td>Watch the first 20 minutes of the recording</td></tr>
+    <tr><td><strong>6:20</strong></td><td>Demo: SmartShift, and the ways an association can mislead</td><td>Replay the prompts below</td></tr>
+    <tr><td><strong>6:50</strong></td><td>Work session: your Results draft</td><td>Steps 1–4 below, at your own pace</td></tr>
+    <tr><td><strong>7:35</strong></td><td>Pod thread: your association, and the strongest reason it might not be causal</td><td>Post by Sunday night</td></tr>
+    <tr><td><strong>7:55</strong></td><td>Module 3 preview</td><td>See "What's next" below</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>Five reasons two things move together</h2>
+  <p>When two things move together, one causing the other is only one of the possibilities. Before your Results section says anything about cause, go through all five.</p>
+  <div class="tw"><table>
+    <tr><th>Reason</th><th>What's happening</th><th>An example</th></tr>
+    <tr><td><strong>1. Causation</strong></td><td>One really does drive the other</td><td>If overtime wears people down and worn-down people leave, overtime and leaving will move together for this reason.</td></tr>
+    <tr><td><strong>2. Reverse direction or timing</strong></td><td>The "outcome" drives the "cause," or the order of events is off</td><td>Customers who have decided to cancel stop opening the newsletter, so "reads the newsletter" seems to keep customers.</td></tr>
+    <tr><td><strong>3. A common cause</strong></td><td>Something else drives both</td><td>Ice cream sales and drownings both rise in summer. Stores in busy locations have both more staff and more sales.</td></tr>
+    <tr><td><strong>4. Selection or grouping</strong></td><td>Who is in the data, or how it's grouped, creates the pattern</td><td>Customers who choose the app were already big spenders. Berkeley's departments.</td></tr>
+    <tr><td><strong>5. Coincidence</strong></td><td>Two trends that happen to line up, or a pattern in too few rows</td><td>Vigen's spurious correlations. Six departures among 25 part-time case-manager rows, from Online 1.</td></tr>
+  </table></div>
+  <p>And a sixth that isn't about the world at all: <strong>a data artifact</strong>, one of the five ways data lies. A definition changes, a batch is mismeasured, and two columns move together because of how they were recorded.</p>
+  <p class="muted">That's the debate in the readings. Anderson says that with enough data, correlation is enough. Harford and Lazer's Google Flu Trends is what happens when a correlation with no model behind it meets a world that changes. A correlation can't tell you when it will stop working, because it doesn't know why it worked.</p>
+</section>
+
+<section class="card">
+  <h2>The demo: SmartShift, step by step</h2>
+  <p>In Online 1, the SmartShift sites had lower turnover, but they already did in 2024. Tonight we push further. Paste each prompt into your Riverbend chat. <strong>Think about the question in bold before you open "What we found."</strong></p>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D1</span><h3>Site by site</h3></div>
+    <div class="prompt">Show the share of staff_quarters rows with left_org = 1 for each site, separately for 2024 and 2025, and mark which sites use SmartShift (S1, S4, S7). Chart it.<button class="copy">Copy</button></div>
+    <p class="think">Did every SmartShift site improve? Did any site without SmartShift improve as much?</p>
+    <details><summary>What we found</summary>
+      <div class="tw"><table>
+        <tr><th>Site</th><th>SmartShift</th><th>2024</th><th>2025</th></tr>
+        <tr><td>S1</td><td>Yes</td><td>6.5%</td><td>2.9%</td></tr>
+        <tr><td>S4</td><td>Yes</td><td>9.7%</td><td>6.1%</td></tr>
+        <tr><td>S7</td><td>Yes</td><td>17.3%</td><td>6.9%</td></tr>
+        <tr><td>S2</td><td></td><td>14.0%</td><td>17.6%</td></tr>
+        <tr><td>S3</td><td></td><td>17.1%</td><td>10.6%</td></tr>
+        <tr><td>S5</td><td></td><td>19.5%</td><td>18.0%</td></tr>
+        <tr><td>S6</td><td></td><td>11.6%</td><td>11.0%</td></tr>
+        <tr><td>S8</td><td></td><td>13.8%</td><td>11.8%</td></tr>
+      </table></div>
+      <p>All three SmartShift sites improved. S7, a rural site, started with <em>high</em> turnover and improved the most. But S3, without SmartShift, improved more than S4 did. S1 and S4 were already among the best before SmartShift arrived.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D2</span><h3>Quarter by quarter, everywhere</h3></div>
+    <div class="prompt">Chart the share of rows with left_org = 1 by quarter, for all of Riverbend and for each site. Does anything happen in one quarter at many sites at once?<button class="copy">Copy</button></div>
+    <p class="think">SmartShift went live at three sites in 2025Q1. What else changed in early 2025, across all of Riverbend? Check the <a href="../../riverbend/">data dictionary</a>.</p>
+    <details><summary>What we found</summary>
+      <p>Across Riverbend, the share leaving fell from 13.1% in 2024Q4 to <strong>8.0% in 2025Q1</strong>, then climbed back toward 2024's levels. It fell at seven of the eight sites, not just the three with SmartShift. Early 2025 is also when Riverbend moved to a new HR information system, the system that records <code>left_org</code>. Something that changes at nearly every site at once is a poor candidate for SmartShift, and a good candidate for a change in how departures were recorded. Is it real, or is it <em>redefined</em>? Hold that question for Module 3.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D3</span><h3>Who answered the survey</h3></div>
+    <div class="prompt">For each quarter, what share of staff_quarters rows have an engagement answer rather than a blank? Compare SmartShift sites with the others.<button class="copy">Copy</button></div>
+    <p class="think">If SmartShift sites' engagement looks higher in 2025, is it the same kind of group answering?</p>
+    <details><summary>What we found</summary>
+      <p>Response rose at every site, from about 61% of rows in early 2024 to 70% by late 2025, and it was higher at the SmartShift sites throughout (about 70% of rows in 2024 and 78% in 2025, against 56% and 63% elsewhere). In Online 1, blanks were the group most likely to leave. When more people answer, the people answering change, and an average of their answers can move even if no one's engagement did. That's <em>selected</em>.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D4</span><h3>What else changed?</h3></div>
+    <div class="prompt">Compare 2024Q4 with 2025Q1 for every column in staff_quarters and site_weeks, at all sites. List everything that changed noticeably at once, at every site, not just at S1, S4, and S7.<button class="copy">Copy</button></div>
+    <p class="think">Each thing on the list is a rival explanation for any 2025 change you'd like to credit to SmartShift. Which would you check first?</p>
+  </div>
+
+  <h3>So, does SmartShift work?</h3>
+  <p>Riverbend's data shows an <strong>association</strong>: the SmartShift sites had lower turnover in 2025. It cannot yet tell you how much of that SmartShift caused, because:</p>
+  <ul>
+    <li>the SmartShift sites were <strong>already different</strong> before it arrived (a common cause, or selection: who chose those three sites, and why?);</li>
+    <li><strong>other things changed at the same time</strong>, across Riverbend (a data artifact, or a rival cause);</li>
+    <li>the people answering the survey <strong>changed</strong> (selection);</li>
+    <li>some site differences are large enough to matter and small enough to be <strong>chance</strong>.</li>
+  </ul>
+  <p><strong>What would you need to know?</strong> Write one sentence before Module 3. A hint: comparing the SmartShift sites' <em>levels</em> to other sites' levels gets you the first problem. What if you compared their <em>changes</em>? That, and "who chose S1, S4, and S7?", is where Module 3 begins.</p>
+  <p class="muted">This course has the same problem. It's a redesign with no comparable baseline and more than one change at once. If students do well this year, how much of it is the redesign? You now know the questions to ask.</p>
+</section>
+
+<section class="card">
+  <h2>The Results draft</h2>
+  <p>One to two pages. It becomes the Results section of your white paper, so it is not extra work. Copy the outline into your own document and fill it in during the work session.</p>
+  <div class="prompt">RESULTS (draft)
+
+1. The question and the prediction
+   My question (and its type: descriptive, exploratory, inferential,
+   predictive, or causal). What my model predicts the data will show.
+
+2. The chart (one or two)
+   For each: "This chart answers: ______."
+   The kinds of the variables, and what one dot or bar represents.
+
+3. The association
+   In plain words: its direction, roughly how strong, the number of
+   rows behind it, and the level (people, sites, weeks, months).
+
+4. Against the model
+   Consistent, inconsistent, or can't tell yet, and why.
+   If consistent: one other model that would predict the same thing.
+
+5. What this does not establish
+   The strongest other explanation (reverse direction, a common cause,
+   selection or grouping, coincidence, or a data artifact).
+   My data concern from Data &amp; Methods section 4, and what it does here.
+   Whether my decision needs a model that explains or one that predicts.<button class="copy">Copy</button></div>
+  <p class="muted">Due on Canvas before your Module 3 kick-off: <strong>Tue Nov 17, 6:00 pm (Salem)</strong> or <strong>Wed Nov 18, 6:00 pm (Portland)</strong>. Your pod reads it first.</p>
+</section>
+
+<section class="card">
+  <h2>Work session: four steps</h2>
+  <p>Replace anything in [brackets] with your own project's details. The AI does the arithmetic; every sentence about what it means is yours.</p>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h3>Check the chart against its question</h3></div>
+    <div class="prompt">Here is my question: [your question]. Here is my chart: [describe it, or upload it]. Does this chart answer that question? Is there a chart that would answer it more directly, given that my variables are [kinds]?<button class="copy">Copy</button></div>
+    <p class="think">Use what your pod wrote at the gallery walk. Where did readers misread the question or the answer?</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h3>Test the association</h3></div>
+    <div class="prompt">My finding is: [your association]. Check it three ways: (1) does it hold within the main groups in my data, such as [a grouping]? (2) does it hold at a different level, such as [people / sites / months]? (3) does it depend on a few rows or one batch of data? Show the numbers and the counts.<button class="copy">Copy</button></div>
+    <p class="think">If it changes within groups or across levels, that's not a failure. It's your finding, stated more precisely.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h3>Name the rivals</h3></div>
+    <div class="prompt">My data shows that [your association]. For each of these, say whether it could explain the association instead of [the cause I have in mind], and what I would expect to see in my data if it did: reverse direction or timing, a common cause, selection or grouping, coincidence, and a change in how the data was recorded.<button class="copy">Copy</button></div>
+    <p class="think">Which rival is strongest? That one goes in section 5. Check whether the AI invented evidence for any of them.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">4</span><h3>Say exactly what you found</h3></div>
+    <div class="prompt">Here is my Results paragraph: [paste it]. Mark every word or phrase that claims more than an association, such as "drives," "reduces," "leads to," "because," or "the effect of." For each, suggest wording that says exactly what the data shows, and tell me what evidence would justify the stronger claim.<button class="copy">Copy</button></div>
+    <p class="think">Hernán's rule: say plainly if your question is causal. Then say honestly how far this evidence gets you.</p>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Pod thread</h2>
+  <p>Post to your pod's thread:</p>
+  <ol>
+    <li><strong>Your association</strong>, in one sentence that claims exactly what the data shows.</li>
+    <li><strong>The strongest reason it might not be causal</strong>, and what data would settle it.</li>
+  </ol>
+  <p><strong>Catching up?</strong> Post by <strong>Sunday night</strong> and reply to one pod-mate. Your pod's thread is linked on Canvas.</p>
+</section>
+
+<section class="card">
+  <h2>Before you submit: the common failures</h2>
+  <p>These are the problems most likely to show up in Results drafts. Check yours against each one.</p>
+  <div class="tw"><table>
+    <tr><th>Failure</th><th>What it looks like</th><th>The fix</th></tr>
+    <tr><td><strong>A chart without a question</strong></td><td>A chart is included because the AI made it.</td><td>Write "This chart answers: …" above every chart. If you can't finish the sentence, cut the chart.</td></tr>
+    <tr><td><strong>Totals, not rates</strong></td><td>The biggest group "has the most problems."</td><td>Divide by the right denominator: per person, per case, per 1,000.</td></tr>
+    <tr><td><strong>Wrong level</strong></td><td>Site averages used to claim something about people, or the reverse.</td><td>Name the level in section 3, and say whether it's the level your model is about.</td></tr>
+    <tr><td><strong>A correlation without a chart</strong></td><td>"r = 0.3" and nothing else.</td><td>Show the scatter or the gradient. One number hides curves, clusters, and broken batches.</td></tr>
+    <tr><td><strong>Silent choices</strong></td><td>Rows, blanks, or a batch dropped without saying so.</td><td>Report what you dropped, how many, and why.</td></tr>
+    <tr><td><strong>A causal verb</strong></td><td>"Overtime drives turnover" from an association.</td><td>Say what the data shows. Save the causal claim, and the evidence for it, for Module 3.</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>What's next</h2>
+  <ul>
+    <li><strong>Module 2 exercise:</strong> due <strong>Sunday, November 15, 11:59 pm</strong>. Part 6 uses tonight's ideas.</li>
+    <li><strong>Results draft:</strong> due before your Module 3 kick-off, <strong>Tue Nov 17 (Salem)</strong> or <strong>Wed Nov 18 (Portland)</strong>, 6:00 pm.</li>
+    <li><strong>Module 3: Causation.</strong> Module 2 stayed on the first rung of Pearl's ladder: what goes with what. Module 3 asks what it would take to climb: what happens if we act, and how you'd know. Bring your strongest rival explanation; it's where your causal diagram starts.</li>
+  </ul>
+</section>
+
+<section class="card" id="watch">
+  <h2>Optional: watch or listen</h2>
+  <p>Short pieces from outside the classroom, from the worlds of business, government, and nonprofits. None is required; each comes with one thing to watch or listen for.</p>
+  <div class="tw"><table>
+    <tr><th>Piece</th><th>Sector</th><th>Watch or listen for</th></tr>
+    <tr><td><a href="https://youtu.be/0cizsKDn3TI">"Big Data: Are We Making a Big Mistake?"</a><br><span class="muted">Tim Harford, the 2014 Significance Lecture, Royal Statistical Society (video)</span></td><td><span class="badge">Business · Government</span></td><td>The lecture behind tonight's reading, in his own voice. Which of his "articles of faith" would Chris Anderson sign? Which one does Riverbend's SmartShift comparison break?</td></tr>
+    <tr><td><a href="https://freakonomics.com/podcast/does-advertising-actually-work-part-2-digital-ep-441">"Does Advertising Actually Work? (Part 2: Digital)"</a><br><span class="muted">Freakonomics Radio, episode 441, November 2020</span></td><td><span class="badge">Business</span></td><td>eBay switched off its paid search ads in an experiment, and sales barely moved: the people who clicked the ads were going to buy anyway. Which of the five reasons was that? What did the experiment do that the sales data couldn't?</td></tr>
+    <tr><td><a href="https://www.npr.org/sections/money/2018/10/17/658119019/episode-453-what-causes-what">"What Causes What?"</a><br><span class="muted">Planet Money, episode 453, 2013 (reposted 2018), with Charles Wheelan</span></td><td><span class="badge">Business · Government</span></td><td>The author of <em>Naked Statistics</em> on telling correlation from causation, starting with a lucky hat. Which of his examples is closest to your own project?</td></tr>
+  </table></div>
+</section>
 <nav class="pager"><a class="prev" href="../../module2/in-person-2/"><span class="dir">← Previous · Tue Nov 10 (Salem) · Wed Nov 11 (Portland)</span><span class="t">In-person 2</span></a><a class="next" href="../../module3/in-person-1/"><span class="dir">Next · Tue Nov 17 (Salem) · Wed Nov 18 (Portland) →</span><span class="t">Module 3 kick-off</span></a></nav>
 </main>
 <footer class="site"><div class="inner">

@@ -25,7 +25,188 @@
 <nav class="crumbs"><a href="../../">Home</a> › <a href="../../module2/">Module 2</a> › Online 1: hands-on analysis</nav>
 <div class="page-head"><div class="eyebrow">Module 2 · Online · both cohorts</div>
 <h1>Online 1: hands-on analysis</h1><p class="lede">Hands-on analysis with AI; pod work</p><div class="badges"><span class="badge">Thu Nov 5, online</span><span class="badge">6:00–8:15 pm (may run to 8:30)</span><span class="badge"><a href="https://meet.google.com/knh-gxyw-uwr">Google Meet</a></span><span class="badge">Recording: posted after the session</span></div></div>
-<section class="card"><h2>Session plan</h2><p>The plan for this session is posted the week before it begins.</p><h3>Topics</h3><p>Hands-on analysis with AI; pod work</p><h3>Due</h3><ul><li>Pod post</li></ul></section>
+<section class="card">
+  <h2>Tonight in one sentence</h2>
+  <p>We ask Gemini for charts and comparisons on Riverbend, catch it making choices only you can judge, and then you make the <strong>first chart of your own Results</strong>.</p>
+  <div class="grid2">
+    <div class="tile">
+      <h3>Joining live</h3>
+      <p>Have Gemini open in a browser tab, signed in with your <strong>Willamette</strong> account, with both Riverbend files uploaded to a new chat. Have your own data open too. Follow along below as we go.</p>
+    </div>
+    <div class="tile">
+      <h3>Catching up later</h3>
+      <p>Watch the recording, then work through this page top to bottom. Every activity works on your own time. <strong>Post to your pod's thread by Sunday night</strong>, and reply to one pod-mate.</p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Before you start</h2>
+  <ul class="check">
+    <li><input type="checkbox" id="c0"><label for="c0">Read Peng &amp; Matsui, ch. 4; Bickel et al. on Berkeley admissions; and Freedman on the ecological fallacy, with their <a href="../readings/#online1">reading guides</a>.</label></li>
+    <li><input type="checkbox" id="c1"><label for="c1">Open <a href="https://gemini.google.com">Gemini</a> with your <strong>Willamette</strong> account, start a new chat, and upload <a href="../../riverbend/data/staff_quarters.csv" download>staff_quarters.csv</a> and <a href="../../riverbend/data/site_weeks.csv" download>site_weeks.csv</a>.</label></li>
+    <li><input type="checkbox" id="c2"><label for="c2">Have your own data in a table, with your Data &amp; Methods draft at hand.</label></li>
+    <li><input type="checkbox" id="c3"><label for="c3">Have the two checks you'll run on every AI answer, from Module 1's "Thinking Like an AI."</label></li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Tonight's plan</h2>
+  <div class="tw"><table>
+    <tr><th>Time</th><th>What</th><th>If you're catching up</th></tr>
+    <tr><td><strong>6:00</strong></td><td>Chart match: the five hardest cards from the kick-off</td><td>Read the key on the <a href="../../module2/in-person-1/">kick-off page</a></td></tr>
+    <tr><td><strong>6:15</strong></td><td>Live demo: Walker works with Gemini on Riverbend</td><td>Watch the recording, or replay the prompts below</td></tr>
+    <tr><td><strong>6:55</strong></td><td>The correlation slider</td><td>The activity below, on your own time</td></tr>
+    <tr><td><strong>7:10</strong></td><td>Hands-on: the prompt card, then your own data</td><td>Same steps, on your own time</td></tr>
+    <tr><td><strong>7:35</strong></td><td>Pod thread: your first chart, the question it answers, and one thing it can't show</td><td>Post by Sunday night</td></tr>
+    <tr><td><strong>8:00</strong></td><td>Shares and what's next</td><td>See "Before In-person 2" below</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>The demo, step by step</h2>
+  <p>These are the prompts used live. Paste each into your own Gemini chat. <strong>Think about the question in bold before you open "What we found."</strong> Gemini's charts and wording will differ from ours, but the numbers should match. If a number doesn't, that's a check worth running.</p>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D1</span><h3>Ask for a chart for a question, not a chart of a variable</h3></div>
+    <div class="prompt">Leadership asks: do sites with more client referrals have longer intake waits? Which chart would answer that, using site_weeks? Draw it, and tell me what one dot represents.<button class="copy">Copy</button></div>
+    <p class="think">What is one dot: a site-week, a site, or a month? Does the answer change with the choice?</p>
+    <details><summary>What we found</summary>
+      <p>The easy answer is a scatter plot of all 832 site-weeks, with a correlation of about <strong>0.25</strong>. But big sites have both more referrals and somewhat longer waits, so that cloud mixes "big site vs. small site" with "busy week vs. quiet week." It answered a question, but not obviously leadership's. Step D5 takes the level apart. <strong>Before you ask for a chart, say what one dot should be.</strong> It's Module 1's "what is a row?" again.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D2</span><h3>Overtime by site and quarter</h3></div>
+    <div class="prompt">Chart the average overtime_hours by site and quarter, one line per site. Then give me the same thing using the median instead of the average.<button class="copy">Copy</button></div>
+    <p class="think">Would you have seen the problem in a table of eight averages? Does the median fix it?</p>
+    <details><summary>What we found</summary>
+      <p>Seven lines sit between about 15 and 46 hours a quarter. S6 jumps to about 470 in 2024Q3 and 2024Q4, then falls back: the mismeasured batch from the kick-off. <strong>The median doesn't fix it</strong>: S6's median in those quarters is about 545, because nearly every row in the batch is wrong, not just a few extreme ones. The median protects you from a few outliers; it can't protect you from a broken batch. Only the chart showed it.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D3</span><h3>A grouped comparison, and one level down</h3></div>
+    <div class="prompt">Compare the share of staff_quarters rows with left_org = 1 for full-time and part-time staff. Then break it down by role. Show the number of rows in every group.<button class="copy">Copy</button></div>
+    <p class="think">Does the overall comparison hold inside every role? Which group would you not trust, and why?</p>
+    <details><summary>What we found</summary>
+      <p>Overall, part-time staff leave <em>less</em> often: 8.9% of rows against 12.8%. Within most roles that holds. Among case managers it flips: 24.0% of part-timers leave against 15.1% of full-timers. But there are only <strong>25 part-time case-manager rows</strong>, so six departures make the 24%. That's rule 2 from the kick-off: <strong>show the count in each group</strong>, and don't build a finding on a handful of rows.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D4</span><h3>Engagement and leaving: averages or a gradient?</h3></div>
+    <div class="prompt">Is engagement associated with leaving? Show me the answer two ways: the average engagement of people who left and people who stayed, and the share who left at each engagement level from 1 to 5, plus the blanks. Chart the second one.<button class="copy">Copy</button></div>
+    <p class="think">Which answer would you show your board? Is "blank" a level of engagement?</p>
+    <details><summary>What we found</summary>
+      <p>The averages: 2.50 for leavers, 3.18 for stayers. True, but it averages an ordered label, and it hides the shape. The gradient shows it: 27.7% leave at level 1, then 13.6%, 9.1%, 5.3%, and 2.9% at level 5. The blanks, 35% of rows, leave at 15.8%, more than anyone who answered 2 or higher. A blank isn't a level; it's a group of its own, and a telling one. <strong>Ask for the gradient, not the averages, when one variable is an ordered label.</strong></p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D5</span><h3>Referrals and waits, level by level</h3></div>
+    <div class="prompt">Using site_weeks, give me the correlation between cases_opened and median_intake_wait_days three ways: (1) week to week within each site, after removing each site's own average; (2) across the eight site averages; (3) month by month, averaging all sites. Explain in plain words why they differ.<button class="copy">Copy</button></div>
+    <p class="think">Which level matches leadership's question? Which matches Little's Law from <a href="../../module1/projects/">Projects at the boundary</a>?</p>
+    <details><summary>What we found</summary>
+      <div class="tw"><table>
+        <tr><th>Level</th><th>Correlation</th></tr>
+        <tr><td>All 832 site-weeks together</td><td>0.25</td></tr>
+        <tr><td>Week to week, within a site</td><td><strong>0.07</strong></td></tr>
+        <tr><td>Across the eight sites</td><td>0.48</td></tr>
+        <tr><td>Month by month, all sites</td><td><strong>0.80</strong></td></tr>
+      </table></div>
+      <p>The same two columns give four answers. Week to week, a busy week barely moves the wait. Across the year, waits rise with the December–January surge in referrals (December waits average 5.6 days against about 4.3 in spring), which is what Little's Law predicts when arrivals outrun capacity. Across sites, the association mixes in size. <strong>An association belongs to a level.</strong> That's Freedman's point, and it's why your Results draft must say which level yours is at.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D6</span><h3>Is SmartShift associated with lower turnover?</h3></div>
+    <div class="prompt">Is SmartShift associated with lower turnover? Compare the sites that adopted it (S1, S4, S7) with the others.<button class="copy">Copy</button></div>
+    <div class="prompt">Now show the same comparison separately for 2024, before SmartShift, and 2025, after it went live.<button class="copy">Copy</button></div>
+    <p class="think">What did the second prompt show that the first one hid?</p>
+    <details><summary>What we found</summary>
+      <div class="tw"><table>
+        <tr><th>Share leaving per quarter</th><th>2024 (before)</th><th>2025 (after)</th></tr>
+        <tr><td>SmartShift sites</td><td>10.4%</td><td>5.0%</td></tr>
+        <tr><td>Other sites</td><td>15.3%</td><td>14.0%</td></tr>
+      </table></div>
+      <p>The first answer is true: 7.7% against 14.6% over both years. But the SmartShift sites had lower turnover <em>before</em> SmartShift existed. Some of the gap was already there. How much of the rest is SmartShift? That's Online 2's question.</p>
+    </details>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Activity: what a correlation looks like (15 minutes)</h2>
+  <p>Open Kristoffer Magnusson's <a href="https://rpsychologist.com/d3/correlation/">interactive correlation slider</a>. It draws a scatter plot for any correlation you choose. Work alone or with a partner.</p>
+  <ol>
+    <li><strong>Set it to 0.2, then 0.44, then 0.8.</strong> Which of the three could you spot by eye without the number? 0.44 is the size of the overtime–engagement correlation in Riverbend, once S6's broken quarters are out (it's negative there; the picture is the same, tilted the other way).</li>
+    <li><strong>Set it to 0.2 and look hard.</strong> Would you tell your board that these two things are related? What would you say instead?</li>
+    <li><strong>Drag one point far from the rest.</strong> Watch the correlation change. How many points does it take to hide, or fake, a relationship? Think of S6.</li>
+  </ol>
+  <p class="think">Write one sentence for your reading notebook: what can a correlation tell you that a scatter plot can't, and what can the scatter plot tell you that the number can't?</p>
+</section>
+
+<section class="card">
+  <h2>Your turn: the prompt card</h2>
+  <p>About 25 minutes. Work alone or with a partner. Run your two checks on every chart.</p>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h3>A chart for a question</h3></div>
+    <div class="prompt">Which Riverbend sites have the most documentation errors? Answer with a chart, and tell me whether you used counts or a rate, and why.<button class="copy">Copy</button></div>
+    <p>Check: did it use counts? Ask for errors per 10 staff, and see whether the ranking changes.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h3>A gradient</h3></div>
+    <div class="prompt">For staff_quarters, show the share of rows with left_org = 1 at each job_level, with the number of rows at each level. Chart it.<button class="copy">Copy</button></div>
+    <p>Write one sentence: is there a gradient, and is every level big enough to trust?</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h3>Your own project</h3></div>
+    <p>Fill in the three blanks and copy the prompt. Nothing you type here is saved or sent anywhere; it stays in your browser.</p>
+    <div class="builder">
+      <label for="question">Your project's question, in one line</label>
+      <input id="question" data-key="question" data-blank="[your question]" placeholder="e.g., do teams with heavier caseloads report lower engagement?">
+      <label for="var1">The first variable, and its kind</label>
+      <input id="var1" data-key="var1" data-blank="[variable 1 and its kind]" placeholder="e.g., caseload per worker (count)">
+      <label for="var2">The second variable, and its kind</label>
+      <input id="var2" data-key="var2" data-blank="[variable 2 and its kind]" placeholder="e.g., engagement score 1–5 (ordered label)">
+    </div>
+    <div class="prompt" data-template="My question is: {question}. Using my data, show how {var1} and {var2} are associated. First tell me what one row and one dot represent. Choose the chart that answers the question, given the kinds of the two variables, and draw it. Then describe the association in plain words: its direction, roughly how strong, and the number of rows behind it. List every choice you made, such as dropping blanks, grouping values, or using an average.">My question is…<button class="copy">Copy</button></div>
+    <p>Then ask it one more thing: <em>"Would this association look different at another level, or within groups?"</em> Keep the chart and the answer. They're the first draft of your Results.</p>
+    <div class="notice">Leave out names and confidential details about your workplace. Gemini with your Willamette account keeps your data out of model training, but your employer's rules still apply.</div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Pod thread</h2>
+  <p>Post to your pod's thread:</p>
+  <ol>
+    <li><strong>Your first Results chart.</strong></li>
+    <li><strong>One sentence:</strong> "This chart answers: …"</li>
+    <li><strong>One thing it can't show.</strong></li>
+  </ol>
+  <p><strong>Catching up?</strong> Post by <strong>Sunday night</strong> and reply to one pod-mate. Your pod's thread is linked on Canvas.</p>
+</section>
+
+<section class="card">
+  <h2>Before In-person 2 (Nov 10 Salem · Nov 11 Portland)</h2>
+  <ul>
+    <li><strong>Bring your preliminary finding:</strong> one chart and one association, printed or on a laptop. Your pod will read it in a gallery walk.</li>
+    <li><strong>Module 2 exercise:</strong> Parts 3 and 4 are ready now. Due <strong>Sunday, November 15, 11:59 pm</strong>.</li>
+  </ul>
+</section>
+
+<section class="card" id="watch">
+  <h2>Optional: watch or listen</h2>
+  <p>Short pieces from outside the classroom, from the worlds of business, government, and nonprofits. None is required; each comes with one thing to watch or listen for.</p>
+  <div class="tw"><table>
+    <tr><th>Piece</th><th>Sector</th><th>Watch or listen for</th></tr>
+    <tr><td><a href="https://www.bbc.co.uk/programmes/w3ct2dkl">"The Gender Gap"</a><br><span class="muted">More or Less: Behind the Stats, BBC World Service, November 2021</span></td><td><span class="badge">Business · Government</span></td><td>A pay gap can be small within full-time work and within part-time work, and still be large overall, because of who works in each. It's the Berkeley admissions puzzle in pay. Which gap would you report to your board, and which one answers "are women paid less for the same work?"</td></tr>
+    <tr><td><a href="https://policyviz.com/podcast/episode-140-scott-berinato/">Scott Berinato on <em>Good Charts</em></a><br><span class="muted">PolicyViz Podcast, episode 140</span></td><td><span class="badge">Business</span></td><td>A Harvard Business Review editor on charts for managers: talk it through, sketch it, then build it. In <em>Good Charts</em> he sorts charts into those that <em>explore</em> and those that <em>declare</em>. Tonight's demo charts explored; which kind should your Results chart be?</td></tr>
+  </table></div>
+</section>
 <nav class="pager"><a class="prev" href="../../module2/in-person-1/"><span class="dir">← Previous · Tue Nov 3 (Salem) · Wed Nov 4 (Portland)</span><span class="t">Module 2 kick-off</span></a><a class="next" href="../../module2/in-person-2/"><span class="dir">Next · Tue Nov 10 (Salem) · Wed Nov 11 (Portland) →</span><span class="t">In-person 2</span></a></nav>
 </main>
 <footer class="site"><div class="inner">

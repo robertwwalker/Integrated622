@@ -25,8 +25,246 @@
 <nav class="crumbs"><a href="../../">Home</a> › <a href="../../module2/">Module 2</a> › Module 2 kick-off</nav>
 <div class="page-head"><div class="eyebrow">Module 2 · In person · Salem and Portland</div>
 <h1>Module 2 kick-off</h1><p class="lede">Visualization: what question each chart answers; grouping; association</p><div class="badges"><span class="badge">Tue Nov 3 (Salem) · Wed Nov 4 (Portland)</span><span class="badge">6:00–9:50 pm</span><span class="badge">Salem: Renjen classroom, Salem campus · <a href="https://meet.google.com/dvx-rkng-stn">Meet</a></span><span class="badge">Portland: GPC 211, Portland · <a href="https://meet.google.com/wxz-dfka-bbd">Meet</a></span></div></div>
-<section class="card"><h2>Session plan</h2><p>The plan for this session is posted the week before it begins.</p><h3>Topics</h3><p>Visualization: what question each chart answers; grouping; association</p><h3>Due</h3><ul><li>Data &amp; Methods draft</li></ul></section>
-<nav class="pager"><a class="prev" href="../../module1/online-2/"><span class="dir">← Previous · Thu Oct 29, online</span><span class="t">Online 2: describing your data</span></a><a class="next" href="../../module2/online-1/"><span class="dir">Next · Thu Nov 5, online →</span><span class="t">Online 1: hands-on analysis</span></a></nav>
+<section class="card">
+  <h2>Tonight in one sentence</h2>
+  <p>Every chart answers one question. Tonight you learn to choose the question first, to see what a group average hides, and to say what it means when two things move together. <strong>Module 1 described one variable at a time; Module 2 relates two.</strong></p>
+  <div class="grid2">
+    <div class="tile">
+      <h3>Before you come</h3>
+      <ul>
+        <li><strong>Submit your Data &amp; Methods draft</strong> on Canvas by 6:00 pm, and bring it; your pod reads it first.</li>
+        <li><strong>Read</strong> the FT's <em>Visual Vocabulary</em>; Few, "Selecting the Right Graph"; Healy, ch. 1; and Peng &amp; Matsui, ch. 3, with their <a href="../readings/#kickoff">reading guides</a>. Bring your hand-drawn first chart and the sentence above it.</li>
+        <li>Bring a laptop with Gemini signed in to your Willamette account. Paper first, though.</li>
+      </ul>
+    </div>
+    <div class="tile">
+      <h3>If you miss tonight</h3>
+      <p>Email me in advance. Work through this page, do the chart match and "regroup it" on your own, and post your first chart, with the question it answers, to your pod's thread before Online 1.</p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Tonight's plan</h2>
+  <div class="tw"><table>
+    <tr><th>Time</th><th>What</th></tr>
+    <tr><td><strong>6:00</strong></td><td>Reconnect: a few of your Roundtable reflections, and where Module 2 fits</td></tr>
+    <tr><td><strong>6:10</strong></td><td>Module 1 exercise debrief: look before you summarize</td></tr>
+    <tr><td><strong>6:40</strong></td><td>What question does each chart answer? Then the chart match</td></tr>
+    <tr><td><strong>7:15</strong></td><td>Break</td></tr>
+    <tr><td><strong>7:30</strong></td><td>Grouping: what a group average hides. Then "regroup it"</td></tr>
+    <tr><td><strong>8:30</strong></td><td>Break</td></tr>
+    <tr><td><strong>8:45</strong></td><td>Association, three shapes</td></tr>
+    <tr><td><strong>9:10</strong></td><td>Pod: the Skeptic's Chair on your Data &amp; Methods draft</td></tr>
+    <tr><td><strong>9:45</strong></td><td>What's next</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>Where we are</h2>
+  <p class="muted">We open with two or three of your Roundtable reflections. Everything Oregon's Chief AI Officer described is a decision someone will make with data. Module 2 is about what data can show.</p>
+  <div class="tw"><table>
+    <tr><th>Stage</th><th>Section it writes</th><th>The question</th></tr>
+    <tr><td>Project Brief</td><td>Theory</td><td>How does this part of the organization work?</td></tr>
+    <tr><td>Module 1</td><td>Data &amp; Methods</td><td>What would I measure, and where does it live?</td></tr>
+    <tr><td><strong>Module 2</strong></td><td><strong>Results</strong></td><td><strong>What does the data show?</strong></td></tr>
+    <tr><td>Module 3</td><td>Interpretation</td><td>What can I claim caused what?</td></tr>
+  </table></div>
+  <p>Results means something specific: <strong>at least one chart, an association finding, and what it does and does not establish.</strong> On Pearl's ladder, from <a href="../../module1/projects/">Projects at the boundary</a>, Module 2 works the first rung, <em>seeing</em>: what goes with what. By the end of the module you'll be able to say exactly why that rung isn't enough.</p>
+</section>
+
+<section class="card">
+  <h2>Debrief: look before you summarize</h2>
+  <p>In the Module 1 exercise you audited an AI's audit of Riverbend. One thing it should have flagged: at site S6, in 2024Q3 and 2024Q4, <code>overtime_hours</code> jumps from about 30 a quarter to about 470, then drops back. It looks like total hours exported into the overtime column. That's <em>mismeasured</em>, one of the five ways data lies.</p>
+  <p>Tonight's question is what those 84 rows do to an analysis that relates two variables.</p>
+  <div class="tw"><table>
+    <tr><th></th><th>All rows</th><th>Without S6's two quarters</th></tr>
+    <tr><td>Mean overtime per quarter</td><td>44.1 hours</td><td>32.6 hours</td></tr>
+    <tr><td>Median overtime per quarter</td><td>31.8 hours</td><td>31.1 hours</td></tr>
+    <tr><td>Correlation: overtime and engagement</td><td>−0.12</td><td><strong>−0.44</strong></td></tr>
+    <tr><td>Correlation: overtime and leaving</td><td>0.04</td><td><strong>0.21</strong></td></tr>
+  </table></div>
+  <p>The median barely moved; the mean and both correlations moved a lot. With the bad rows in, the correlations say "almost no relationship." Without them, the more overtime people work, the less engaged they are and the more likely they are to leave. <strong>A correlation is a single number, and one broken batch of data can hide a real relationship inside it.</strong> A chart shows the broken batch at a glance.</p>
+  <p class="muted">That's why every association in Module 2 starts with a chart, and why you'll ask your AI analyst for the chart and the number together.</p>
+</section>
+
+<section class="card">
+  <h2>What question does each chart answer?</h2>
+  <p>Question first, chart second. The FT's <em>Visual Vocabulary</em> and Few's seven message types sort charts by the question they answer. Here they are side by side, with what each needs from your variables.</p>
+  <div class="tw"><table>
+    <tr><th>The question</th><th>FT family</th><th>Usual charts</th><th>Variables it needs</th></tr>
+    <tr><td>How has it changed over time?</td><td>Change over time</td><td>Line, column</td><td>A date, and a count or measurement</td></tr>
+    <tr><td>Which is biggest? In what order?</td><td>Ranking · Magnitude</td><td>Sorted bar, dot plot</td><td>A label, and a count, measurement, or rate</td></tr>
+    <tr><td>How far is each from a target or average?</td><td>Deviation</td><td>Diverging bar</td><td>A label, and a measurement against a reference</td></tr>
+    <tr><td>How are the values spread out?</td><td>Distribution</td><td>Histogram, box plot; counts by level for ordered labels</td><td>One measurement, count, or ordered label</td></tr>
+    <tr><td>What share is each part of the whole?</td><td>Part-to-whole</td><td>Stacked bar, 100% bar (pies only for two or three parts)</td><td>A label, and counts that add up</td></tr>
+    <tr><td>Do two things move together?</td><td>Correlation</td><td>Scatter plot; a gradient of rates by level</td><td>Two measurements or counts, or an ordered label and a yes/no</td></tr>
+    <tr><td>Where is it?</td><td>Spatial</td><td>Map</td><td>A place, and a rate (not a raw count)</td></tr>
+    <tr><td>How does it move from one stage to the next?</td><td>Flow</td><td>Funnel, flow diagram</td><td>Stages, and counts at each</td></tr>
+  </table></div>
+  <p class="muted">The kind of variable still decides what you can do, as in Module 1. You can't draw a histogram of a label, and a bar of average ratings hides the spread a chart of counts by level would show.</p>
+</section>
+
+<section class="card">
+  <h2>Activity: the chart match (20 minutes, pods)</h2>
+  <p>For each manager's question: <strong>which family, which chart, and which kinds of variable?</strong> In the room you'll have cards; on your own, work in a document. Then sketch by hand the first chart you'd draw for Riverbend.</p>
+  <div class="grid3">
+    <div class="tile"><h3>Nonprofit</h3><ol>
+      <li>Which of our programs grew fastest over the last five years?</li>
+      <li>What share of our budget goes to each program?</li>
+      <li>Do donors who give more often also give larger gifts?</li>
+      <li>Do most clients wait a little for services, or do some wait a very long time?</li></ol></div>
+    <div class="tile"><h3>Public</h3><ol start="5">
+      <li>Which county districts issue permits fastest?</li>
+      <li>How far is each department's spending from its budget?</li>
+      <li>Did 911 response times change after the new dispatch system went live?</li>
+      <li>Where in the county are the overdue inspections?</li></ol></div>
+    <div class="tile"><h3>Private</h3><ol start="9">
+      <li>Which product categories have the most returns?</li>
+      <li>How do customer tiers compare on satisfaction (1–5)?</li>
+      <li>Do batches with longer cycle times have more defects?</li>
+      <li>Where do orders drop out between cart, checkout, and delivery?</li></ol></div>
+  </div>
+  <details><summary>Check your match (after you've tried)</summary>
+    <div class="tw"><table>
+      <tr><th>#</th><th>Family</th><th>A good chart</th><th>Watch out for</th></tr>
+      <tr><td>1</td><td>Change over time</td><td>Lines, one per program</td><td>Growth in percent or in dollars? Small programs grow fast in percent.</td></tr>
+      <tr><td>2</td><td>Part-to-whole</td><td>One stacked or 100% bar</td><td>A pie works only with a few programs.</td></tr>
+      <tr><td>3</td><td>Correlation</td><td>Scatter: gifts per year against average gift</td><td>A few very large donors can drive it. Look before you summarize.</td></tr>
+      <tr><td>4</td><td>Distribution</td><td>Histogram of wait times</td><td>The mean hides the long tail; report the median and the share waiting over a threshold.</td></tr>
+      <tr><td>5</td><td>Ranking</td><td>Sorted bar of median days to permit</td><td>Districts with few permits have unstable numbers. Show the count.</td></tr>
+      <tr><td>6</td><td>Deviation</td><td>Diverging bar around zero</td><td>Percent of budget, not dollars, if departments differ in size.</td></tr>
+      <tr><td>7</td><td>Change over time</td><td>Line by week, with the go-live date marked</td><td>A change in how "response time" is recorded can look like a change in response time (<em>redefined</em>).</td></tr>
+      <tr><td>8</td><td>Spatial</td><td>Map of overdue inspections per 100 properties</td><td>A map of raw counts is a map of where the properties are.</td></tr>
+      <tr><td>9</td><td>Ranking</td><td>Sorted bar of returns per 1,000 sold</td><td>"Most returns" in raw counts just finds the best-selling category.</td></tr>
+      <tr><td>10</td><td>Distribution, by group</td><td>100% bars of counts at each level, one bar per tier</td><td>Satisfaction is an ordered label; a bar of means hides the spread.</td></tr>
+      <tr><td>11</td><td>Correlation</td><td>Scatter: cycle time against defects per batch</td><td>Bigger batches may have both. Use defects per unit if batch sizes differ.</td></tr>
+      <tr><td>12</td><td>Flow</td><td>Funnel with counts at each stage</td><td>Each stage's denominator is the stage before it.</td></tr>
+    </table></div>
+    <p><strong>The pattern:</strong> half the traps are about the denominator. Counts measure size; rates measure performance.</p>
+  </details>
+</section>
+
+<section class="card">
+  <h2>Grouping: what a group average hides</h2>
+  <p>Most management questions compare groups: sites, departments, programs, tiers. A group's average can mislead in three ways.</p>
+
+  <h3>1. The group's average can be one member</h3>
+  <p>In Module 1's Online 1, leadership asked whether urban, suburban, or rural sites have more turnover. Here is the answer by site type, and then by site.</p>
+  <div class="grid2">
+    <div class="tw"><table>
+      <tr><th>Site type</th><th>Share leaving per quarter</th><th>Rows</th></tr>
+      <tr><td>Urban</td><td><strong>9.9%</strong></td><td>1,040</td></tr>
+      <tr><td>Suburban</td><td>13.4%</td><td>1,177</td></tr>
+      <tr><td>Rural</td><td>12.0%</td><td>998</td></tr>
+    </table></div>
+    <div class="tw"><table>
+      <tr><th>Urban site</th><th>Share leaving per quarter</th><th>Rows</th></tr>
+      <tr><td>S1</td><td>4.7%</td><td>551</td></tr>
+      <tr><td>S2</td><td>15.7%</td><td>489</td></tr>
+    </table></div>
+  </div>
+  <p>"Urban sites retain staff best" is really "S1 retains staff best." Leave S1 out and the urban rate is 15.7%, the <em>highest</em> of the three. The grouping hid a difference inside the group, and S1 is also one of the three SmartShift sites. Keep that in mind for Online 2.</p>
+
+  <h3>2. Counts measure size, not performance</h3>
+  <p>Which Riverbend site misses the most client visits? By weekly count, the biggest ones: S1 and S2 miss about 5.3 and 5.5 visits a week, and S8 misses 3.2. But S1 has about 69 staff and S8 has 38. <strong>Per 10 staff, missed visits are between 0.75 and 0.90 a week at every site.</strong> Across sites, missed visits correlate 0.95 with staff on the roster. The ranking by count was a ranking by size.</p>
+
+  <h3>3. Who is in the group changes the group's average</h3>
+  <p>You met this in Module 1. Riverbend's average engagement was 3.11 per row but 2.80 per employee, because people who stay longer answer more surveys and are more engaged. The Berkeley admissions case from the reading is the same idea: men and women applied to different departments, and the departments admitted at different rates.</p>
+
+  <h3>Three rules for any grouped comparison</h3>
+  <ol>
+    <li><strong>Say what the groups are,</strong> and why those groups.</li>
+    <li><strong>Show the count in each group.</strong> Small groups give unstable averages.</li>
+    <li><strong>Compare rates, not totals,</strong> and then look one level down.</li>
+  </ol>
+</section>
+
+<section class="card">
+  <h2>Activity: regroup it (25 minutes, pods)</h2>
+  <p>Each card is a finding someone wants to put in a report. For each: <strong>what could the grouping hide, and how would you regroup to check?</strong></p>
+  <div class="grid3">
+    <div class="tile"><h3>Nonprofit</h3><ol>
+      <li>"Students in our after-school program graduate at 82%, against 74% across the district."</li>
+      <li>"Volunteers we recruit online stay longer than volunteers we recruit at events."</li></ol></div>
+    <div class="tile"><h3>Public</h3><ol start="3">
+      <li>"Average days to close a case rose 20% this year."</li>
+      <li>"District A has the most code violations in the county."</li></ol></div>
+    <div class="tile"><h3>Private</h3><ol start="5">
+      <li>"Store B has the highest sales per employee."</li>
+      <li>"Customers who use our app spend 30% more."</li></ol></div>
+  </div>
+  <details><summary>Some answers (after you've tried)</summary>
+    <ol>
+      <li>Who enrolls: families who sign up for an after-school program may differ from the district as a whole. Compare students with similar grades and schools.</li>
+      <li>Online recruiting may have started recently, or for different roles. Compare within role and start year.</li>
+      <li>The mix of cases may have changed, with more of the slow kind. Compare by case type.</li>
+      <li>District A may simply have the most properties. Use violations per 1,000 properties.</li>
+      <li>Store B may have more part-time staff. Use sales per hour worked.</li>
+      <li>Heavy shoppers may be the ones who download the app. Compare customers with similar spending before the app.</li>
+    </ol>
+    <p>Cards 1, 2, and 6 are also about <em>who chose to be in the group</em>. Hold on to that: it's the heart of Online 2 and of Module 3.</p>
+  </details>
+</section>
+
+<section class="card">
+  <h2>Association, three shapes</h2>
+  <p>Two variables are <strong>associated</strong> when knowing one tells you something about the other. The kinds of the two variables decide what the association looks like and how to show it.</p>
+  <div class="tw"><table>
+    <tr><th>Shape</th><th>When</th><th>Show it with</th><th>Riverbend</th></tr>
+    <tr><td><strong>Two groups</strong></td><td>A label or yes/no, and a yes/no or measurement</td><td>Proportions or medians side by side, with counts</td><td>Leaving per quarter: full-time 12.8%, part-time 8.9%</td></tr>
+    <tr><td><strong>A gradient</strong></td><td>An ordered label, and a yes/no or measurement</td><td>The rate at each level, in order</td><td>Leaving by engagement answer (below)</td></tr>
+    <tr><td><strong>Two measurements</strong></td><td>Two counts or measurements</td><td>A scatter plot, then a correlation</td><td>Overtime and engagement: −0.44 (once S6's bad rows are out)</td></tr>
+  </table></div>
+
+  <h3>A gradient: engagement and leaving</h3>
+  <div class="tw"><table>
+    <tr><th>"I would recommend Riverbend as a place to work"</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>Blank</th></tr>
+    <tr><td>Share leaving that quarter</td><td>27.7%</td><td>13.6%</td><td>9.1%</td><td>5.3%</td><td>2.9%</td><td>15.8%</td></tr>
+  </table></div>
+  <p>Each step up the scale, fewer people leave. It's the clearest picture of association in the dataset, and it needs no average of a rating. Notice the blanks: people who didn't answer leave more often than anyone who answered 2 or higher.</p>
+
+  <h3>Correlation, in words</h3>
+  <p>A correlation is one number between −1 and +1 for how closely two measurements move together along a straight line. You never need the formula. Read it in words:</p>
+  <ul>
+    <li><strong>Direction:</strong> positive (both rise together) or negative (one rises as the other falls).</li>
+    <li><strong>Strength, roughly:</strong> near 0, little straight-line relationship; around 0.2, weak; around 0.4, moderate; 0.6 and beyond, strong. These are rough guides, not rules.</li>
+    <li><strong>What one number can't show:</strong> a curve, a few extreme points, a broken batch of data, or groups mixed together. Healy's Anscombe quartet and tonight's S6 rows are why you always look at the scatter.</li>
+  </ul>
+  <p><strong>And what no association can show:</strong> which one causes the other, or whether something else causes both. That's Online 2's subject, and Module 3's.</p>
+</section>
+
+<section class="card">
+  <h2>Pod exercise: the Skeptic's Chair (35 minutes)</h2>
+  <p>Your pod has read your Data &amp; Methods draft. Same roles as Module 1, a new question: <strong>what is the first chart of your Results, and what question does it answer?</strong></p>
+  <div class="tw"><table>
+    <tr><th>Role</th><th>Job tonight</th></tr>
+    <tr><td><strong>Author</strong></td><td>States their question, shows their hand-drawn first chart, and reads the sentence above it (3 min)</td></tr>
+    <tr><td><strong>Translator</strong></td><td>Names the chart's family and checks that the variables' kinds fit it</td></tr>
+    <tr><td><strong>Skeptic</strong></td><td>Names what the chart could hide: a grouping, a denominator, a broken batch of data</td></tr>
+    <tr><td><strong>Scribe</strong></td><td>Records the objections; the Author gets the last word</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>What's next</h2>
+  <ul>
+    <li><strong>Thursday:</strong> <a href="../../module2/online-1/">Online 1, hands-on analysis</a>. Have Gemini open, the Riverbend files uploaded, and your own data ready.</li>
+    <li><strong>The <a href="../../module2/">Module 2 exercise</a> starts tonight.</strong> Parts 1 and 2 are ready now. Due Sun Nov 15, 11:59 pm.</li>
+    <li><strong>Results draft:</strong> due at the Module 3 kick-off, Tue Nov 17 (Salem) or Wed Nov 18 (Portland), 6:00 pm. Its template is on the <a href="../../module2/online-2/">Online 2 page</a>.</li>
+  </ul>
+</section>
+
+<section class="card" id="watch">
+  <h2>Optional: watch or listen</h2>
+  <p>Short pieces from outside the classroom, from the worlds of business, government, and nonprofits. None is required; each comes with one thing to watch or listen for.</p>
+  <div class="tw"><table>
+    <tr><th>Piece</th><th>Sector</th><th>Watch or listen for</th></tr>
+    <tr><td><a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">"The Best Stats You've Ever Seen"</a><br><span class="muted">Hans Rosling, TED2006 · about 20 minutes</span></td><td><span class="badge">Government · Nonprofit</span></td><td>A public-health statistician animates decades of data on health and wealth. What question does each moving bubble chart answer? Which grouping, "the developing world," does he break apart, and what did it hide?</td></tr>
+    <tr><td><a href="https://www.lostwomenofscience.org/podcast-episodes/florence-nightingale-and-her-geeks-declare-war-on-death">"Florence Nightingale and Her Geeks Declare War on Death"</a><br><span class="muted">Cautionary Tales podcast, Tim Harford, 2021 (rebroadcast by Lost Women of Science, 2025)</span></td><td><span class="badge">Government</span></td><td>Nightingale's charts changed public health. Harford asks whether one of them persuaded more than it should have. Listen for the role of the seasons. Riverbend's intake waits rise every winter: what would a chart that ignored the season tell you?</td></tr>
+  </table></div>
+</section>
+<nav class="pager"><a class="prev" href="../../module1/online-2/"><span class="dir">← Previous · Thu Oct 29, online (recorded)</span><span class="t">Online 2: describing your data</span></a><a class="next" href="../../module2/online-1/"><span class="dir">Next · Thu Nov 5, online →</span><span class="t">Online 1: hands-on analysis</span></a></nav>
 </main>
 <footer class="site"><div class="inner">
 <img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA">
