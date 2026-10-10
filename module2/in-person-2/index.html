@@ -109,12 +109,12 @@
   </table></div>
 
   <h3>A predictive model of who leaves Riverbend</h3>
-  <p>Here is a model predicting <code>left_org</code> from what Riverbend knows each quarter: engagement (and whether it was blank), overtime with S6's broken quarters removed, caseload, tenure, training, role, full- or part-time, pay, commute, and site.</p>
-  <div class="prompt">Build a model that predicts left_org in staff_quarters from engagement (treat blanks as their own group), overtime_hours, caseload, tenure_years, training_completed, role, employment_type, pay_hourly, commute_miles, and site_id. Leave out S6's rows for 2024Q3 and 2024Q4. Fit it on 2024 only and test it on 2025. In plain words: if I pick one person who left and one who stayed, how often does the model rank the leaver as riskier? Which predictors matter most?<button class="copy">Copy</button></div>
+  <p>Here is a model predicting <code>left_org</code> from what Riverbend knows each quarter: engagement, overtime, caseload, tenure, training, role, full- or part-time, pay, commute, and site.</p>
+  <div class="prompt">Build a model that predicts left_org in staff_quarters from engagement, overtime_hours, caseload, tenure_years, training_completed, role, employment_type, pay_hourly, commute_miles, and site_id. Fit it on 2024 only and test it on 2025. In plain words: if I pick one person who left and one who stayed, how often does the model rank the leaver as riskier? Which predictors matter most?<button class="copy">Copy</button></div>
   <details><summary>What we found</summary>
     <ul>
-      <li><strong>It predicts moderately well.</strong> Pick one person who left and one who stayed at random: the model ranks the leaver as riskier about <strong>7 times in 10</strong>. Fit on 2024 alone, it does just as well on 2025, a year it never saw. That's the umbrella test, and it passes. (Statisticians call this number the AUC; 0.5 is a coin toss and 1.0 is perfect.)</li>
-      <li><strong>Overtime alone does nearly as well</strong> (about 68 times in 100), and engagement alone does somewhat worse (about 64).</li>
+      <li><strong>It predicts moderately well.</strong> Pick one person who left and one who stayed at random: the model ranks the leaver as riskier about <strong>7 times in 10</strong>. Fit on 2024 alone, it does a little worse on 2025, a year it never saw (about 2 times in 3), but still far better than a coin toss. That's the umbrella test, and it passes. (Statisticians call this number the AUC; 0.5 is a coin toss and 1.0 is perfect.)</li>
+      <li><strong>Overtime alone, or engagement alone, does nearly as well</strong>: each picks the leaver about two times in three.</li>
       <li><strong>One catch:</strong> every predictor here was measured in the same quarter the person left. A list for the <em>start</em> of a quarter can only use what was known before it began. How much of the 7 in 10 survives? That's Part 5 of the Module 2 exercise.</li>
       <li><strong>Commute distance predicts nothing.</strong> Leavers and stayers have nearly the same median commute: 11.5 miles against 11.2. A null finding is a finding.</li>
     </ul>
@@ -122,7 +122,6 @@
   <h3>Predictors that aren't levers</h3>
   <p>A predictive model uses whatever predicts. That doesn't make every predictor something a manager can pull.</p>
   <ul>
-    <li><strong>Blank engagement</strong> predicts leaving. Making everyone fill in the survey won't keep anyone.</li>
     <li><strong>Training completed</strong> is lower among leavers: 29% of their rows against 40% for stayers, in every role. Does training keep people? Before you say so, name two other explanations. It's tonight's warm-up for the Skeptic's Chair.</li>
   </ul>
   <p><strong>So: a leaving model, built on what's known in advance, can decide whom to check in with next quarter: the umbrella. Don't use it to decide whether more training or less overtime would keep people, the rain dance.</strong> That second question is Module 3's.</p>

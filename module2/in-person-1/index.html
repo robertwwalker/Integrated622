@@ -75,17 +75,7 @@
 
 <section class="card">
   <h2>Debrief: look before you summarize</h2>
-  <p>In the Module 1 exercise you audited an AI's audit of Riverbend. One thing it should have flagged: at site S6, in 2024Q3 and 2024Q4, <code>overtime_hours</code> jumps from about 30 a quarter to about 470, then drops back. It looks like total hours exported into the overtime column. That's <em>mismeasured</em>, one of the five ways data lies.</p>
-  <p>Tonight's question is what those 84 rows do to an analysis that relates two variables.</p>
-  <div class="tw"><table>
-    <tr><th></th><th>All rows</th><th>Without S6's two quarters</th></tr>
-    <tr><td>Mean overtime per quarter</td><td>44.1 hours</td><td>32.6 hours</td></tr>
-    <tr><td>Median overtime per quarter</td><td>31.8 hours</td><td>31.1 hours</td></tr>
-    <tr><td>Correlation: overtime and engagement</td><td>−0.12</td><td><strong>−0.44</strong></td></tr>
-    <tr><td>Correlation: overtime and leaving</td><td>0.04</td><td><strong>0.21</strong></td></tr>
-  </table></div>
-  <p>The median barely moved; the mean and both correlations moved a lot. With the bad rows in, the correlations say "almost no relationship." Without them, the more overtime people work, the less engaged they are and the more likely they are to leave. <strong>A correlation is a single number, and one broken batch of data can hide a real relationship inside it.</strong> A chart shows the broken batch at a glance.</p>
-  <p class="muted">That's why every association in Module 2 starts with a chart, and why you'll ask your AI analyst for the chart and the number together.</p>
+  <p>This section is posted after the Module 1 exercise closes on Sunday, November 1. Come ready to say which problems in Riverbend's data the AI's audit caught, and which it missed.</p>
 </section>
 
 <section class="card">
@@ -214,22 +204,22 @@
     <tr><th>Shape</th><th>When</th><th>Show it with</th><th>Riverbend</th></tr>
     <tr><td><strong>Two groups</strong></td><td>A label or yes/no, and a yes/no or measurement</td><td>Proportions or medians side by side, with counts</td><td>Leaving per quarter: full-time 12.8%, part-time 8.9%</td></tr>
     <tr><td><strong>A gradient</strong></td><td>An ordered label, and a yes/no or measurement</td><td>The rate at each level, in order</td><td>Leaving by engagement answer (below)</td></tr>
-    <tr><td><strong>Two measurements</strong></td><td>Two counts or measurements</td><td>A scatter plot, then a correlation</td><td>Overtime and engagement: −0.44 (once S6's bad rows are out)</td></tr>
+    <tr><td><strong>Two measurements</strong></td><td>Two counts or measurements</td><td>A scatter plot, then a correlation</td><td>Intake waits and client satisfaction across site-weeks: −0.72</td></tr>
   </table></div>
 
   <h3>A gradient: engagement and leaving</h3>
   <div class="tw"><table>
-    <tr><th>"I would recommend Riverbend as a place to work"</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>Blank</th></tr>
-    <tr><td>Share leaving that quarter</td><td>27.7%</td><td>13.6%</td><td>9.1%</td><td>5.3%</td><td>2.9%</td><td>15.8%</td></tr>
+    <tr><th>"I would recommend Riverbend as a place to work"</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+    <tr><td>Share leaving that quarter</td><td>27.7%</td><td>13.6%</td><td>9.1%</td><td>5.3%</td><td>2.9%</td></tr>
   </table></div>
-  <p>Each step up the scale, fewer people leave. It's the clearest picture of association in the dataset, and it needs no average of a rating. Notice the blanks: people who didn't answer leave more often than anyone who answered 2 or higher.</p>
+  <p>Each step up the scale, fewer people leave. It's the clearest picture of association in the dataset, and it needs no average of a rating.</p>
 
   <h3>Correlation, in words</h3>
   <p>A correlation is one number between −1 and +1 for how closely two measurements move together along a straight line. You never need the formula. Read it in words:</p>
   <ul>
     <li><strong>Direction:</strong> positive (both rise together) or negative (one rises as the other falls).</li>
     <li><strong>Strength, roughly:</strong> near 0, little straight-line relationship; around 0.2, weak; around 0.4, moderate; 0.6 and beyond, strong. These are rough guides, not rules.</li>
-    <li><strong>What one number can't show:</strong> a curve, a few extreme points, a broken batch of data, or groups mixed together. Healy's Anscombe quartet and tonight's S6 rows are why you always look at the scatter.</li>
+    <li><strong>What one number can't show:</strong> a curve, a few extreme points, a broken batch of data, or groups mixed together. Healy's Anscombe quartet is why you always look at the scatter.</li>
   </ul>
   <p><strong>And what no association can show:</strong> which one causes the other, or whether something else causes both. That's Online 2's subject, and Module 3's.</p>
 </section>
