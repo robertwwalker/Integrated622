@@ -50,19 +50,20 @@
       scope.querySelector('#' + b.dataset.tab).classList.add('active');
     })));
 
-    // "this week" on the home page: next session on or after today (dates embedded at build time)
+    // home page: highlight the next session in the calendar (dates embedded at build time);
+    // fill the optional "this week" cards if the page has that block
     const tw = document.getElementById('this-week');
     const data = document.getElementById('sessions-data');
-    if (tw && data) {
+    if (data) {
       const S = JSON.parse(data.textContent);
       const today = new Date(); today.setHours(0, 0, 0, 0);
       const last = s => new Date(Math.max(...Object.values(s.dates).map(d => Date.parse(d + 'T00:00:00'))));
       const upcoming = S.filter(s => last(s) >= today);
       const pick = upcoming.slice(0, 2);
-      if (pick.length) {
+      if (tw && pick.length) {
         tw.innerHTML = pick.map(s => `<a class="tile" href="${s.href}"><span class="muted">${s.when}</span><h3>${s.title}</h3>` +
           `<p>${s.topics}</p>${s.due.length ? `<p class="muted"><strong>Due:</strong> ${s.due.join('; ')}</p>` : ''}</a>`).join('');
-      } else {
+      } else if (tw) {
         tw.innerHTML = '<p>The course has finished. Thank you, and keep the puzzles coming.</p>';
       }
       document.querySelectorAll('tr[data-id]').forEach(tr => { if (pick[0] && tr.dataset.id === pick[0].id) tr.classList.add('now'); });
