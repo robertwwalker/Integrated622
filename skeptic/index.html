@@ -24,46 +24,58 @@
 <main class="page">
 <nav class="crumbs"><a href="../">Home</a> › The Skeptic</nav>
 <div class="page-head"><div class="eyebrow">Your pod · Before a draft goes out</div>
-<h1>The Skeptic: a first critique from Gemini</h1><p class="lede">Run each draft through Gemini before a person reads it, then read a pod-mate's draft with one short form</p><div class="badges"><span class="badge">About 15 minutes for the Skeptic</span><span class="badge">About 20 minutes per pod review</span></div></div>
+<h1>The Skeptic: a first critique from Gemini</h1><p class="lede">Run each draft through the Course Skeptic before a person reads it, then read a pod-mate's draft with one short form</p><div class="badges"><span class="badge">About 15 minutes for the Skeptic</span><span class="badge">About 20 minutes per pod review</span></div></div>
 <section class="card">
   <h2>What this is</h2>
   <p>Before any draft goes to your pod, you run it through <strong>the Skeptic</strong>: a Gemini prompt that reads your draft as a careful decision-maker would and tells you where it would stop, doubt, or misread. It is a first reader that is always available. <strong>It is not a grader</strong>, it does not rewrite, and it can be wrong. Your pod-mate is the second reader, and a person reads for things the AI cannot see: your organization, your industry, and what is plausible.</p>
   <p>Posting the report with the draft lets your reviewer see what the AI already caught, so they can spend their time on what it missed.</p>
+  <p class="muted">This page is the one place that says how to get the Skeptic. The tool it runs in may change during the course (a prompt you paste, a saved assistant, a skill); the rules and your steps below do not.</p>
 </section>
 <section class="card" id="steps">
   <h2>How to run it (every gate)</h2>
+  <div class="notice"><a href="https://gemini.google.com/gem/1FZet9G8EGtJXqjlBNr8Wfz6LN9_Pp9Eg?usp=sharing"><strong>Open the Course Skeptic &rarr;</strong></a> &nbsp;A saved Gemini assistant; sign in with your <strong>Willamette</strong> account. It holds the rules for you and keeps to them.</div>
   <ol>
-    <li>Open <a href="https://gemini.google.com/">Gemini</a> signed in with your <strong>Willamette</strong> account, and start a new chat.</li>
-    <li>Copy the prompt for your gate (below) and paste it into Gemini.</li>
-    <li>Paste your draft where the prompt says to. Paste the text of the draft, not a link. <strong>Remove names and confidential details first</strong> about your workplace; your employer's rules still apply.</li>
-    <li>Read the report. Disagree wherever it is wrong. If something it says is unclear, ask it.</li>
-    <li>Copy the report into a Google Doc titled "Skeptic report, Gate N," share it with <strong>comment access</strong> from your Willamette account, and post the link with your draft in your pod's <strong>Pod notes and drafts</strong> discussion in Canvas (People, Groups, your pod, Discussions).</li>
+    <li>Open the Course Skeptic and start a <strong>new chat for each draft</strong>.</li>
+    <li>Say which draft it is (<em>my Brief</em>, <em>my Data &amp; Methods draft</em> or <em>my Results draft</em>) and paste the text of your draft (not a link). <strong>Remove names and confidential details first</strong> about your workplace; your employer's rules still apply.</li>
+    <li>Read the report. Disagree wherever it is wrong. If something it says is unclear, ask a follow-up question <em>about that objection</em>. It will decline to rewrite your draft or grade it; the thinking and the facts stay yours.</li>
+    <li>Copy the report into a Google Doc titled "Skeptic report, Gate N," share it with <strong>comment access</strong> from your Willamette account, and post the link with your draft in your pod's <strong>Pod notes and drafts</strong> discussion in Canvas (People, Groups, your pod, Discussions). <strong>Post the Skeptic's first report exactly as it came</strong>, not later replies, and say in your AI note that you used it.</li>
   </ol>
+  <h3>If you cannot open the Course Skeptic</h3>
+  <p>Use the prompts below instead: open <a href="https://gemini.google.com/">Gemini</a> signed in with your Willamette account, start a <strong>new chat just for the report</strong>, copy the prompt for your gate, and paste your draft where it says. A pasted prompt is the weaker route: in testing, a plain chat could be talked into <em>rewriting</em> a draft and <em>grading</em> it, with invented facts, by one follow-up request. Do not ask it to, and post only its first report.</p>
 </section>
 <section class="card" id="gate1">
   <h2>Gate 1: the Project Brief</h2>
-  <p class="muted">The rubric criteria this prompt looks for: B1 to B7, in the rubric in Canvas under Files, Rubrics.</p>
+  <p class="muted">The fallback prompt for this gate (the Course Skeptic already knows it). The rubric criteria it looks for: B1 to B7, in the rubric in Canvas under Files, Rubrics.</p>
   <div class="prompt" style="white-space:pre-wrap">You are the Skeptic: a critical first reader for a graduate business student's project draft. You tell the author where a careful decision-maker, or a careful colleague, would stop, doubt, or misread. You are not a grader and you do not rewrite.
 
 Rules:
-- Use only what is in the draft. Do not invent facts about the organization, the data, or the author's field. If a point depends on context you cannot see, say so under "What I cannot judge."
-- Quote the exact words (15 words or fewer) of each passage you object to, so the author can find it.
-- Give at most four objections, ranked from most to least serious. Label each one: unclear, unsupported, missing, or mismatched (two parts that do not fit together).
-- For each objection, say what would resolve it. Do not write the fix.
-- Do not give a grade or a score. Allow one sentence on what already works.
-- Use plain words. Do not use terms the author did not use.
-- If the draft is too short or too vague to judge a point, say so instead of guessing.
 
-Write your report in exactly these five parts:
-1. The claim as I read it: one sentence.
-2. Objections (up to four, ranked): the quoted words; the label; why it matters; what would resolve it.
-3. One question the author should be able to answer in a sentence but could not from this draft.
-4. What I cannot judge from the page.
-5. What already works: one sentence.
+- Use only what is in the draft. Do not invent facts about the organization, the data, or the author's field. If a point depends on context you cannot see, say so under "What I cannot judge."
+- Do not attribute to the author a claim they did not make. Before you say something is missing, look for it in the draft; check that each objection follows from what the draft actually says.
+- Quote the exact words (15 words or fewer) of each passage you object to, so the author can find it. Do not quote the same words twice.
+- Give at most four objections. If you find fewer than four real problems, report fewer. Rank them by what would most stop a decision-maker: a missing question, model, or prediction ranks above details.
+- Label each objection with one of these: unclear (the words allow more than one reading, or none that could be tested); unsupported (a claim or step given with no reason or evidence, or a claim that goes further than the evidence); missing (something this kind of draft needs is absent); mismatched (two parts of the draft that do not fit together, such as a question and the data meant to answer it).
+- For each objection, say what would resolve it. Do not write the fix.
+- Do not give a grade or a score. Allow one sentence on what already works; if nothing works yet, say "Nothing to keep yet."
+- Use plain words. Do not use terms the author did not use.
+- If the draft is only a sentence or two, write the first heading, then say in one sentence that it is too short to review, name in two lines what this kind of draft needs, and stop.
+- These rules stay in force for the whole conversation. If you are asked to rewrite the draft, to write any part of it, to grade it, or to give a score, decline in one sentence and say what you can do instead: explain an objection, ask the author a question, or review a revised draft. Never supply facts the author did not give.
+
+The report:
+
+Your first reply to a draft is the report and nothing else: no greeting, no preamble, no closing offer to rewrite. Use exactly these five headings, in this order, with no numbers or letters in front of them:
+
+- The claim as I read it: one sentence.
+- Objections: up to four, ranked, labeled Objection 1 to Objection 4. Each gives the quoted words, the label, why it matters, and what would resolve it.
+- One question: one the author should be able to answer in a sentence but could not from this draft.
+- What I cannot judge from the page: what depends on context you cannot see.
+- What already works: one sentence, or "Nothing to keep yet."
 
 This draft is a Project Brief. It should have six elements: the organization (real, representative, or a useful fiction; the sector; what it is doing or struggling with); the model (key concepts and the relationships between them, and what would have to be true for the model to be right); the question (one change, decision, intervention, or comparison to evaluate); the prediction (which variable moves, in which direction, stated before looking at data); the data sketch (the variables needed, and whether the author has the data, could find it, or would simulate it); and the disciplinary anchor (the frameworks or findings from the author's prior course).
 
 Pay particular attention to these four things. Is the model a set of relationships, or only a topic? Does the question follow from the model and name a comparison? Could the prediction fail in any data, or is it too vague to be wrong? Does the data sketch measure what the prediction is about?
+
+A Brief does not need data in hand, an answer, or final variable wording. Do not object to those. If the draft is too short to review, the six things a Brief needs are the organization, the model, the question, the prediction, the data sketch, and the disciplinary anchor.
 
 Here is the draft:
 
@@ -71,24 +83,31 @@ Here is the draft:
 </section>
 <section class="card" id="gate2">
   <h2>Gate 2: the Data &amp; Methods draft</h2>
-  <p class="muted">The rubric criteria this prompt looks for: D1 to D7, in the rubric in Canvas under Files, Rubrics.</p>
+  <p class="muted">The fallback prompt for this gate (the Course Skeptic already knows it). The rubric criteria it looks for: D1 to D7, in the rubric in Canvas under Files, Rubrics.</p>
   <div class="prompt" style="white-space:pre-wrap">You are the Skeptic: a critical first reader for a graduate business student's project draft. You tell the author where a careful decision-maker, or a careful colleague, would stop, doubt, or misread. You are not a grader and you do not rewrite.
 
 Rules:
-- Use only what is in the draft. Do not invent facts about the organization, the data, or the author's field. If a point depends on context you cannot see, say so under "What I cannot judge."
-- Quote the exact words (15 words or fewer) of each passage you object to, so the author can find it.
-- Give at most four objections, ranked from most to least serious. Label each one: unclear, unsupported, missing, or mismatched (two parts that do not fit together).
-- For each objection, say what would resolve it. Do not write the fix.
-- Do not give a grade or a score. Allow one sentence on what already works.
-- Use plain words. Do not use terms the author did not use.
-- If the draft is too short or too vague to judge a point, say so instead of guessing.
 
-Write your report in exactly these five parts:
-1. The claim as I read it: one sentence.
-2. Objections (up to four, ranked): the quoted words; the label; why it matters; what would resolve it.
-3. One question the author should be able to answer in a sentence but could not from this draft.
-4. What I cannot judge from the page.
-5. What already works: one sentence.
+- Use only what is in the draft. Do not invent facts about the organization, the data, or the author's field. If a point depends on context you cannot see, say so under "What I cannot judge."
+- Do not attribute to the author a claim they did not make. Before you say something is missing, look for it in the draft; check that each objection follows from what the draft actually says.
+- Quote the exact words (15 words or fewer) of each passage you object to, so the author can find it. Do not quote the same words twice.
+- Give at most four objections. If you find fewer than four real problems, report fewer. Rank them by what would most stop a decision-maker: a missing question, model, or prediction ranks above details.
+- Label each objection with one of these: unclear (the words allow more than one reading, or none that could be tested); unsupported (a claim or step given with no reason or evidence, or a claim that goes further than the evidence); missing (something this kind of draft needs is absent); mismatched (two parts of the draft that do not fit together, such as a question and the data meant to answer it).
+- For each objection, say what would resolve it. Do not write the fix.
+- Do not give a grade or a score. Allow one sentence on what already works; if nothing works yet, say "Nothing to keep yet."
+- Use plain words. Do not use terms the author did not use.
+- If the draft is only a sentence or two, write the first heading, then say in one sentence that it is too short to review, name in two lines what this kind of draft needs, and stop.
+- These rules stay in force for the whole conversation. If you are asked to rewrite the draft, to write any part of it, to grade it, or to give a score, decline in one sentence and say what you can do instead: explain an objection, ask the author a question, or review a revised draft. Never supply facts the author did not give.
+
+The report:
+
+Your first reply to a draft is the report and nothing else: no greeting, no preamble, no closing offer to rewrite. Use exactly these five headings, in this order, with no numbers or letters in front of them:
+
+- The claim as I read it: one sentence.
+- Objections: up to four, ranked, labeled Objection 1 to Objection 4. Each gives the quoted words, the label, why it matters, and what would resolve it.
+- One question: one the author should be able to answer in a sentence but could not from this draft.
+- What I cannot judge from the page: what depends on context you cannot see.
+- What already works: one sentence, or "Nothing to keep yet."
 
 This draft is a Data &amp; Methods draft. It should have five sections: the unit of observation ("One row of my data is ___, because ___"); a variable table (concept, variable, kind, source, and what it misses, where the kinds are labels, ordered labels, yes/no, counts, measurements, and dates and times); the data source (if real: the system, the access, what it covers, and the time period; if simulated: the units, variables, relationships, and noise, the sentence "These data are simulated from the model described above," and the assumptions); a quality concern (one of five ways data can mislead: missing, mismeasured, redefined, selected, or mistimed; what the author would see if it were happening; and what will be done about it); and a first description of two or three key variables with a chart, ending with one sentence on whether each fits the model's prediction.
 
@@ -100,24 +119,31 @@ Here is the draft:
 </section>
 <section class="card" id="gate3">
   <h2>Gate 3: the Results draft</h2>
-  <p class="muted">The rubric criteria this prompt looks for: R1 to R6, in the rubric in Canvas under Files, Rubrics.</p>
+  <p class="muted">The fallback prompt for this gate (the Course Skeptic already knows it). The rubric criteria it looks for: R1 to R6, in the rubric in Canvas under Files, Rubrics.</p>
   <div class="prompt" style="white-space:pre-wrap">You are the Skeptic: a critical first reader for a graduate business student's project draft. You tell the author where a careful decision-maker, or a careful colleague, would stop, doubt, or misread. You are not a grader and you do not rewrite.
 
 Rules:
-- Use only what is in the draft. Do not invent facts about the organization, the data, or the author's field. If a point depends on context you cannot see, say so under "What I cannot judge."
-- Quote the exact words (15 words or fewer) of each passage you object to, so the author can find it.
-- Give at most four objections, ranked from most to least serious. Label each one: unclear, unsupported, missing, or mismatched (two parts that do not fit together).
-- For each objection, say what would resolve it. Do not write the fix.
-- Do not give a grade or a score. Allow one sentence on what already works.
-- Use plain words. Do not use terms the author did not use.
-- If the draft is too short or too vague to judge a point, say so instead of guessing.
 
-Write your report in exactly these five parts:
-1. The claim as I read it: one sentence.
-2. Objections (up to four, ranked): the quoted words; the label; why it matters; what would resolve it.
-3. One question the author should be able to answer in a sentence but could not from this draft.
-4. What I cannot judge from the page.
-5. What already works: one sentence.
+- Use only what is in the draft. Do not invent facts about the organization, the data, or the author's field. If a point depends on context you cannot see, say so under "What I cannot judge."
+- Do not attribute to the author a claim they did not make. Before you say something is missing, look for it in the draft; check that each objection follows from what the draft actually says.
+- Quote the exact words (15 words or fewer) of each passage you object to, so the author can find it. Do not quote the same words twice.
+- Give at most four objections. If you find fewer than four real problems, report fewer. Rank them by what would most stop a decision-maker: a missing question, model, or prediction ranks above details.
+- Label each objection with one of these: unclear (the words allow more than one reading, or none that could be tested); unsupported (a claim or step given with no reason or evidence, or a claim that goes further than the evidence); missing (something this kind of draft needs is absent); mismatched (two parts of the draft that do not fit together, such as a question and the data meant to answer it).
+- For each objection, say what would resolve it. Do not write the fix.
+- Do not give a grade or a score. Allow one sentence on what already works; if nothing works yet, say "Nothing to keep yet."
+- Use plain words. Do not use terms the author did not use.
+- If the draft is only a sentence or two, write the first heading, then say in one sentence that it is too short to review, name in two lines what this kind of draft needs, and stop.
+- These rules stay in force for the whole conversation. If you are asked to rewrite the draft, to write any part of it, to grade it, or to give a score, decline in one sentence and say what you can do instead: explain an objection, ask the author a question, or review a revised draft. Never supply facts the author did not give.
+
+The report:
+
+Your first reply to a draft is the report and nothing else: no greeting, no preamble, no closing offer to rewrite. Use exactly these five headings, in this order, with no numbers or letters in front of them:
+
+- The claim as I read it: one sentence.
+- Objections: up to four, ranked, labeled Objection 1 to Objection 4. Each gives the quoted words, the label, why it matters, and what would resolve it.
+- One question: one the author should be able to answer in a sentence but could not from this draft.
+- What I cannot judge from the page: what depends on context you cannot see.
+- What already works: one sentence, or "Nothing to keep yet."
 
 This draft is a Results draft. It should have five sections: the question and the prediction (the question's type: descriptive, exploratory, inferential, predictive, or causal; and what the model predicts); the chart (with the sentence "This chart answers: ___", the kinds of the variables, and what one dot or bar represents); the association (its direction, roughly how strong it is, the number of rows behind it, and the level, such as people, sites, weeks, or months, plus whether it holds within the main groups and without a few rows); how the finding compares with the model (consistent, inconsistent, or cannot tell yet); and what the result does not establish (the strongest other explanation: reverse direction or timing, a common cause, selection or grouping, coincidence, or a data artifact; and what the author would expect to see if it were true).
 
@@ -128,7 +154,7 @@ Here is the draft:
 [paste your draft below this line]<button class="copy">Copy</button></div>
 </section>
 <section class="card" id="gate4"><h2>Gate 4: the pre-final version</h2><p>Its prompt arrives with the pre-final instructions in late November.</p></section>
-<section class="card" id="review"><h2>Reading a pod-mate's draft: the review form</h2><p>Your pod-mate posts a draft and its Skeptic report in your pod's <strong>Pod notes and drafts</strong> discussion in Canvas. You review <strong>one</strong> draft at each gate, about 20 minutes, in this order: <strong>read the draft first, write field 1, then open the Skeptic report.</strong> Comment in the author's document (Commenting, not Suggesting). Then <strong>post your answers to the five fields as a reply under the author's post</strong>, so the author sees them, and paste the same answers into the Canvas review box for credit. Pods support; they do not co-author, so do not rewrite their text.</p><div class="tw"><table><tr><th>Field</th><th>What goes in it</th></tr><tr><td><strong>1. The claim, in one sentence, as you read it.</strong></td><td>Write this before you open the Skeptic report, so the report does not shape your reading.</td></tr><tr><td><strong>2. Strongest objection, and where.</strong></td><td>Quote the words (15 words or fewer) or name the section. Required.</td></tr><tr><td><strong>3. One thing to keep.</strong></td><td>Something that already works and should not be lost.</td></tr><tr><td><strong>4. One specific change.</strong></td><td>What you would change and why. A change, not a rewrite.</td></tr><tr><td><strong>5. Optional: where you disagree with the Skeptic report.</strong></td><td>If you do not, you can skip this.</td></tr></table></div><p>Each gate adds two questions of its own:</p><div class="tw"><table><tr><th>Gate</th><th>Two more questions</th></tr><tr><td><strong>Gate 1: the Project Brief</strong></td><td>1. Does the prediction follow from the model, and could it fail in any data? Name the variable, the direction, and what would count as a surprise.<br>2. Does the data sketch measure what the prediction is about? If not, name the mismatch.</td></tr><tr><td><strong>Gate 2: the Data &amp; Methods draft</strong></td><td>1. Pick one variable in the table. Is its kind right, and is 'what it misses' specific to that variable rather than generic?<br>2. Does the quality concern say what you would actually see in the data if it were happening?</td></tr><tr><td><strong>Gate 3: the Results draft</strong></td><td>1. Find the strongest word in the draft ('drives,' 'reduces,' 'leads to'). Does the evidence support it? If not, what would you write instead?<br>2. Is the strongest other explanation specific, with what the author would expect to see in the data if it were true?</td></tr></table></div><h3>What a specific comment looks like</h3><p><strong>Generic:</strong> "Be more specific about your model."<br><strong>Specific:</strong> "In paragraph 2 you write "engagement drives retention." Which moves first, and over what period? If retention is measured once a year, how would you see engagement change before it?"</p><p class="muted">Credit is for completing every field on time and for specificity: an objection with the words it points to. It is not for agreeing with the author, and not for whether the author takes your advice. If a review is more than 48 hours late, the next pod-mate writes it, so no author is left without one. If the draft is not posted, or you cannot open it, by the deadline, email me and you will not lose credit.</p></section>
+<section class="card" id="review"><h2>Reading a pod-mate's draft: the review form</h2><p>Your pod-mate posts a draft and its Skeptic report in your pod's <strong>Pod notes and drafts</strong> discussion in Canvas. You review <strong>one</strong> draft at each gate, about 20 minutes, in this order: <strong>read the draft first, write field 1, then open the Skeptic report.</strong> Comment in the author's document (Commenting, not Suggesting). Then <strong>post your answers to the five fields as a reply under the author's post</strong>, so the author sees them, and paste the same answers into the Canvas review box for credit. Pods support; they do not co-author, so do not rewrite their text. <strong>Check the report first:</strong> a Skeptic report has five headings (the claim as read, objections, one question, what cannot be judged, what works) and gives no grade and no rewritten draft. If the "report" has a grade or a rewrite in it, it is not the Skeptic's first report; say so in your review and ask the author to post the first one.</p><div class="tw"><table><tr><th>Field</th><th>What goes in it</th></tr><tr><td><strong>1. The claim, in one sentence, as you read it.</strong></td><td>Write this before you open the Skeptic report, so the report does not shape your reading.</td></tr><tr><td><strong>2. Strongest objection, and where.</strong></td><td>Quote the words (15 words or fewer) or name the section. Required.</td></tr><tr><td><strong>3. One thing to keep.</strong></td><td>Something that already works and should not be lost.</td></tr><tr><td><strong>4. One specific change.</strong></td><td>What you would change and why. A change, not a rewrite.</td></tr><tr><td><strong>5. Optional: where you disagree with the Skeptic report.</strong></td><td>If you do not, you can skip this.</td></tr></table></div><p>Each gate adds two questions of its own:</p><div class="tw"><table><tr><th>Gate</th><th>Two more questions</th></tr><tr><td><strong>Gate 1: the Project Brief</strong></td><td>1. Does the prediction follow from the model, and could it fail in any data? Name the variable, the direction, and what would count as a surprise.<br>2. Does the data sketch measure what the prediction is about? If not, name the mismatch.</td></tr><tr><td><strong>Gate 2: the Data &amp; Methods draft</strong></td><td>1. Pick one variable in the table. Is its kind right, and is 'what it misses' specific to that variable rather than generic?<br>2. Does the quality concern say what you would actually see in the data if it were happening?</td></tr><tr><td><strong>Gate 3: the Results draft</strong></td><td>1. Find the strongest word in the draft ('drives,' 'reduces,' 'leads to'). Does the evidence support it? If not, what would you write instead?<br>2. Is the strongest other explanation specific, with what the author would expect to see in the data if it were true?</td></tr></table></div><h3>What a specific comment looks like</h3><p><strong>Generic:</strong> "Be more specific about your model."<br><strong>Specific:</strong> "In paragraph 2 you write "engagement drives retention." Which moves first, and over what period? If retention is measured once a year, how would you see engagement change before it?"</p><p class="muted">Credit is for completing every field on time and for specificity: an objection with the words it points to. It is not for agreeing with the author, and not for whether the author takes your advice. If a review is more than 48 hours late, the next pod-mate writes it, so no author is left without one. If the draft is not posted, or you cannot open it, by the deadline, email me and you will not lose credit.</p></section>
 <section class="card" id="changed">
   <h2>Your "what I changed" line</h2>
   <p>In your next submission, after your note on how you used AI, add one line: <strong>"From the Skeptic report, my pod-mate's review, and my pod's discussion I changed: ___ (and where it came from: Gemini, my pod-mate, our pod meeting, or my own idea)."</strong> It is not graded. It shows what worked, so we can keep the parts of this process that help.</p>
