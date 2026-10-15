@@ -173,3 +173,18 @@ footer.site a { color: var(--gold); }
   .pager { grid-template-columns: 1fr; }
   .pager .next { grid-column: 1; }
 }
+
+/* ---------- aside: a word with a note (hover, focus, or tap). Used for terms that need a careful explanation. ---------- */
+.aside { position: relative; }
+.aside-term { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: help;
+              border-bottom: 2px dotted var(--accent); }
+.aside-term:hover, .aside-term[aria-expanded="true"] { color: var(--link); }
+.aside-term:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.aside-note { position: absolute; left: 0; top: calc(100% + .5rem); z-index: 20; width: min(27rem, calc(100vw - 2rem));
+              background: var(--card); color: var(--text); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+              border-radius: 2px; padding: .8rem 1rem; font-size: .92rem; line-height: 1.5; font-weight: 400; text-align: left;
+              box-shadow: 0 6px 20px rgba(0, 0, 0, .18); display: none; }
+.aside-note::before { content: ""; position: absolute; left: 0; right: 0; top: -.6rem; height: .6rem; }   /* keeps the note open while the pointer crosses the gap */
+.aside-note .aside-src { display: block; margin-top: .5rem; color: var(--muted); font-size: .84rem; }
+.aside.open .aside-note { display: block; }
+@media (hover: hover) { .aside:hover .aside-note { display: block; } }

@@ -41,6 +41,34 @@
       cb.addEventListener('change', () => { try { localStorage.setItem(k, cb.checked ? '1' : '0'); } catch (e) {} });
     });
 
+
+    // asides: a term with a note; click or tap toggles, Escape or an outside click closes, and the note stays inside the window
+    const asides = Array.from(document.querySelectorAll('.aside'));
+    const place = a => {   // keep the note inside its card (and the window)
+      const n = a.querySelector('.aside-note'); n.style.left = '0px'; n.style.width = '';
+      const box = (a.closest('.card') || document.body).getBoundingClientRect(), m = 12;
+      const lo = Math.max(box.left, 0) + m, hi = Math.min(box.right, window.innerWidth) - m;
+      if (hi - lo < n.offsetWidth) n.style.width = (hi - lo) + 'px';
+      const r = n.getBoundingClientRect();
+      if (r.right > hi) n.style.left = (hi - r.right) + 'px';
+      const r2 = n.getBoundingClientRect();
+      if (r2.left < lo) n.style.left = (parseFloat(n.style.left) + lo - r2.left) + 'px';
+    };
+    const close = a => { a.classList.remove('open'); const b = a.querySelector('.aside-term'); if (b) b.setAttribute('aria-expanded', 'false'); };
+    asides.forEach(a => {
+      const b = a.querySelector('.aside-term');
+      b.addEventListener('click', e => {
+        e.stopPropagation();
+        const wasOpen = a.classList.contains('open');
+        asides.forEach(close);
+        if (!wasOpen) { a.classList.add('open'); b.setAttribute('aria-expanded', 'true'); place(a); }
+      });
+      a.addEventListener('mouseenter', () => place(a));
+      b.addEventListener('keydown', e => { if (e.key === 'Escape') { close(a); } });
+    });
+    document.addEventListener('click', e => { asides.forEach(a => { if (!a.contains(e.target)) close(a); }); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') asides.forEach(close); });
+
     // tabs
     document.querySelectorAll('.tabs').forEach(tabs => tabs.querySelectorAll('.tab-btn').forEach(b => b.addEventListener('click', () => {
       const scope = tabs.parentElement;
