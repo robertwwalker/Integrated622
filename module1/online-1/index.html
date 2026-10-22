@@ -53,15 +53,109 @@
 
 <section class="card">
   <h2>Tonight's plan</h2>
+  <p class="muted">Slides from the session: <a href="../../slides/online-1-2026-10-22/">Online 1: AI as your analyst</a>, every slide, for anyone catching up.</p>
   <div class="tw"><table>
     <tr><th>Time</th><th>What</th><th>If you're catching up</th></tr>
-    <tr><td><strong>6:00</strong></td><td>Kinds of variables: five rows from your own variable tables</td><td>Read the posted key</td></tr>
+    <tr><td><strong>6:00</strong></td><td>Kinds of variables: five rows from the kick-off tables</td><td>Read <a href="#posted-key">the posted key</a></td></tr>
     <tr><td><strong>6:25</strong></td><td>Live demo: Walker works with Gemini on the Riverbend data</td><td>Watch the recording, read the <a href="#demo-transcript">demo transcript</a>, or replay the prompts below</td></tr>
     <tr><td><strong>7:00</strong></td><td>Hands-on: your turn with the prompt card</td><td>Same steps, on your own time</td></tr>
     <tr><td><strong>7:35</strong></td><td>Pod board: one AI-suggested measure you'd accept, one you'd reject</td><td>Post by Saturday night; replies by Sunday night</td></tr>
     <tr><td><strong>8:05</strong></td><td>Shares and what's next</td><td>See "Before In-person 2" below</td></tr>
   </table></div>
 </section>
+
+<!-- posted-key:start -->
+<section class="card" id="posted-key">
+  <h2>The posted key: five rows from the kick-off tables</h2>
+  <p>These five rows come from a pod's table at the kick-off, reworded so that no person or organization can be recognized. For each one, answer the three questions <strong>before</strong> you open &ldquo;Check yourself.&rdquo; Nobody's name is attached to a row.</p>
+  <div class="step">
+    <div class="step-head"><span class="step-num">K1</span><h3>Employee satisfaction after a workplace policy change</h3></div>
+    <p><strong>As the pod wrote it:</strong> the concept is a change to where people work; the variable proposed is employees' satisfaction (“happiness”), which the pod called an <strong>ordered label</strong>; it came with two others, costs (a measurement) and retention (yes/no or a ratio).</p>
+    <p class="think">1. What kind of thing is it? (the six kinds)<br>2. What does that kind let us do with it?<br>3. What does it miss?</p>
+    <details><summary>Check yourself</summary>
+      <ul>
+        <li><strong>Kind:</strong> Ordered labels.</li>
+        <li><strong>If it is arguable:</strong> Some treat a 1–5 satisfaction score as a measurement. That is defensible if you say so; it makes the average a choice you have to defend.</li>
+        <li><strong>Summarize it with:</strong> Counts at each level; the median; the share answering 4 or 5. A mean only if you defend it.</li>
+        <li><strong>Watch out for:</strong> Averaging it, and comparing “before” and “after” groups that are not the same people.</li>
+        <li><strong>What it misses:</strong> Why someone chose a 3, and everyone who left or did not answer.</li>
+        <li><strong>The decision hiding in it:</strong> Report the average or the share who are satisfied. They can tell different stories.</li>
+      </ul>
+      <p><strong>Ask your AI analyst:</strong></p>
+      <div class="prompt">Is a 1–5 employee satisfaction rating a measurement or an ordered label? Give me the strongest argument for each, then tell me which summary you would use and why.<button class="copy">Copy</button></div>
+    </details>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">K2</span><h3>Network outages</h3></div>
+    <p><strong>As the pod wrote it:</strong> the variable proposed is outages, which the pod called <strong>yes/no</strong>; the same row also listed downtime (a measurement) and percentage of time up (a ratio). The Skeptic said length matters.</p>
+    <p class="think">1. What kind of thing is it? (the six kinds)<br>2. What does that kind let us do with it?<br>3. What does it miss?</p>
+    <details><summary>Check yourself</summary>
+      <ul>
+        <li><strong>Kind:</strong> Counts: the number of outages in a period. A count can be zero, and zero means something.</li>
+        <li><strong>If it is arguable:</strong> “Was there an outage this week?” (Yes/No) is defensible, and it answers a different question: how often a week is clean, not how many outages there were.</li>
+        <li><strong>Summarize it with:</strong> Totals; outages per month; the share of weeks with none. Downtime is a different variable (a measurement).</li>
+        <li><strong>Watch out for:</strong> A zero that means “no outage” versus “nothing was recorded.” And what counts as an outage at all: one minute, or ten?</li>
+        <li><strong>What it misses:</strong> How long each outage lasted, and how bad it was.</li>
+        <li><strong>The decision hiding in it:</strong> Define an outage. The definition changes every number that follows.</li>
+      </ul>
+      <p><strong>Ask your AI analyst:</strong></p>
+      <div class="prompt">I am tracking network outages. Compare recording them as yes/no per week, as a count of outages, and as total downtime in minutes. For each, tell me the kind of variable, which summary fits, and what a zero would mean.<button class="copy">Copy</button></div>
+    </details>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">K3</span><h3>Winning a proposal</h3></div>
+    <p><strong>As the pod wrote it:</strong> the variable proposed is win, which the pod called <strong>yes/no</strong>, with a win rate called a <strong>ratio</strong>. The Skeptic raised fraud and burnout.</p>
+    <p class="think">1. What kind of thing is it? (the six kinds)<br>2. What does that kind let us do with it?<br>3. What does it miss?</p>
+    <details><summary>Check yourself</summary>
+      <ul>
+        <li><strong>Kind:</strong> Yes/No, one value for each proposal. The win rate is the share of proposals that were won.</li>
+        <li><strong>If it is arguable:</strong> The pod called the win rate a “ratio.” It is a proportion: say proportion, not average.</li>
+        <li><strong>Summarize it with:</strong> The share won, always shown with the number of proposals behind it.</li>
+        <li><strong>Watch out for:</strong> Small numbers: 3 of 4 is 75%, but it means very little. Which proposals count: all, or only those submitted?</li>
+        <li><strong>What it misses:</strong> How big each win was. A yes/no gives a small win and a large one the same weight.</li>
+        <li><strong>The decision hiding in it:</strong> Reward the wins or the value of the wins. Pay for the share and people may choose easier proposals.</li>
+      </ul>
+      <p><strong>Ask your AI analyst:</strong></p>
+      <div class="prompt">If I record each proposal as won (yes) or lost (no), what is the win rate, what kind of variable is it, and how many proposals would I need before the rate means anything?<button class="copy">Copy</button></div>
+    </details>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">K4</span><h3>Time to resolution</h3></div>
+    <p><strong>As the pod wrote it:</strong> the variable proposed is time to resolution (or time to decision), which the pod called a <strong>measurement</strong>. The Skeptic said it hinges on agreeing what a good time is, and that the work crosses several teams.</p>
+    <p class="think">1. What kind of thing is it? (the six kinds)<br>2. What does that kind let us do with it?<br>3. What does it miss?</p>
+    <details><summary>Check yourself</summary>
+      <ul>
+        <li><strong>Kind:</strong> Measurements: the elapsed time between two events.</li>
+        <li><strong>If it is arguable:</strong> Underneath it are two <strong>dates and times</strong>, the moment a case opens and the moment it closes. You can keep the two timestamps or the elapsed time; each answers a different question.</li>
+        <li><strong>Summarize it with:</strong> The median and the spread; a histogram. A few very long cases can pull the mean far from the middle.</li>
+        <li><strong>Watch out for:</strong> When the clock starts and stops; cases that are reopened; time spent waiting on another team.</li>
+        <li><strong>What it misses:</strong> Whether the problem was solved well, or came back.</li>
+        <li><strong>The decision hiding in it:</strong> Who decides what “resolved” means, and what time is good enough. That is a management decision, not a statistical one.</li>
+      </ul>
+      <p><strong>Ask your AI analyst:</strong></p>
+      <div class="prompt">A case has an opened date and a closed date. Explain the difference between storing the two dates and storing the elapsed time. What kind of variable is each, which summary fits, and what could make the elapsed time misleading?<button class="copy">Copy</button></div>
+    </details>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">K5</span><h3>Item categories across regions</h3></div>
+    <p><strong>As the pod wrote it:</strong> the variable proposed is an item label and its type (a category), which the pod called <strong>labels</strong>. The Skeptic pointed to regional differences and to too many overlapping categories.</p>
+    <p class="think">1. What kind of thing is it? (the six kinds)<br>2. What does that kind let us do with it?<br>3. What does it miss?</p>
+    <details><summary>Check yourself</summary>
+      <ul>
+        <li><strong>Kind:</strong> Labels. Names or categories, with no order.</li>
+        <li><strong>If it is arguable:</strong> Not much, as a kind. The hidden decision is how the categories are drawn, so that every item belongs to exactly one.</li>
+        <li><strong>Summarize it with:</strong> Counts and shares by category. There is no mean of a label.</li>
+        <li><strong>Watch out for:</strong> Overlapping categories, which count the same item twice; far too many categories; the same item carrying different codes in different regions.</li>
+        <li><strong>What it misses:</strong> How the items relate to each other, and how much of each there is.</li>
+        <li><strong>The decision hiding in it:</strong> One global item code or regional ones. That choice changes every count.</li>
+      </ul>
+      <p><strong>Ask your AI analyst:</strong></p>
+      <div class="prompt">Here are ten item descriptions [paste them, generic]. Propose categories so that each item belongs to exactly one. Then show how overlapping categories would change a count.<button class="copy">Copy</button></div>
+    </details>
+  </div>
+  <p class="muted">Afterward: which of these five did we disagree about, and what did the disagreement turn on? Which would you least trust to average? Which row of your own variable table is closest to one of these, and what kind is it, honestly?</p>
+</section>
+<!-- posted-key:end -->
 
 <section class="card">
   <h2>The demo, step by step</h2>
