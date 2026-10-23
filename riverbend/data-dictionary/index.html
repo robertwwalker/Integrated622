@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riverbend data dictionary | Models &harr; Data</title>
+<script>try{var t=localStorage.getItem('i622-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Figtree:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<header>
+<div class="masthead"><div class="inner">
+<a href="../../"><img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA"></a>
+<span class="rule"></span>
+<a class="course" href="../../"><span class="s">GSMPR 622A · Fall 2026 · Data, Statistics, and Decision Science</span><span class="t">Models &harr; Data</span></a>
+<span class="spacer"></span>
+<button class="theme-toggle" type="button" aria-label="Switch day or night theme">Night</button>
+</div></div>
+<div class="sitebar"><div class="inner"><nav class="nav"><a href="../../" class="">Home</a><a href="../../start/" class="">Start</a><a href="../../models/" class="">Models</a><a href="../../syllabus/" class="">Syllabus</a><a href="../../project/" class="">Project</a><a href="../../riverbend/" class="active">Riverbend</a><a href="../../module1/" class="">Module 1</a><a href="../../module2/" class="">Module 2</a><a href="../../module3/" class="">Module 3</a></nav></div></div>
+</header>
+<main class="page">
+<nav class="crumbs"><a href="../../">Home</a> › <a href="../">Riverbend</a> › Data dictionary</nav>
+<div class="page-head"><div class="eyebrow">Shared course data</div>
+<h1>Riverbend Community Services — Data Dictionary</h1><p class="lede">GSMPR 622A shared course dataset · Fall 2026</p><p class="muted">The same text as the downloadable <a href="../data/Data_Dictionary.md" download>Data_Dictionary.md</a>, as a web page. The files are on the <a href="../">dataset page</a>.</p></div>
+<section class="card"><p><strong>This dataset is simulated.</strong> Riverbend Community Services is a fictional organization, and no row describes a real person. The data was built from a stated model of how an organization like this works, which is the kind of honest simulation this course teaches. We use the same data in all three modules.</p></section>
+<section class="card"><h2 id="the-organization">The organization</h2>
+<p>Riverbend Community Services is a regional nonprofit providing <strong>home health visits, case management, and client transportation</strong> from <strong>8 service sites</strong>. It employs about 400 staff. Funding comes from a county contract, foundation grants, and fee-for-service billing.</p>
+<p>The data covers <strong>8 quarters, January 2024 through December 2025</strong>.</p>
+<p>In <strong>2025, three sites (S1, S4, S7) began using SmartShift</strong>, a new scheduling system intended to reduce overtime and turnover. The other five sites did not. Leadership wants to know whether SmartShift worked and should be rolled out everywhere.</p>
+<p>Also in early 2025, Riverbend <strong>moved to a new HR information system</strong>.</p></section>
+<section class="card"><h2 id="two-tables">Two tables</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th><code>staff_quarters.csv</code></th>
+<th><code>site_weeks.csv</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>One row is</strong></td>
+<td>one employee in one quarter</td>
+<td>one site in one week</td>
+</tr>
+<tr>
+<td><strong>Rows</strong></td>
+<td>3,215</td>
+<td>832 (8 sites × 104 weeks)</td>
+</tr>
+<tr>
+<td><strong>Comes from</strong></td>
+<td>HR information system, payroll, quarterly engagement survey</td>
+<td>Case management system, scheduling, client surveys</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How they connect:</strong> both tables have <code>site_id</code> and <code>quarter</code>. A quarter contains about 13 weeks. Before you combine the tables, decide what a row of the combined table should be.</p></section>
+<section class="card"><h2 id="staff_quarterscsv"><code>staff_quarters.csv</code></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>employee_id</code></td>
+<td>Employee identifier from the HR system</td>
+</tr>
+<tr>
+<td><code>quarter</code></td>
+<td>Calendar quarter, <code>2024Q1</code> through <code>2025Q4</code></td>
+</tr>
+<tr>
+<td><code>site_id</code></td>
+<td>Site where the employee worked that quarter (S1–S8)</td>
+</tr>
+<tr>
+<td><code>manager_id</code></td>
+<td>The employee's manager that quarter</td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td>Home Health Aide, Nurse, Case Manager, Intake Coordinator, Driver, Admin, or Supervisor</td>
+</tr>
+<tr>
+<td><code>job_level</code></td>
+<td>Job level, 1 (entry) to 4 (senior)</td>
+</tr>
+<tr>
+<td><code>employment_type</code></td>
+<td>Full-time or Part-time</td>
+</tr>
+<tr>
+<td><code>hire_date</code></td>
+<td>Date of hire, as recorded in the HR system</td>
+</tr>
+<tr>
+<td><code>tenure_years</code></td>
+<td>Years since hire, at the start of the quarter (0 for employees hired during the quarter)</td>
+</tr>
+<tr>
+<td><code>age_band</code></td>
+<td>Under 30, 30–39, 40–49, 50+</td>
+</tr>
+<tr>
+<td><code>pay_hourly</code></td>
+<td>Hourly pay rate in dollars</td>
+</tr>
+<tr>
+<td><code>commute_miles</code></td>
+<td>One-way distance from home to site, in miles</td>
+</tr>
+<tr>
+<td><code>caseload</code></td>
+<td>Clients assigned during the quarter (0 for roles without a caseload)</td>
+</tr>
+<tr>
+<td><code>overtime_hours</code></td>
+<td>Overtime hours worked during the quarter, from payroll</td>
+</tr>
+<tr>
+<td><code>training_completed</code></td>
+<td>1 if the employee completed the quarter's professional development training, 0 if not</td>
+</tr>
+<tr>
+<td><code>engagement</code></td>
+<td>Response to the engagement survey question "I would recommend Riverbend as a place to work," from 1 (strongly disagree) to 5 (strongly agree). Blank if the employee did not respond.</td>
+</tr>
+<tr>
+<td><code>left_org</code></td>
+<td>1 if the HR system recorded the employee as leaving Riverbend during the quarter, 0 if not</td>
+</tr>
+<tr>
+<td><code>exit_reason</code></td>
+<td>Reason given in the exit interview, if one was held. Blank otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="site_weekscsv"><code>site_weeks.csv</code></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>site_id</code></td>
+<td>Site (S1–S8)</td>
+</tr>
+<tr>
+<td><code>week_start</code></td>
+<td>Monday the week begins</td>
+</tr>
+<tr>
+<td><code>quarter</code></td>
+<td>Calendar quarter the week starts in</td>
+</tr>
+<tr>
+<td><code>site_type</code></td>
+<td>Urban, Suburban, or Rural</td>
+</tr>
+<tr>
+<td><code>smartshift_live</code></td>
+<td>1 if the site was using SmartShift that week, 0 if not</td>
+</tr>
+<tr>
+<td><code>staff_on_roster</code></td>
+<td>Staff employed at the site that quarter</td>
+</tr>
+<tr>
+<td><code>open_positions</code></td>
+<td>Budgeted positions unfilled that quarter</td>
+</tr>
+<tr>
+<td><code>cases_opened</code></td>
+<td>New client referrals opened that week</td>
+</tr>
+<tr>
+<td><code>cases_closed</code></td>
+<td>Client cases recorded as closed that week</td>
+</tr>
+<tr>
+<td><code>median_intake_wait_days</code></td>
+<td>Median days from referral to first visit, for clients first seen that week</td>
+</tr>
+<tr>
+<td><code>missed_visits</code></td>
+<td>Scheduled visits that did not happen that week</td>
+</tr>
+<tr>
+<td><code>documentation_errors</code></td>
+<td>Visit records flagged by quality review that week</td>
+</tr>
+<tr>
+<td><code>satisfaction_responses</code></td>
+<td>Number of client satisfaction surveys returned that week</td>
+</tr>
+<tr>
+<td><code>client_satisfaction</code></td>
+<td>Average client rating that week, on a 1–5 scale</td>
+</tr>
+</tbody>
+</table></div></section>
+<section class="card"><h2 id="things-worth-knowing">Things worth knowing</h2>
+<ul>
+<li>Data from real organizations is never perfectly clean, and neither is this. Part of your work is finding where it might mislead you.</li>
+<li>Ask your AI analyst what a row is, what kind of variable each column is, and what looks odd. Then check its answers.</li>
+</ul>
+<p>I eagerly await your puzzles.</p></section>
+<div class="pager"><a href="../"><span class="dir">← Back to</span><span class="t">The Riverbend dataset</span></a></div>
+</main>
+<footer class="site"><div class="inner">
+<img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA">
+<div>Models &harr; Data · GSMPR 622A, the integrated course · Data, Statistics, and Decision Science · Fall 2026<br>
+Willamette University · Atkinson Graduate School of Management<br>
+Robert W. Walker · <a href="mailto:rwalker@willamette.edu">rwalker@willamette.edu</a> · I eagerly await your puzzles.</div>
+</div></footer>
+</body>
+</html>
