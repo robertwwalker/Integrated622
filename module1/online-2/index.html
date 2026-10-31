@@ -97,7 +97,7 @@
    Two or three key variables, each described with the five questions,
    and one sentence each: does it look like my model predicted?<button class="copy">Copy</button></div>
   <p class="muted">Due on Canvas before your Module 2 kick-off: <strong>Tue Nov 3, 6:00 pm (Salem)</strong> or <strong>Wed Nov 4, 6:00 pm (Portland)</strong>. Your pod reviews it within 72 hours.</p>
-  <p><strong>A worked example:</strong> the running example's <a href="../../fernhill/#v1-dm">Data &amp; Methods draft</a>, with its Project Brief and the data behind every number.</p>
+  <p><strong>A worked example:</strong> the running example's <a href="../../fernhill/#v1-dm">Data &amp; Methods draft</a>, with its Project Brief and the data behind every number. <a href="#fernhill">How to read it</a>, below.</p>
 </section>
 
 <section class="card">
@@ -141,6 +141,29 @@
     <div class="prompt">My model predicts [your prediction from the Project Brief]. Based only on the descriptions above, does the data look the way the model says it should? What can a description of one variable at a time not tell me?<button class="copy">Copy</button></div>
     <p class="think">Describing one variable at a time can't show you a relationship. That's Module 2. Write one honest sentence for each variable: is it consistent with your model, inconsistent, or not yet able to say?</p>
   </div>
+</section>
+
+<section class="card" id="fernhill">
+  <h2>Supplement: a complete example, Fernhill Software</h2>
+  <p>The permit office in the videos shows the moves. <a href="../../fernhill/">Fernhill</a> shows the finished draft: a fictional software firm whose project is built in the open, alongside yours. <strong>Version 1</strong> is posted now, with its Project Brief, a Data &amp; Methods draft written to the rubric, and the data behind every number. Read its draft next to the template above, one section at a time.</p>
+  <div class="tw"><table>
+    <tr><th>Your draft's section</th><th>Fernhill's, and what to notice</th></tr>
+    <tr><td><strong>1. Unit of observation</strong></td><td><a href="../../fernhill/#unit-of-observation">One product team in one quarter.</a> It also checks that a row is what the model is about: a team has one manager at a time, so a row is one manager's quarter.</td></tr>
+    <tr><td><strong>2. Variable table</strong></td><td><a href="../../fernhill/#variable-table">Six rows.</a> Look at each kind (labels, yes/no, a measurement that is a share), and at how specific "what it misses" is.</td></tr>
+    <tr><td><strong>3. Data source</strong></td><td><a href="../../fernhill/#data-source">Simulated, and says so.</a> Its wording differs from your template's sentence on purpose: Fernhill's analyst doesn't know the model its data came from. Yours come from your own model, so use the template's sentence. Notice that it left out records its model didn't call for, and said so.</td></tr>
+    <tr><td><strong>4. Quality concern</strong></td><td><a href="../../fernhill/#quality-concern">One concern, chosen.</a> What it would look like if it were happening, and what the analyst will do about it, including refusing to fill in blanks.</td></tr>
+    <tr><td><strong>5. First description</strong></td><td><a href="../../fernhill/#first-description">The five questions</a> for each key variable, the choices reported, and a sentence about the prediction that says "not yet able to say" when one variable can't settle it.</td></tr>
+  </table></div>
+  <h3>Run Step 3 on it yourself</h3>
+  <p>Download <a href="../../fernhill/data/fernhill_v1.csv" download>fernhill_v1.csv</a>, start a new Gemini chat with your <strong>Willamette</strong> account, upload it, and paste:</p>
+  <div class="prompt">I've attached fernhill_v1.csv: Fernhill Software's records, one row per product team per quarter. Describe delivered_share: what kind of variable it is, how many values there are including blanks, the middle (the median, and the mean only if a mean makes sense for this kind of variable), how spread out it is, and its shape, with a chart. Tell me any choices you made, such as dropping blanks or zeros.<button class="copy">Copy</button></div>
+  <p class="think">Do Gemini's numbers match the draft's? If they don't, find out why before you trust either.</p>
+  <h3>How to use it, and how not to</h3>
+  <ul>
+    <li><strong>It shows the form. It is not an answer key.</strong> Your organization, model and data are your own. Copy the habits, not the content. Leaning on it a bit is fine.</li>
+    <li><strong>Its model gets tested.</strong> Careful work can still rest on a model that turns out to be incomplete. When the evidence calls for a revision, the revision is posted with what was learned and why; the <a href="../../fernhill/">Fernhill page</a> carries the schedule.</li>
+    <li><strong>Doing this alone is the point.</strong> Nothing here needs a partner; if you have time before your draft is due, run the prompt and read one section against your own.</li>
+  </ul>
 </section>
 
 <section class="card">
