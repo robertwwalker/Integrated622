@@ -46,7 +46,7 @@
 <h1>Fernhill Software: a project in the open</h1>
 <p class="lede">One fictional project, built alongside yours. Each draft is posted as yours comes due, and revised in the open when the evidence calls for it.</p>
 <div class="badges"><span class="badge">Version 2 of 3: the trial designer's model</span><span class="badge">Through the Results draft</span><span class="badge">Next update: Thu Nov 19</span><a class="badge" href="data/fernhill_v2.csv" download>Download the data</a></div></div>
-<section class="card">
+<section class="card" id="v1-start"><h2>Looking for version 1? <span class="fh-ver">retired</span></h2><p>Version 1, the enthusiast's model, is complete and unchanged, and has been replaced by version 2 below. If you only need version 1, for instance to run its Results draft through <a href="../skeptic/">the Skeptic</a> or to check one of its numbers, start here.</p><p><a class="badge" href="files/v1-results.pdf" download>Results draft (PDF)</a> <a class="badge" href="files/v1-data-and-methods.pdf" download>Data &amp; Methods draft (PDF)</a> <a class="badge" href="files/v1-brief.pdf" download>Project Brief (PDF)</a> <a class="badge" href="data/fernhill_v1.csv" download>Download fernhill_v1.csv</a></p><p class="muted">Or read it on this page (each link opens version 1 below): <a href="#v1-results">Results draft</a> · <a href="#v1-dm">Data &amp; Methods draft</a> · <a href="#v1-brief">Project Brief</a>. The prompts that wrote them: <a href="#v1-prompts-results">Results prompts</a> · <a href="#v1-prompts-dm">Data &amp; Methods prompts</a>.</p></section><section class="card">
   <h2>How to use this page</h2>
   <ul>
     <li><strong>It shows the form.</strong> Each draft follows the course template and is written to the rubric, so you can see what a complete section looks like.</li>
@@ -628,7 +628,7 @@ before-period, split the waits by difficulty, used the median, and kept
 the long waits it called outliers.</p>
 </section>
 <section class="card" id="data"><h2>The data <span class="fh-ver">version 2</span></h2><p><a class="badge" href="data/fernhill_v2.csv" download>Download fernhill_v2.csv</a> <span class="muted">1,440 rows × 21 columns, with one row per team per quarter, July 2023 to June 2026.</span></p><p>Fernhill is a useful fiction, so these records are simulated. Every number in the drafts above comes from this file, so you can check any of them with Gemini.</p><details><summary>What each column records</summary><div class="tw"><table><tr><th>Column</th><th>Kind</th><th>What it records</th></tr><tr><td><code>team_id</code></td><td>Labels</td><td>The team, T001 to T120</td></tr><tr><td><code>quarter</code></td><td>Dates and times</td><td>2023Q3 to 2026Q2</td></tr><tr><td><code>period</code></td><td>Labels</td><td>pre means July 2023 to June 2025, and pilot is Fernhill&#x27;s planning label for July 2025 onward</td></tr><tr><td><code>arm</code></td><td>Labels</td><td>The arm the team was assigned by lot, either EM_noAI, EM_AI or ML_AI</td></tr><tr><td><code>ai_access</code></td><td>Yes/No</td><td>AI tools licensed to the team</td></tr><tr><td><code>team_size</code></td><td>Counts</td><td>Engineers on the team</td></tr><tr><td><code>manager_type</code></td><td>Labels</td><td>engineer (an engineer promoted to manager) or professional (a manager hired on people skill)</td></tr><tr><td><code>tech_score</code></td><td>Measurement</td><td>The manager&#x27;s technical assessment at hire, 0 to 100 (a coding test for engineers, and a literacy test for professional managers)</td></tr><tr><td><code>people_rating</code></td><td>Measurement (a share)</td><td>Share of favorable answers about the manager on the eight Project Oxygen behaviors, from the team&#x27;s upward feedback survey. It is blank if the team didn&#x27;t answer</td></tr><tr><td><code>lead_former_manager</code></td><td>Yes/No</td><td>Whether the team&#x27;s technical lead used to be its manager. It is blank where there is no lead</td></tr><tr><td><code>hard_plan</code></td><td>Yes/No</td><td>Work rated hard at quarterly planning, before it started. It is blank before July 2025</td></tr><tr><td><code>hard_close</code></td><td>Yes/No</td><td>Work rated hard at the quarter-close review, after it ended</td></tr><tr><td><code>escalations</code></td><td>Counts</td><td>Technical questions the team sent up for a decision</td></tr><tr><td><code>esc_open_at_close</code></td><td>Counts</td><td>Escalations still unanswered at the quarter&#x27;s close</td></tr><tr><td><code>esc_wait_hrs</code></td><td>Measurement</td><td>Typical hours an escalation waited for an answer. A few are blank</td></tr><tr><td><code>blocked_hours</code></td><td>Measurement</td><td>Typical hours a ticket sat blocked on another team</td></tr><tr><td><code>lead_departed</code></td><td>Yes/No</td><td>The lead (or, under an engineer-manager, the most senior engineer) left this quarter</td></tr><tr><td><code>eng_departures</code></td><td>Counts</td><td>Other engineers who left this quarter</td></tr><tr><td><code>milestones_committed</code></td><td>Counts</td><td>Milestones the team committed to at planning</td></tr><tr><td><code>milestones_delivered</code></td><td>Counts</td><td>Of those, milestones delivered by their dates</td></tr><tr><td><code>delivered_share</code></td><td>Measurement (a share)</td><td>Delivered ÷ committed, the outcome</td></tr></table></div></details><p><a class="badge" href="data/fernhill_ai_usage.csv" download>Download fernhill_ai_usage.csv</a> <span class="muted">IT's usage logs, with one row per team per pilot quarter (480 rows × 3 columns). <code>ai_active_share</code> is the share of a team's engineers active on licensed AI tools in a typical week, and it is 0 where a team has no license. Join it to the main file on <code>team_id</code> and <code>quarter</code>.</span></p><p><strong>Work it yourself:</strong> the prompts used to write the drafts are just below, in order. Do Gemini's numbers match the draft? If not, find out why before you trust either.</p></section>
-<section class="card" id="v2-prompts"><h2>Work it yourself: the Data &amp; Methods prompts <span class="fh-ver">version 2</span></h2><p>These are the prompts used to write the Data &amp; Methods draft
+<section class="card" id="v2-prompts-dm"><h2>Work it yourself: the Data &amp; Methods prompts <span class="fh-ver">version 2</span></h2><p>These are the prompts used to write the Data &amp; Methods draft
 above, in order. Download <code>fernhill_v2.csv</code>, start a new
 Gemini chat with your Willamette account, upload the file, and paste
 each prompt into the same chat. (The Results prompts that follow
@@ -898,7 +898,7 @@ difference between arms, a change from the before-period, how a wait
 relates to delivery, or whether a few extreme values belong to one arm.
 That is exactly what the Results prompts are for.</p>
 </details></div></section>
-<section class="card" id="v2-prompts"><h2>Work it yourself: the Results prompts <span class="fh-ver">version 2</span></h2><p>These are the prompts used to write the Results draft above, in
+<section class="card" id="v2-prompts-results"><h2>Work it yourself: the Results prompts <span class="fh-ver">version 2</span></h2><p>These are the prompts used to write the Results draft above, in
 order, in the same chat as the Data &amp; Methods prompts (or a new one
 with <code>fernhill_v2.csv</code> uploaded again, and
 <code>fernhill_ai_usage.csv</code> before P16). <strong>Think about the
@@ -1606,7 +1606,7 @@ to say. The model predicts a gain on hard quarters too, and 619 hard and
 and histograms. I added a milestone-weighted mean, and rejected its
 offer to fill blank ratings, since a filled-in rating is a measurement
 nobody took.</p>
-</div><div class="fh-earlier" id="v1-prompts"><h3>Work it yourself: the Data &amp; Methods prompts <span class="fh-ver">version 1</span></h3><p>These are the prompts used to write the Data &amp; Methods draft
+</div><div class="fh-earlier" id="v1-prompts-dm"><h3>Work it yourself: the Data &amp; Methods prompts <span class="fh-ver">version 1</span></h3><p>These are the prompts used to write the Data &amp; Methods draft
 above, in order. Download the data, start a new Gemini chat with your
 Willamette account, upload the file, and paste each prompt into the same
 chat. <strong>Think about the question before you open “What we
@@ -2007,7 +2007,7 @@ average, the median and the most common band tell different stories,
 which is the point of section 3, and I would rather make that point than
 keep to the limit. Under the rubric that costs the draft something, and
 I accept the cost.</p>
-</div><div class="fh-earlier" id="v1-prompts"><h3>Work it yourself: the Results prompts <span class="fh-ver">version 1</span></h3><p>These are the prompts used to write the Results draft above, in
+</div><div class="fh-earlier" id="v1-prompts-results"><h3>Work it yourself: the Results prompts <span class="fh-ver">version 1</span></h3><p>These are the prompts used to write the Results draft above, in
 order, in the same chat as the Data &amp; Methods prompts (or a new one
 with the data uploaded again). <strong>Think about the question before
 you open “What we found.”</strong> Gemini’s charts and wording will
@@ -2179,6 +2179,12 @@ model doesn’t mention either. The draft records them as noticed but not
 pursued, and what to do about them is the question the next version has
 to answer.</p>
 </details></div></div></details></section>
+<script>
+(function(){function openTo(){var h=location.hash;if(h.length<2)return;var el=document.getElementById(decodeURIComponent(h.slice(1)));if(!el)return;
+for(var n=el.parentElement;n;n=n.parentElement){if(n.tagName==='DETAILS')n.open=true;}
+setTimeout(function(){el.scrollIntoView();},0);}
+window.addEventListener('hashchange',openTo);document.addEventListener('DOMContentLoaded',openTo);})();
+</script>
 </main>
 <footer class="site"><div class="inner">
 <img src="../assets/wu-mba-signature.png" alt="Willamette University MBA">
