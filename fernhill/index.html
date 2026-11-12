@@ -527,11 +527,11 @@ prediction</h3>
 <p>My question is causal. With AI held fixed, does the new structure
 raise delivery (the share of a team’s committed milestones delivered by
 their dates) above engineer-managers’, and what does AI alone add? The
-lot is what would let me call the differences effects. This draft
-answers the descriptive question of how the arms compare, and it leaves
-the causal claim for Module 3. My model predicts AI adds about 8 points
-on easy quarters and little on hard ones, and the new structure shortens
-waits and adds about 5 points on hard quarters.</p>
+lot would let me call differences effects, but this draft answers only
+the descriptive question of how the arms compare and leaves the causal
+claim for Module 3. My model predicts AI adds about 8 points on easy
+quarters and little on hard ones, and the new structure shortens waits
+and adds about 5 points on hard quarters.</p>
 <h3 id="the-charts">2. The charts</h3>
 <p>The first chart compares the three arms.</p>
 <div class="column-margin">
@@ -564,14 +564,17 @@ points on easy quarters and 4.1 on hard.</p>
 <p>On the structure, with AI in both arms, the new structure delivered
 0.8 points less on easy quarters and 8.9 less on hard ones (9.4 against
 the before-periods), over 320 team-quarters from 80 teams. It holds by
-team (teams moved 0.2 points down under engineer-managers with AI, 5.8
-down in the new structure) and without the first pilot quarter (7.3
-points less on hard quarters).</p>
+team (0.2 points down under engineer-managers with AI, 5.8 in the new
+structure) and without the first pilot quarter (7.3 points less on hard
+quarters). <strong>The average and the median disagree on
+delivery.</strong> The new structure’s pilot median is 71.4%, level with
+engineer-managers with AI and 1.6 points above its own before-period,
+yet its average is 61.7% against 66.7%. The weak quarters pull the
+average down, and the median team still fell 5.7 points.</p>
 <p>On hard quarters the new structure’s median wait was shorter (24.6
 hours against 27.8, with 2 blank waits left out), though its average was
 longer (83.0 against 29.4). People-skill ratings were higher under
-professional managers (0.78 against 0.69, with 33 blank and left
-out).</p>
+professional managers (0.78 against 0.69, 33 blank left out).</p>
 <p><strong>And the new structure’s hard quarters split.</strong> As many
 delivered 70% or more as under engineer-managers with AI (20 against
 19), but nearly twice as many delivered under 30% (23 against 12). The
@@ -583,11 +586,10 @@ engineer-managers with AI (55.3%).</p>
 <p>The Brief named three ways the model would be wrong, and two hold.
 AI’s gain is nearly as large on hard quarters as easy (9.5 points
 against 10.7, and 4.1 against 5.2 after the before-periods), so the
-first holds, though teams working harder while watched would predict it
-too. The new structure’s median wait on hard quarters is shorter, so the
-second doesn’t hold, but its average is longer. At the median its waits
-are shorter yet its delivery is 8.9 points lower, so the third
-holds.</p>
+first holds. The new structure’s median wait on hard quarters is
+shorter, so the second doesn’t hold, but its average is longer. At the
+median its waits are shorter yet its delivery is 8.9 points lower, so
+the third holds.</p>
 <p>But the median hides something. The shortfall sits in the 14 hard
 quarters with a wait over 100 hours, and the rest delivered as
 engineer-managers with AI did, so the queue may limit delivery after
@@ -607,10 +609,9 @@ without (55.3% against 45.8%).</p>
 shrinks hard–easy differences, so the shortfall is, if anything,
 understated. Noticed, not pursued. Leads left 11.2% of new-structure
 teams a quarter, against 3% to 4% elsewhere, and all 18 who left had
-been the team’s manager. IT’s logs show no licensed AI use in the no-AI
-arm (0 in 160 team-quarters).</p>
+been the team’s manager.</p>
 <p><strong>The decision needs a model that explains,</strong> because
-the average hides a split, and only knowing what splits it can say where
+the average hides a split, and only knowing what splits it says where
 the structure would work.</p>
 <p><strong>What would settle it is a better diagram, not more of the
 same data.</strong> The shortfall belongs to the new structure on hard
@@ -618,14 +619,13 @@ work, and within it to quarters whose waits explode, not to AI. Every
 escalation there passes between the lead, who judges the technical path,
 and the manager, who sets priorities, and our diagram has no box for
 that. Module 3 draws the diagram, and that box is where to look first,
-measured from the first month, before results and departures reshape
-it.</p>
+measured from the first month.</p>
 <h3 id="note-on-ai-use">Note on AI use</h3>
 <p>I used Gemini (Willamette account) for the comparisons and charts.
 Asked early, it judged the wait prediction contradicted from the
-all-quarter average wait (53.2 hours against 22.4). I added each arm’s
-before-period, split the waits by difficulty, used the median, and kept
-the long waits it called outliers.</p>
+all-quarter average wait. I added each arm’s before-period, split the
+waits by difficulty, used the median, and kept the long waits it called
+outliers.</p>
 </section>
 <section class="card" id="data"><h2>The data <span class="fh-ver">version 2</span></h2><p><a class="badge" href="data/fernhill_v2.csv" download>Download fernhill_v2.csv</a> <span class="muted">1,440 rows × 21 columns, with one row per team per quarter, July 2023 to June 2026.</span></p><p>Fernhill is a useful fiction, so these records are simulated. Every number in the drafts above comes from this file, so you can check any of them with Gemini.</p><details><summary>What each column records</summary><div class="tw"><table><tr><th>Column</th><th>Kind</th><th>What it records</th></tr><tr><td><code>team_id</code></td><td>Labels</td><td>The team, T001 to T120</td></tr><tr><td><code>quarter</code></td><td>Dates and times</td><td>2023Q3 to 2026Q2</td></tr><tr><td><code>period</code></td><td>Labels</td><td>pre means July 2023 to June 2025, and pilot is Fernhill&#x27;s planning label for July 2025 onward</td></tr><tr><td><code>arm</code></td><td>Labels</td><td>The arm the team was assigned by lot, either EM_noAI, EM_AI or ML_AI</td></tr><tr><td><code>ai_access</code></td><td>Yes/No</td><td>AI tools licensed to the team</td></tr><tr><td><code>team_size</code></td><td>Counts</td><td>Engineers on the team</td></tr><tr><td><code>manager_type</code></td><td>Labels</td><td>engineer (an engineer promoted to manager) or professional (a manager hired on people skill)</td></tr><tr><td><code>tech_score</code></td><td>Measurement</td><td>The manager&#x27;s technical assessment at hire, 0 to 100 (a coding test for engineers, and a literacy test for professional managers)</td></tr><tr><td><code>people_rating</code></td><td>Measurement (a share)</td><td>Share of favorable answers about the manager on the eight Project Oxygen behaviors, from the team&#x27;s upward feedback survey. It is blank if the team didn&#x27;t answer</td></tr><tr><td><code>lead_former_manager</code></td><td>Yes/No</td><td>Whether the team&#x27;s technical lead used to be its manager. It is blank where there is no lead</td></tr><tr><td><code>hard_plan</code></td><td>Yes/No</td><td>Work rated hard at quarterly planning, before it started. It is blank before July 2025</td></tr><tr><td><code>hard_close</code></td><td>Yes/No</td><td>Work rated hard at the quarter-close review, after it ended</td></tr><tr><td><code>escalations</code></td><td>Counts</td><td>Technical questions the team sent up for a decision</td></tr><tr><td><code>esc_open_at_close</code></td><td>Counts</td><td>Escalations still unanswered at the quarter&#x27;s close</td></tr><tr><td><code>esc_wait_hrs</code></td><td>Measurement</td><td>Typical hours an escalation waited for an answer. A few are blank</td></tr><tr><td><code>blocked_hours</code></td><td>Measurement</td><td>Typical hours a ticket sat blocked on another team</td></tr><tr><td><code>lead_departed</code></td><td>Yes/No</td><td>The lead (or, under an engineer-manager, the most senior engineer) left this quarter</td></tr><tr><td><code>eng_departures</code></td><td>Counts</td><td>Other engineers who left this quarter</td></tr><tr><td><code>milestones_committed</code></td><td>Counts</td><td>Milestones the team committed to at planning</td></tr><tr><td><code>milestones_delivered</code></td><td>Counts</td><td>Of those, milestones delivered by their dates</td></tr><tr><td><code>delivered_share</code></td><td>Measurement (a share)</td><td>Delivered ÷ committed, the outcome</td></tr></table></div></details><p><a class="badge" href="data/fernhill_ai_usage.csv" download>Download fernhill_ai_usage.csv</a> <span class="muted">IT's usage logs, with one row per team per pilot quarter (480 rows × 3 columns). <code>ai_active_share</code> is the share of a team's engineers active on licensed AI tools in a typical week, and it is 0 where a team has no license. Join it to the main file on <code>team_id</code> and <code>quarter</code>.</span></p><p><strong>Work it yourself:</strong> the prompts used to write the drafts are just below, in order. Do Gemini's numbers match the draft? If not, find out why before you trust either.</p></section>
 <section class="card" id="v2-prompts-dm"><h2>Work it yourself: the Data &amp; Methods prompts <span class="fh-ver">version 2</span></h2><p>These are the prompts used to write the Data &amp; Methods draft
@@ -1383,6 +1383,55 @@ structure every escalation passes between the lead and the manager, and
 this file has no box for what happens there. The draft records it as
 noticed, not pursued, and the next version has to decide what to
 measure.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P19</span><h3>Do the average and the median agree on delivery?</h3></div><div class="prompt">For each arm, give the average and the median of delivered_share in the eight before quarters and in the four pilot quarters, counting each team-quarter once. Then tell me, for each arm, whether the average and the median moved the same way from before to the pilot.<button class="copy" type="button">Copy</button></div><p class="think">If an average falls and a median doesn&#x27;t, what does that say about the shape of the distribution? Which arm&#x27;s story changes, and what in this file could be pulling its average down?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Before: average</th>
+<th>Before: median</th>
+<th>Pilot: average</th>
+<th>Pilot: median</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EM_noAI</td>
+<td>61.5%</td>
+<td>64.0%</td>
+<td>57.0%</td>
+<td>59.2%</td>
+</tr>
+<tr>
+<td>EM_AI</td>
+<td>66.9%</td>
+<td>70.6%</td>
+<td>66.7%</td>
+<td>71.4%</td>
+</tr>
+<tr>
+<td>ML_AI</td>
+<td>67.4%</td>
+<td>69.8%</td>
+<td>61.7%</td>
+<td>71.4%</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>For the new structure the middle held and the average
+fell.</strong> Its pilot median (71.4%) is level with engineer-managers
+with AI and 1.6 points above its own before-period, while its average is
+5.1 points lower than theirs (5.07 before rounding) and fell 5.8 from
+before. The weak quarters pull the average down, which is the long tail
+the histogram of hard quarters shows, and it is version 1’s lesson
+again, that an average and a median agree only when a distribution is
+symmetric. <strong>A second view keeps the story honest.</strong> By
+team, the median change is still 5.7 points down (P12), so the typical
+team fell even though the typical team-quarter did not. That is the
+middle of the changes, not the change in the middle. <strong>This prompt
+was added after our November 10 run, so the chat behind the share link
+does not contain it.</strong> The table is from the data. Run it in your
+chat and compare, and see whether Gemini says which arm’s story
+changes.</p>
 </details></div></section>
 <section class="card" id="version-1"><h2>Earlier: version 1, the enthusiast's model</h2><p>This is a complete project through its Results draft, with careful, honest work on a model that turned out to be incomplete, and the reason the next version exists. It stays here because we learn from mistakes too.</p><details><summary>Show version 1</summary><p><a href="data/fernhill_v1.csv" download>Download fernhill_v1.csv</a></p><div class="fh-earlier" id="v1-brief"><h3>Project Brief <span class="fh-ver">version 1</span></h3><p><a class="badge" href="files/v1-brief.pdf" download>Download the PDF</a> <span class="muted">The same Brief as a two-page document.</span></p><h3 id="the-organization">1. The organization</h3>
 <p>Fernhill Software is a useful fiction, a business-software firm with
