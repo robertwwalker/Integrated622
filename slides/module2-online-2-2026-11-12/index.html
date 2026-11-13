@@ -1036,19 +1036,19 @@ Robert W. Walker
 </tr>
 <tr class="odd">
 <td>6:50</td>
-<td><strong>Work session:</strong> your Results draft, four steps, at your own pace</td>
+<td><strong>Live build:</strong> Fernhill’s Results draft, prompt by prompt, and you play along</td>
 </tr>
 <tr class="even">
-<td>7:35</td>
-<td><strong>Pod board:</strong> your association, and the strongest reason it might not be causal</td>
+<td>7:25</td>
+<td><strong>Launch:</strong> your own Results draft, the outline, the four steps, and the common failures</td>
 </tr>
 <tr class="odd">
-<td>7:55</td>
-<td><strong>Module 3 preview</strong></td>
+<td>7:45</td>
+<td><strong>What’s next,</strong> and your work session from here</td>
 </tr>
 <tr class="even">
-<td>8:15</td>
-<td>Done (may run to 8:30)</td>
+<td><strong>8:00</strong></td>
+<td><strong>Done.</strong> The work session is the follow-on, at your own pace</td>
 </tr>
 </tbody>
 </table>
@@ -1058,7 +1058,6 @@ Robert W. Walker
 <ul>
 <li><strong>Use your Willamette account</strong> in Gemini, not a personal Gmail.</li>
 <li><strong>Catching up later?</strong> The page has everything: the five reasons, the demo prompts with what we found, the four steps.</li>
-<li><strong>Your pod board:</strong> post by <strong>Saturday night</strong>, reply to the two pod-mates after you by <strong>Sunday night</strong>.</li>
 <li><strong>Module 2 exercise:</strong> due <strong>Sun Nov 15</strong>, 11:59 pm. Part 6 uses tonight’s ideas.</li>
 <li><strong>Pulse form:</strong> it closes <strong>Fri Nov 13</strong>. It takes a couple of minutes and it decides who reads your pre-final.</li>
 </ul>
@@ -1250,9 +1249,74 @@ Robert W. Walker
 <p><strong>What would change your mind? What would you do if you did not use it?</strong></p>
 <p><em>Fisher’s point again. This comparison is the one the rollout left behind, not one anyone designed.</em></p>
 </section>
-<section id="work-session" class="slide level2" data-background-color="#1c5253">
-<h2>Work session</h2>
-<p><em>6:50 to 7:35 · your Results draft, at your own pace</em></p>
+<section id="live-build" class="slide level2" data-background-color="#1c5253">
+<h2>Live build</h2>
+<p><em>6:50 to 7:25 · Fernhill’s Results draft, the charts first, and you play along</em></p>
+</section>
+<section id="set-up-then-play-along" class="slide level2 smaller">
+<h2>Set up, then play along</h2>
+<p>Open a <strong>new Gemini chat</strong> with your <strong>Willamette</strong> account and upload <strong><code>fernhill_v2.csv</code></strong>, from the <a href="https://robertwwalker.github.io/Integrated622/fernhill/" data-preview-link="false">Fernhill page</a>.</p>
+<p>I paste each prompt into my chat and <strong>you paste it into yours.</strong> Think about the question in bold before the answer appears. Gemini’s wording and charts will differ from mine, but <strong>the numbers should match.</strong> If one doesn’t, that is a check worth running.</p>
+<p>This is <strong>version 2 of Fernhill’s Results draft.</strong> Its prompts, and the draft itself, are on the page for afterward. Keep your charts and answers. They show you what a Results draft is built from, ready for your own.</p>
+</section>
+<section id="f1.-what-is-a-row-and-what-is-compared" class="slide level2 smaller">
+<h2>F1. What is a row, and what is compared?</h2>
+<blockquote>
+<p>Count the team-quarters and the distinct teams in each arm, separately for the periods before and during the pilot. Then tell me whether manager_type and ai_access are the same for every team in each arm during the pilot, and which rows have a value for hard_plan.</p>
+</blockquote>
+<p><strong>The lot assigned teams, not team-quarters. How many independent units does each arm really have?</strong></p>
+</section>
+<section id="f2.-did-the-lot-balance-the-arms" class="slide level2 smaller">
+<h2>F2. Did the lot balance the arms?</h2>
+<blockquote>
+<p>For each arm, give the average delivered_share over the eight quarters before the pilot, with the number of team-quarters.</p>
+</blockquote>
+<p><strong>If teams were assigned by lot, how different would you expect the arms to be before anything changed?</strong></p>
+</section>
+<section id="f3.-the-first-chart" class="slide level2 smaller">
+<h2>F3. The first chart</h2>
+<blockquote>
+<p>Make one dot plot. Put the three arms on the y axis (EM_noAI, EM_AI, ML_AI) and the average delivered_share on the x axis, from 40% to 80%. Use only the pilot quarters and split them by hard_plan, with a filled dot for easy quarters (hard_plan = no) and a hollow dot for hard quarters (hard_plan = yes), joined by a line on each row. On the same row, mark each arm’s average over its eight pre-pilot quarters with a cross, which can’t be split by difficulty. Label every point with its value, add a legend, and tell me what one dot and one cross represent. Then give a table of the nine pilot averages with the number of team-quarters behind each.</p>
+</blockquote>
+<p><strong>What does the cross let you see that the dots alone cannot?</strong> Then write one sentence, <strong>“This chart answers: …”</strong></p>
+</section>
+<section id="f4.-what-the-new-structure-adds" class="slide level2 smaller">
+<h2>F4. What the new structure adds</h2>
+<blockquote>
+<p>Compare ML_AI with EM_AI on average delivered_share in the pilot quarters, separately for easy and hard quarters (hard_plan), raw, and then after subtracting each arm’s own average over its eight pre-pilot quarters. Show the number of team-quarters in each group, and write the comparison as a description, not as an effect.</p>
+</blockquote>
+<p><strong>Would you write that the new structure “hurts hard work”? What would you need to know first?</strong></p>
+</section>
+<section id="f5.-waits-and-which-summary-to-use" class="slide level2 smaller">
+<h2>F5. Waits, and which summary to use</h2>
+<blockquote>
+<p>For hard quarters in the pilot, compare esc_wait_hrs across the three arms. Give the number of values, the number blank, the median, the mean, and the 25th and 75th percentiles.</p>
+</blockquote>
+<p><strong>The model says the new structure shortens waits. Which summary would you use to test that, and what does it mean if two summaries disagree?</strong></p>
+</section>
+<section id="f6.-the-second-chart" class="slide level2 smaller">
+<h2>F6. The second chart</h2>
+<blockquote>
+<p>Draw two histograms side by side for the hard quarters in the pilot, one for EM_AI and one for ML_AI, with delivered_share in ten-point bands on the same x axis (0% to 100%) and the same y axis (counts). Shade the part of each bar that comes from team-quarters with esc_wait_hrs over 100, and use a lighter shade for the rest, with the two team-quarters that have a blank wait counted in the lighter shade. Tell me what one bar represents, and how many team-quarters are in each panel. Then count how many delivered 70% or more and how many delivered under 30%.</p>
+</blockquote>
+<p><strong>Does each panel look like one population or two?</strong> Then write: <strong>“This chart answers: …”</strong></p>
+</section>
+<section id="what-the-build-showed" class="slide level2 smaller">
+<h2>What the build showed</h2>
+<ul>
+<li><strong>F1:</strong> each arm is 40 teams, not 480 team-quarters.</li>
+<li><strong>F2:</strong> a lot can be unlucky, so every gap needs the before-period beside it.</li>
+<li><strong>F3:</strong> the crosses turn a 10-point gap into about 5.</li>
+<li><strong>F4:</strong> “delivered less,” not “hurts.”</li>
+<li><strong>F5:</strong> the median and the mean said opposite things, so the summary you choose is the finding.</li>
+<li><strong>F6:</strong> one arm looked like two populations.</li>
+</ul>
+<p><em>The AI drew both charts and computed every number. Every one of those was a judgment.</em></p>
+<p>Version 2’s finished Results draft, with a PDF, is on the <a href="https://robertwwalker.github.io/Integrated622/fernhill/" data-preview-link="false">Fernhill page</a>. Compare it with yours.</p>
+</section>
+<section id="launch-your-results-draft" class="slide level2" data-background-color="#1c5253">
+<h2>Launch your Results draft</h2>
+<p><em>7:25 to 7:45 · the outline, the four steps, and the common failures. Then the work is yours.</em></p>
 </section>
 <section id="the-results-draft" class="slide level2 smaller scrollable">
 <h2>The Results draft</h2>
@@ -1268,7 +1332,7 @@ Robert W. Walker
 </section>
 <section id="four-steps" class="slide level2 smaller scrollable">
 <h2>Four steps</h2>
-<p>Replace anything in [brackets] with your own project’s details. The AI does the arithmetic; every sentence about what it means is yours. <strong>Work alone, or with a pod-mate if one is free.</strong></p>
+<p>Replace anything in [brackets] with your own project’s details. The AI does the arithmetic; every sentence about what it means is yours. <strong>Work on your own.</strong></p>
 <ol type="1">
 <li><strong>Check the chart against its question.</strong> <em>Here is my question: [your question]. Here is my chart: [describe it, or upload it]. Does this chart answer that question? Is there a chart that would answer it more directly, given that my variables are [kinds]?</em></li>
 <li><strong>Test the association.</strong> <em>My finding is: [your association]. Check it three ways: (1) does it hold within the main groups in my data, such as [a grouping]? (2) does it hold at a different level, such as [people / sites / months]? (3) does it depend on a few rows or one batch of data? Show the numbers and the counts.</em></li>
@@ -1331,23 +1395,9 @@ Robert W. Walker
 </tbody>
 </table>
 </section>
-<section id="pod-board" class="slide level2" data-background-color="#1c5253">
-<h2>Pod board</h2>
-<p><em>7:35 to 7:55</em></p>
-</section>
-<section id="your-pod-board" class="slide level2">
-<h2>Your pod board</h2>
-<p>Post to <strong>your pod’s board</strong> in Canvas:</p>
-<ul>
-<li>Your <strong>association</strong>, in one sentence that claims exactly what the data shows.</li>
-<li><strong>The strongest reason it might not be causal</strong>, and what data would settle it.</li>
-</ul>
-<p><em>Rejections and limits are the richer material.</em> The post is the deliverable. A pod that wants to talk live uses its own Meet link, and no one is required to.</p>
-<p><strong>Post by Saturday night. Reply to the two pod-mates after you by Sunday night.</strong></p>
-</section>
 <section id="module-3-preview" class="slide level2" data-background-color="#1c5253">
 <h2>Module 3 preview</h2>
-<p><em>7:55 to 8:15</em></p>
+<p><em>7:45 to 8:00 · what’s next, and your work session from here</em></p>
 </section>
 <section id="whats-next" class="slide level2 smaller">
 <h2>What’s next</h2>
@@ -1356,18 +1406,25 @@ Robert W. Walker
 <li><strong>Results draft</strong> due before your Module 3 kick-off: Tue Nov 17 (Salem) or Wed Nov 18 (Portland), 6:00 pm. Your pod reviews it within 72 hours.</li>
 <li><strong>Module 3 is Causation.</strong> Module 2 stayed on the first rung of Pearl’s ladder, what goes with what. Module 3 asks what it would take to climb. What happens if we act, and how would you know? <strong>Bring your strongest rival explanation, and your twin: who is your comparison, and why would it have moved the way your group would have without the change? They are where your causal diagram starts.</strong></li>
 <li><strong>Fernhill:</strong> version 2’s Results draft is on the site tonight.</li>
+<li><strong>Pod post 4</strong> is a Canvas task, separate from tonight: your association in one sentence and the strongest reason it might not be causal, due Saturday night, with replies Sunday night. It needs nothing from tonight beyond your own draft.</li>
 <li><strong>The recording</strong> will be on the Online 2 page and in Canvas.</li>
 </ul>
 </section>
-<section id="your-project-now" class="slide level2 smaller">
-<h2>Your project, now</h2>
-<p>If you have the time, <strong>keep going on your own project tonight.</strong></p>
+<section id="your-work-session-from-here" class="slide level2 smaller">
+<h2>Your work session, from here</h2>
+<p><strong>The meeting ends at 8:00. The work session is the follow-on.</strong> Complete and draft your own Results, with the outline and the four steps, at your own pace and alone.</p>
 <ul>
-<li>Rerun step 3 of the four steps on a <strong>second pair of variables</strong>, or on your strongest rival.</li>
+<li>Rerun step 3 on a <strong>second pair of variables</strong>, or on your strongest rival.</li>
 <li>Ask Gemini: <em>what would I expect to see in my data if my strongest rival were true, and can I look?</em></li>
 <li>Draft the <strong>one sentence</strong> your Results can honestly support: what it shows, at what level, and what it does not establish.</li>
 </ul>
-<p><em>No one is waiting on you. Whatever you get to goes to your pod board.</em></p>
+<p><em>If you have the time, start tonight. No one is waiting on you. The Results draft is due Tue Nov 17 (Salem) or Wed Nov 18 (Portland), 6:00 pm.</em></p>
+</section>
+<section id="if-the-data-are-still-a-problem" class="slide level2">
+<h2>If the data are still a problem</h2>
+<p><strong>If there are still issues with the data to resolve, let’s get on the calendar as soon as possible.</strong></p>
+<p><a href="https://calendar.app.google/N364Xomvh9udRFaL9" data-preview-link="false">Book a time: calendar.app.google/N364Xomvh9udRFaL9</a></p>
+<p><em>Or email me at rwalker@willamette.edu.</em></p>
 </section>
 <section id="questions" class="slide level2 center">
 <h2>Questions</h2>
