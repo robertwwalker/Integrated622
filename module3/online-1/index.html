@@ -24,10 +24,10 @@
 <main class="page">
 <nav class="crumbs"><a href="../../">Home</a> › <a href="../../module3/">Module 3</a> › Online 1: causal diagrams</nav>
 <div class="page-head"><div class="eyebrow">Module 3 · Online · both cohorts</div>
-<h1>Online 1: causal diagrams</h1><p class="lede">Causal diagram workshop; what would move you up the ladder; forecasting the effect of a decision</p><div class="badges"><span class="badge">Thu Nov 19, online</span><span class="badge">6:00–7:45 pm</span><span class="badge"><a href="https://meet.google.com/knh-gxyw-uwr">Google Meet</a></span><span class="badge">Recording: posted after the session</span></div></div>
+<h1>Online 1: causal diagrams</h1><p class="lede">Causal diagram workshop; what would move you up the ladder; forecasting the effect of a decision</p><div class="badges"><span class="badge">Thu Nov 19, online</span><span class="badge">6:00–8:00 pm</span><span class="badge"><a href="https://meet.google.com/knh-gxyw-uwr">Google Meet</a></span><span class="badge">Recording: posted after the session</span></div></div>
 <section class="card">
   <h2>Tonight in one sentence</h2>
-  <p>You find the box missing from Fernhill's diagram, test whether Tuesday's SmartShift comparison holds up, ask what it would take to know more and whether that's worth it, turn the answer into a <strong>forecast with a range</strong>, and then, once we close, <strong>start on your own project</strong>: your diagram, your rung, your forecast.</p>
+  <p>You find the box missing from Fernhill's diagram, test whether Tuesday's SmartShift comparison holds up, ask what it would take to know more and whether that's worth it, turn the answer into a <strong>forecast with a range</strong>, and then <strong>start on your own project</strong>: your diagram, your rung, your forecast. Before any of that, you learn to <strong>read a diagram back</strong> and to test what it says must be true.</p>
   <div class="grid2">
     <div class="tile">
       <h3>Joining live</h3>
@@ -38,6 +38,7 @@
       <p>Watch the recording, then work through this page top to bottom. Every activity works on your own time. <strong>Post to your pod's board by Saturday night</strong>, and reply to the two pod-mates after you by Sunday night.</p>
     </div>
   </div>
+  <p class="muted">Slides from the night: <a href="../../slides/module3-online-1-2026-11-19/">Module 3 Online 1: causal diagrams</a>, every slide, to follow along or look again.</p>
 </section>
 
 <section class="card">
@@ -55,13 +56,16 @@
   <h2>Tonight's plan</h2>
   <div class="tw"><table>
     <tr><th>Time</th><th>What</th><th>If you're catching up</th></tr>
-    <tr><td><strong>6:00</strong></td><td>DAGitty in ten minutes: SmartShift's diagram, built live</td><td>Follow the steps below</td></tr>
-    <tr><td><strong>6:10</strong></td><td>Fernhill: the missing box</td><td>Steps F1&ndash;F3</td></tr>
-    <tr><td><strong>6:25</strong></td><td>Does Tuesday's comparison hold up? Demos D1&ndash;D5</td><td>Replay the prompts below</td></tr>
-    <tr><td><strong>7:05</strong></td><td>What would move you up the ladder, and is it worth it?</td><td>The table and activity below</td></tr>
-    <tr><td><strong>7:20</strong></td><td>Forecasting the effect of a decision: SmartShift everywhere?</td><td>The forecast steps below</td></tr>
-    <tr><td><strong>7:35</strong></td><td>Pod board, the final project, and what's next. We close at 7:45</td><td>Post by Saturday night; replies by Sunday night</td></tr>
-    <tr><td><strong>After the session</strong></td><td>Your own project: your diagram, your rung, your forecast. About 35 minutes, on your own time</td><td>Steps W1&ndash;W5; keep going if you have the time</td></tr>
+    <tr><td><strong>6:00</strong></td><td>Reconnect: Tuesday's comparison, and what it assumes</td><td>The first paragraph of "Does Tuesday's comparison hold up?"</td></tr>
+    <tr><td><strong>6:05</strong></td><td>DAGitty in ten minutes: SmartShift's diagram, built live</td><td>Follow the steps below</td></tr>
+    <tr><td><strong>6:15</strong></td><td>Reading a diagram back: paths, adjustment sets, and what must be true</td><td>The section below, with a check you can run</td></tr>
+    <tr><td><strong>6:35</strong></td><td>Fernhill: the missing box</td><td>Steps F1&ndash;F3</td></tr>
+    <tr><td><strong>6:50</strong></td><td>Does Tuesday's comparison hold up? Demos D1&ndash;D5</td><td>Replay the prompts below</td></tr>
+    <tr><td><strong>7:20</strong></td><td>What would move you up the ladder, and is it worth it?</td><td>The table and activity below</td></tr>
+    <tr><td><strong>7:30</strong></td><td>Forecasting the effect of a decision: SmartShift everywhere?</td><td>The forecast steps below</td></tr>
+    <tr><td><strong>7:45</strong></td><td>Your own diagram, at your seat: steps W1&ndash;W3, in quiet</td><td>Steps W1&ndash;W3 below</td></tr>
+    <tr><td><strong>7:55</strong></td><td>The final project, the pod board, and what's next. We close at 8:00</td><td>Post by Saturday night; replies by Sunday night</td></tr>
+    <tr><td><strong>After the session</strong></td><td>Steps W4 and W5: your AI analyst, your rung, your forecast. About 20 minutes, on your own time</td><td>Keep going if you have the time</td></tr>
   </table></div>
 </section>
 
@@ -95,6 +99,48 @@ HR_system -> left_org
     </ul>
     <p>To keep a diagram, take a screenshot, or copy the model code into your notes. Saving to dagitty.net itself needs an internet connection.</p>
   </details>
+</section>
+
+<section class="card" id="reading-back">
+  <h2>Reading a diagram back</h2>
+  <p>DAGitty gives you three things once you have drawn a diagram. <strong>Paths</strong>, every route between the cause and the outcome, some carrying the effect and some carrying bias. <strong>An adjustment set</strong>, what to compare within, if anything works. And <strong>testable implications</strong>, things that must be true in the data <em>if the diagram is right</em>. The first two tell you what to do. The third tells you whether to believe the diagram. Here is what DAGitty says about SmartShift's diagram (the model code above), computed with DAGitty itself.</p>
+
+  <h3>Seven paths from SmartShift to leaving</h3>
+  <div class="tw"><table>
+    <tr><th></th><th>Path</th><th>Kind</th></tr>
+    <tr><td>1</td><td>SmartShift &rarr; overtime &rarr; leaving</td><td><strong>Causal</strong></td></tr>
+    <tr><td>2</td><td>SmartShift &rarr; overtime &rarr; engagement &rarr; leaving</td><td><strong>Causal</strong></td></tr>
+    <tr><td>3</td><td>SmartShift &larr; readiness &rarr; leaving</td><td><strong>Back door</strong>, open</td></tr>
+    <tr><td>4</td><td>SmartShift &larr; readiness &rarr; engagement &rarr; leaving</td><td><strong>Back door</strong>, open</td></tr>
+    <tr><td>5</td><td>SmartShift &larr; site type &rarr; leaving</td><td><strong>Back door</strong>, open</td></tr>
+    <tr><td>6</td><td>SmartShift &rarr; overtime &rarr; engagement &larr; readiness &rarr; leaving</td><td>Blocked at a <strong>collider</strong> (engagement)</td></tr>
+    <tr><td>7</td><td>SmartShift &larr; readiness &rarr; engagement &larr; overtime &rarr; leaving</td><td>Blocked at a <strong>collider</strong> (engagement)</td></tr>
+  </table></div>
+  <p>A causal path starts with an arrow out of SmartShift. A back door starts with an arrow into it.</p>
+
+  <h3>What to compare within</h3>
+  <p>With readiness unmeasured, <strong>DAGitty says no adjustment set exists</strong>: no comparison of measured variables will do, because the back door through readiness stays open. If readiness had been measured, the answer would be to compare within <strong>readiness and site type</strong>. For the <em>direct</em> effect the set would add <strong>overtime</strong>, the mediator. You would not do that for the total effect, because adjusting for the road the effect travels removes the effect.</p>
+
+  <h3>A mediator and a collider</h3>
+  <p>A <strong>mediator</strong> is the road the effect travels (SmartShift &rarr; overtime &rarr; leaving); comparing within it removes part of the effect. A <strong>collider</strong> is where two arrows meet (HR system &rarr; leaving &larr; overtime); comparing within it creates a link that was not there. DAGitty confirms it: the HR system change and overtime are unrelated until you look only at the people who left, and then they are connected. Looking only at people who answered a survey, or only at people who left, is looking within a collider or its child.</p>
+
+  <h3>What must be true if the diagram is right</h3>
+  <p>DAGitty lists <strong>ten testable implications</strong> for this diagram. Three of them: SmartShift and the HR system change are unrelated (the HR change hit every site, whatever it got), site type and overtime are unrelated once you know whether a site got SmartShift, and overtime and whether someone answered the survey are unrelated once you know their engagement. <strong>If one fails in the data, the diagram is wrong.</strong></p>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">T1</span><h3>Test one implication</h3></div>
+    <div class="prompt">Using staff_quarters, take only 2024, before SmartShift started anywhere, and leave out site S6's rows for 2024Q3 and 2024Q4. Compare the average overtime_hours by site type: urban (S1, S2), suburban (S3, S4, S5) and rural (S6, S7, S8), with the number of rows in each. Then tell me whether site type is related to overtime, and what that would mean for a causal diagram in which site type affects who got SmartShift and affects leaving, but is drawn with no arrow into overtime.<button class="copy">Copy</button></div>
+    <p class="think">The diagram says site type does not touch overtime once you know who got SmartShift. Does the data agree?</p>
+    <details><summary>What we found</summary>
+      <div class="tw"><table>
+        <tr><th>Site type</th><th>Average overtime, 2024</th><th>Rows</th></tr>
+        <tr><td>Rural (S6, S7, S8)</td><td><strong>29.9</strong> hours</td><td>414</td></tr>
+        <tr><td>Suburban (S3, S4, S5)</td><td><strong>38.5</strong></td><td>590</td></tr>
+        <tr><td>Urban (S1, S2)</td><td><strong>37.7</strong></td><td>528</td></tr>
+      </table></div>
+      <p><strong>It fails.</strong> Every rural site is below every urban and suburban site, so site type is related to overtime and the diagram is missing an arrow from site type to overtime. Adding it does not change what to adjust for (site type was already in the set), but it changes the story: site type is a cause of overtime, of who got SmartShift, and of leaving. <strong>The habit: draw it, read it back, test one thing it says must be true, and redraw.</strong> Gemini's numbers should match; watch its vocabulary, which may borrow terms (such as "exclusion restriction") that do not describe this.</p>
+    </details>
+  </div>
 </section>
 
 <section class="card" id="fernhill">
@@ -182,7 +228,7 @@ esc_wait_hrs -> delivered_share
     <div class="prompt">Among staff who answered the engagement question at least once in 2024 and at least once in 2025, compare each person's average engagement in 2025 with their average in 2024. Report the average change for people at SmartShift sites and at the other sites, with the number of people in each.<button class="copy">Copy</button></div>
     <p class="think">In Module 2, more people started answering the survey at SmartShift sites. Does the rise in engagement survive looking at the same people?</p>
     <details><summary>What we found</summary>
-      <p>The same people's engagement rose <strong>0.20</strong> at SmartShift sites (131 people) and <strong>0.00</strong> at the others (162 people). The rise isn't just a different group answering. Comparing the same people over time is a comparison of changes too, one person at a time.</p>
+      <p>Grouping people by their 2024 site, the same people's engagement rose <strong>0.18</strong> at SmartShift sites (131 people) and <strong>0.02</strong> at the others (163 people). Grouping them by their 2025 site gives 0.21 and −0.01. The rise isn't just a different group answering. Comparing the same people over time is a comparison of changes too, one person at a time. But 23 people changed sites, so say which rule you used, and notice that Gemini may pick a different one.</p>
     </details>
   </div>
 
@@ -237,8 +283,8 @@ esc_wait_hrs -> delivered_share
 </section>
 
 <section class="card">
-  <h2>Your own project: diagram, rung, forecast (about 35 minutes, after the session)</h2>
-  <p>Fernhill and Riverbend were worked examples. This is yours, and it is work time. <strong>It is not part of the live session: we close at 7:45, and you take this block when you can, tonight or later this week.</strong> Nothing here needs a partner. Some of you will have the time tonight and some won't; <strong>if you have it, keep going past the 35 minutes</strong>. This is the start of your white paper's causal claim, and what you build here is your pod board post, due Saturday night.</p>
+  <h2>Your own project: diagram, rung, forecast</h2>
+  <p>Fernhill and Riverbend were worked examples. This is yours, and it is work time. <strong>Steps W1 to W3 are in the live session, at 7:45, in quiet and at your own seat, about ten minutes. Steps W4 and W5 are after we close, at your own pace, tonight or later this week.</strong> Nothing here needs a partner. Some of you will have the time tonight and some won't; <strong>if you have it, keep going</strong>. This is the start of your white paper's causal claim, and what you build here is your pod board post, due Saturday night.</p>
   <div class="step">
     <div class="step-head"><span class="step-num">W1</span><h3>Build it</h3></div>
     <p>Build your redrawn paper diagram in DAGitty. Mark the change or decision you're evaluating as the <strong>exposure</strong> and your outcome as the <strong>outcome</strong>.</p>
