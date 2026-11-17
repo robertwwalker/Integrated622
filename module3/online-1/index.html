@@ -25,30 +25,323 @@
 <nav class="crumbs"><a href="../../">Home</a> › <a href="../../module3/">Module 3</a> › Online 1: causal diagrams</nav>
 <div class="page-head"><div class="eyebrow">Module 3 · Online · both cohorts</div>
 <h1>Online 1: causal diagrams</h1><p class="lede">Causal diagram workshop; what would move you up the ladder; forecasting the effect of a decision</p><div class="badges"><span class="badge">Thu Nov 19, online</span><span class="badge">6:00–7:45 pm</span><span class="badge"><a href="https://meet.google.com/knh-gxyw-uwr">Google Meet</a></span><span class="badge">Recording: posted after the session</span></div></div>
-<section class="card"><h2>Session plan</h2><p>The plan for this session is posted the week before it begins.</p><h3>Topics</h3><p>Causal diagram workshop; what would move you up the ladder; forecasting the effect of a decision</p><h3>Due</h3><ul><li>Module 3 exercise, Sun Nov 22, 11:59 pm</li></ul></section>
-<section class="card" id="readings">
-  <h2>Read before this session</h2>
-  <p class="muted">This guide is also on the <a href="../readings/#online1">Module 3 readings</a> page, with Thursday's other two readings and the full sequence of what's due.</p>
-  <p>Hubbard, <em>How to Measure Anything: Finding the Value of "Intangibles" in Business</em>, 3rd ed. (Wiley, 2014), chapter 7, "Quantifying the Value of Information."</p>
-  <div class="badges"><span class="badge">Core</span><span class="badge"><a href="https://ebookcentral.proquest.com/lib/willamette/detail.action?docID=1641073">Library ebook</a> (365-day loan)</span><span class="badge">About 50 minutes, with the guide</span></div>
-  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Tonight asks what would move you up Pearl's ladder. Chapter 7 asks the manager's next question: is it worth the climb? More data costs money and time, and it only has value if it might change a decision. Your white paper has to say what it would take to know more; this chapter turns that from a wish into a judgment. It finishes the Hubbard thread from Module 1: chapter 3 (anything that matters can be measured), chapter 4 (define the decision first), chapter 6 (ranges, not points). Skip the arithmetic; the ideas carry.</p>
-  <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>The decision and the doubt (5 minutes)</h3></div>
-    <p>Write the decision your white paper will recommend, in one sentence. Then name the one uncertainty that, if it were resolved, would be most likely to change that recommendation.</p>
-  </div>
-  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
-    <ol>
-      <li><strong>The McNamara fallacy.</strong> The chapter opens with it. State its steps in your own words. Which step is most tempting in your project?</li>
-      <li><strong>The chance of being wrong and the cost of being wrong.</strong> Hubbard combines them into the <em>expected opportunity loss</em>. Say in words what it is. For your decision, what would being wrong cost, and who would pay?</li>
-      <li><strong>The measurement inversion.</strong> Organizations tend to measure what is easy, not what is most uncertain and most consequential. Which variable in your project is easiest to measure, and which matters most? Are they the same?</li>
-      <li><strong>Partial uncertainty reduction.</strong> Why does Hubbard say that a little information is often worth the most? What does that mean for a pilot like SmartShift at three sites?</li>
-      <li><strong>The "epiphany."</strong> What does he say changes once an organization starts asking what information is worth?</li>
-    </ol>
-  </div>
-  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>What it would take to know more (10 minutes)</h3></div>
-    <p>Draft the sentence your white paper needs: the one further measurement that would most improve your recommendation, roughly what it would cost, and whether it is worth it given what being wrong would cost. If the answer is "not worth it," say so; that is a finding too. The loop never closes completely (see <a href="../../module1/projects/">Projects at the boundary</a>); this is how you decide which gap is worth closing next.</p>
+<section class="card">
+  <h2>Tonight in one sentence</h2>
+  <p>You find the box missing from Fernhill's diagram, test whether Tuesday's SmartShift comparison holds up, ask what it would take to know more and whether that's worth it, turn the answer into a <strong>forecast with a range</strong>, and then, once we close, <strong>start on your own project</strong>: your diagram, your rung, your forecast.</p>
+  <div class="grid2">
+    <div class="tile">
+      <h3>Joining live</h3>
+      <p>Have two browser tabs open: <a href="https://dagitty.net/">DAGitty</a>, and Gemini signed in with your <strong>Willamette</strong> account with both Riverbend files uploaded to a new chat. Have your redrawn diagram and your Results draft at hand. Follow along below as we go.</p>
+    </div>
+    <div class="tile">
+      <h3>Catching up later</h3>
+      <p>Watch the recording, then work through this page top to bottom. Every activity works on your own time. <strong>Post to your pod's board by Saturday night</strong>, and reply to the two pod-mates after you by Sunday night.</p>
+    </div>
   </div>
 </section>
 
+<section class="card">
+  <h2>Before you start</h2>
+  <ul class="check">
+    <li><input type="checkbox" id="c0"><label for="c0">Read Hubbard, ch. 7; <em>The Effect</em>, ch. 7; and Bloom, Han, and Liang, with their <a href="../readings/#online1">reading guides</a>.</label></li>
+    <li><input type="checkbox" id="c1"><label for="c1">Open <a href="https://dagitty.net/">DAGitty</a> and click "Launch DAGitty online in your browser." It's free, with no account. You'll draw only diagrams in it, never data.</label></li>
+    <li><input type="checkbox" id="c2"><label for="c2">Open <a href="https://gemini.google.com">Gemini</a> with your <strong>Willamette</strong> account, start a new chat, and upload <a href="../../riverbend/data/staff_quarters.csv" download>staff_quarters.csv</a> and <a href="../../riverbend/data/site_weeks.csv" download>site_weeks.csv</a>.</label></li>
+    <li><input type="checkbox" id="c4"><label for="c4">Read version 2 of <a href="../../fernhill/">Fernhill</a>, the running example (its Brief, Data &amp; Methods and Results draft), and especially section 5 of its Results draft, which says what it cannot settle.</label></li>
+    <li><input type="checkbox" id="c3"><label for="c3">Have the diagram you redrew after reading <em>The Effect</em>, ch. 7, with the cause, the outcome, and the boxes you have data for marked.</label></li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Tonight's plan</h2>
+  <div class="tw"><table>
+    <tr><th>Time</th><th>What</th><th>If you're catching up</th></tr>
+    <tr><td><strong>6:00</strong></td><td>DAGitty in ten minutes: SmartShift's diagram, built live</td><td>Follow the steps below</td></tr>
+    <tr><td><strong>6:10</strong></td><td>Fernhill: the missing box</td><td>Steps F1&ndash;F3</td></tr>
+    <tr><td><strong>6:25</strong></td><td>Does Tuesday's comparison hold up? Demos D1&ndash;D5</td><td>Replay the prompts below</td></tr>
+    <tr><td><strong>7:05</strong></td><td>What would move you up the ladder, and is it worth it?</td><td>The table and activity below</td></tr>
+    <tr><td><strong>7:20</strong></td><td>Forecasting the effect of a decision: SmartShift everywhere?</td><td>The forecast steps below</td></tr>
+    <tr><td><strong>7:35</strong></td><td>Pod board, the final project, and what's next. We close at 7:45</td><td>Post by Saturday night; replies by Sunday night</td></tr>
+    <tr><td><strong>After the session</strong></td><td>Your own project: your diagram, your rung, your forecast. About 35 minutes, on your own time</td><td>Steps W1&ndash;W5; keep going if you have the time</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>DAGitty in ten minutes</h2>
+  <p>DAGitty draws causal diagrams and reads them back to you: given your boxes and arrows, it says which comparisons can estimate the effect you care about. It knows only what you draw. <strong>The arrows are your claims, not its findings.</strong></p>
+  <p>You can draw by clicking on the canvas (Huntington-Klein's <a href="https://www.dagitty.net/learn/primer/Dagitty-Cheat-Sheet.pdf">two-page cheat sheet</a> shows how), or paste a model. Here is SmartShift's diagram as a model. In DAGitty, open the "Model code" panel, replace what's there with this, and click "Update DAG":</p>
+  <div class="prompt">dag {
+SmartShift [exposure]
+left_org [outcome]
+readiness [latent]
+readiness -> SmartShift
+readiness -> engagement
+readiness -> left_org
+site_type -> SmartShift
+site_type -> left_org
+SmartShift -> overtime
+overtime -> engagement
+overtime -> left_org
+engagement -> left_org
+engagement -> answered_survey
+HR_system -> left_org
+}<button class="copy">Copy</button></div>
+  <p class="think">What does DAGitty say about estimating SmartShift's effect on leaving?</p>
+  <details><summary>What we found</summary>
+    <ul>
+      <li><strong>No comparison of measured columns closes the back door.</strong> <em>Readiness</em> is marked latent, meaning unmeasured, and it causes both SmartShift and leaving. Comparing within site type closes one back door, but not that one. That's why Tuesday's move matters: comparing changes removes readiness, <em>if</em> readiness stayed the same between 2024 and 2025.</li>
+      <li><strong>Overtime and engagement are on the path from SmartShift to leaving.</strong> DAGitty won't tell you to compare within them, because they're how SmartShift might work. Comparing within overtime would remove part of the effect you want.</li>
+      <li><strong>The HR system</strong> affects what got recorded as leaving, but it doesn't touch SmartShift, so it isn't a back door. It's a shock to the outcome, which a comparison of changes subtracts out if it hit both groups alike.</li>
+      <li>Delete the <em>readiness</em> box and DAGitty says to compare within site type. That's the diagram the data alone would let you believe.</li>
+    </ul>
+    <p>To keep a diagram, take a screenshot, or copy the model code into your notes. Saving to dagitty.net itself needs an internet connection.</p>
+  </details>
+</section>
+
+<section class="card" id="fernhill">
+  <h2>Fernhill: the missing box (15 minutes)</h2>
+  <p>Fernhill's version 2 ran a fair trial, and its Results draft ends by saying what it cannot settle: the new structure delivers less on hard work, and <strong>the diagram has no box for what happens between the lead, who judges the technical path, and the manager, who sets priorities.</strong> Here is version 2's diagram as a model. In DAGitty, open the "Model code" panel, replace what's there with this, and click "Update DAG":</p>
+  <div class="prompt">dag {
+arm [exposure]
+delivered_share [outcome]
+arm -> manager_type
+arm -> ai_access
+manager_type -> esc_wait_hrs
+manager_type -> delivered_share
+ai_access -> escalations
+escalations -> esc_wait_hrs
+hard_plan -> escalations
+esc_wait_hrs -> delivered_share
+}<button class="copy">Copy</button></div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">F1</span><h3>Read it back</h3></div>
+    <p>What does DAGitty say about estimating the arm's effect on delivery? Why does assignment by lot make that answer so simple?</p>
+    <details><summary>What we found</summary>
+      <p><strong>Nothing needs adjusting.</strong> The lot has no arrows into it, so no back door runs through it and a direct comparison of arms estimates the effect of the arm. That is what randomizing buys. It does not buy an explanation: the diagram says nothing about <em>why</em> hard work delivers less in the new structure.</p>
+    </details>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">F2</span><h3>Draw how one unknown gets resolved</h3></div>
+    <p>Pick one escalated technical unknown in the new structure, with a manager and a lead. In words, trace it from the team to an answer: who touches it, and in what order? Then <strong>add the box or boxes the diagram is missing</strong>, with arrows in and out. Ask of each box: <em>what shapes it? what does it change? does it carry over from one quarter to the next? could Fernhill measure it, and when would it have had to start?</em></p>
+    <p>Mark any box Fernhill has no column for as <strong>latent</strong>, as in the workshop below.</p>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">F3</span><h3>Keep it for tonight</h3></div>
+    <p>Save your model code. <strong>After tonight's session, Fernhill's page posts version 3</strong>: the diagram the firm drew next, and the data it measured. Compare yours with it. You are not being graded on matching it; the question is whether the box you drew is one you could have measured.</p>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Does Tuesday's comparison hold up?</h2>
+  <p>On Tuesday, comparing changes gave SmartShift about <strong>12 fewer overtime hours a quarter</strong> and about <strong>4.2 points less leaving</strong>, relative to the other sites. Each of these demos tests one thing that comparison assumes. Paste each prompt into your Riverbend chat. <strong>Think about the question in bold before you open "What we found."</strong> Gemini's wording will differ from ours, but the numbers should match.</p>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D1</span><h3>Were they parallel before?</h3></div>
+    <div class="prompt">Using staff_quarters, for each quarter show (a) the average overtime_hours, leaving out site S6's rows for 2024Q3 and 2024Q4, and (b) the share of rows with left_org = 1, using every row. Do both separately for the SmartShift sites (S1, S4, S7) and the other five, and chart both as lines by quarter. Then pretend SmartShift started in mid-2024: compare the change from the first half of 2024 to the second half, for the two groups, for both measures.<button class="copy">Copy</button></div>
+    <p class="think">Before SmartShift, did the two groups move together?</p>
+    <details><summary>What we found</summary>
+      <div class="tw"><table>
+        <tr><th>Quarter</th><th>Overtime: SmartShift</th><th>Overtime: others</th><th>Leaving: SmartShift</th><th>Leaving: others</th></tr>
+        <tr><td>2024Q1</td><td>32.2</td><td>37.2</td><td>6.7%</td><td>14.5%</td></tr>
+        <tr><td>2024Q2</td><td>34.5</td><td>38.6</td><td>14.2%</td><td>18.3%</td></tr>
+        <tr><td>2024Q3</td><td>34.0</td><td>37.3</td><td>7.5%</td><td>15.3%</td></tr>
+        <tr><td>2024Q4</td><td>32.1</td><td>38.3</td><td>13.1%</td><td>13.0%</td></tr>
+        <tr><td>2025Q1</td><td>19.3</td><td>35.3</td><td>3.1%</td><td>11.2%</td></tr>
+        <tr><td>2025Q2</td><td>20.7</td><td>36.8</td><td>6.8%</td><td>13.0%</td></tr>
+        <tr><td>2025Q3</td><td>18.0</td><td>38.0</td><td>5.0%</td><td>14.2%</td></tr>
+        <tr><td>2025Q4</td><td>19.9</td><td>34.8</td><td>5.0%</td><td>17.8%</td></tr>
+      </table></div>
+      <p>Overtime ran in parallel through 2024, about 5 hours apart, then the SmartShift sites dropped 13 hours in 2025Q1 and stayed there. The mid-2024 "fake start" gives almost nothing (−0.2 hours). Leaving is noisier: quarters swing by 5 to 7 points at the SmartShift sites, which have about 160 staff, and the fake start gives +2.1 points. Parallel enough to believe the overtime comparison; leaving needs more care.</p>
+      <p>Notice 2025Q1 in the "others" column: leaving dipped at those sites too. That's the HR system change, and the comparison subtracts it out.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D2</span><h3>The broken batch, one more time</h3></div>
+    <div class="prompt">Repeat the comparison of changes for overtime_hours (the SmartShift sites' change from 2024 to 2025, minus the other sites' change), but this time keep every row, including S6's 2024Q3 and 2024Q4. Then do it once more using medians instead of averages.<button class="copy">Copy</button></div>
+    <p class="think">Which way does the answer move?</p>
+    <details><summary>What we found</summary>
+      <p>With S6's broken quarters in, the other sites' 2024 average jumps to 75.4 hours, so their "fall" to 36.2 looks enormous. The difference in changes flips from <strong>−12.1 to +25.5 hours</strong>: SmartShift would appear to <em>raise</em> overtime. Medians are steadier, about −10.5. <strong>A causal estimate inherits every problem in the data underneath it.</strong> Module 1's audit wasn't a warm-up.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D3</span><h3>How sure? Placebo sites</h3></div>
+    <div class="prompt">There are 56 ways to pick three of Riverbend's eight sites. For every one of them, pretend those three sites got SmartShift and compute the same comparison of changes, for overtime (leaving out S6's 2024Q3 and 2024Q4) and for the share leaving (using every row). Where do S1, S4, and S7 rank among the 56? Show the range.<button class="copy">Copy</button></div>
+    <p class="think">What would you tell the board about each outcome?</p>
+    <details><summary>What we found</summary>
+      <ul>
+        <li><strong>Overtime:</strong> the real three rank <strong>1st of 56</strong>, the largest drop of any trio. If SmartShift did nothing, a first-place finish would be about a 1-in-56 chance.</li>
+        <li><strong>Leaving:</strong> they rank <strong>6th of 56</strong>. Trios range from about −6 to +6 points, so −4.2 is near the edge, but five made-up trios did as well or better.</li>
+      </ul>
+      <p>For the board: the overtime evidence is strong. The turnover evidence is suggestive and consistent with a real effect, but eight sites can't rule out chance. This is how sure you can be, without a formula.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D4</span><h3>Same people, or different people?</h3></div>
+    <div class="prompt">Among staff who answered the engagement question at least once in 2024 and at least once in 2025, compare each person's average engagement in 2025 with their average in 2024. Report the average change for people at SmartShift sites and at the other sites, with the number of people in each.<button class="copy">Copy</button></div>
+    <p class="think">In Module 2, more people started answering the survey at SmartShift sites. Does the rise in engagement survive looking at the same people?</p>
+    <details><summary>What we found</summary>
+      <p>The same people's engagement rose <strong>0.20</strong> at SmartShift sites (131 people) and <strong>0.00</strong> at the others (162 people). The rise isn't just a different group answering. Comparing the same people over time is a comparison of changes too, one person at a time.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D5</span><h3>One effect, three estimates</h3></div>
+    <div class="prompt">Repeat the comparison of changes for overtime (leaving out S6's 2024Q3 and 2024Q4) and for the share leaving (using every row), separately within each site type: S1 against S2 (urban), S4 against S3 and S5 (suburban), and S7 against S6 and S8 (rural).<button class="copy">Copy</button></div>
+    <p class="think">What would you report?</p>
+    <details><summary>What we found</summary>
+      <div class="tw"><table>
+        <tr><th>Site type</th><th>Overtime, hours per quarter</th><th>Leaving, points</th></tr>
+        <tr><td>Urban (S1 against S2)</td><td>−14.3</td><td>−7.1</td></tr>
+        <tr><td>Suburban (S4 against S3 and S5)</td><td>−14.0</td><td>+0.5</td></tr>
+        <tr><td>Rural (S7 against S6 and S8)</td><td>−9.8</td><td>−9.3</td></tr>
+      </table></div>
+      <p>Overtime falls in every comparison. Leaving falls a lot in two and not at all in the third, where S3, without SmartShift, also improved. Each comparison rests on one or two sites. Report the range, not the most flattering number.</p>
+    </details>
+  </div>
+</section>
+
+<section class="card">
+  <h2>What would move you up the ladder, and is it worth it?</h2>
+  <p>Every design rests on something it can't check from inside. The higher the rung, the less it rests on.</p>
+  <div class="tw"><table>
+    <tr><th>Design</th><th>Rung</th><th>What has to be true</th></tr>
+    <tr><td>Compare adopters with everyone else</td><td>1</td><td>Nothing else differs between them. Rarely true: who chose?</td></tr>
+    <tr><td>Before and after, at the adopters only</td><td>1</td><td>Nothing else changed at the same time. At Riverbend, the HR system did.</td></tr>
+    <tr><td>Compare changes (difference-in-differences)</td><td>toward 2</td><td>The groups would have moved in parallel; nothing else changed at only one of them</td></tr>
+    <tr><td>Roll out in an order chosen by lottery</td><td>2</td><td>Willingness to let chance decide who goes first</td></tr>
+    <tr><td>A randomized experiment (Bloom's hybrid trial)</td><td>2</td><td>Chance decides who gets it; enough people; the same measures for both groups</td></tr>
+    <tr><td>What would have happened to this person</td><td>3</td><td>A causal model whose assumptions can't all be tested</td></tr>
+  </table></div>
+  <p>Then Hubbard's question: <strong>is the climb worth it?</strong> For Riverbend, the five remaining sites will adopt SmartShift in some order anyway. Letting a lottery pick the order costs almost nothing, and within a year it would settle the turnover question that the eight-site comparison can't. That's Hubbard's "partial uncertainty reduction": a little information, where the uncertainty is greatest, is often worth the most.</p>
+  <h3>Your next rung (you'll do this for your own project in W5, below)</h3>
+  <p>One sentence each: the rung your evidence reaches now; the cheapest design that would get you one rung higher; what being wrong would cost, and who would pay; and whether it's worth it. These are sections 3 and 4 of your Interpretation.</p>
+</section>
+
+<section class="card">
+  <h2>Forecasting the effect of a decision</h2>
+  <p>Leadership's real question is whether to roll SmartShift out to the other five sites. That needs an <strong>intervention forecast</strong>, the third kind on the <a href="../../models/">Models</a> page: if we act, what happens? It has four ingredients:</p>
+  <ol>
+    <li><strong>The estimate and its range:</strong> Tuesday's comparison, with D3 and D5 telling you how wide to make it.</li>
+    <li><strong>The mechanism you believe:</strong> your diagram. SmartShift → overtime → leaving.</li>
+    <li><strong>Whether it travels:</strong> the three adopters were the readiest sites in their types. Will it work as well at the others? (Cartwright, before the dry run.)</li>
+    <li><strong>Ranges, not points, run forward:</strong> a Monte Carlo simulation, as in Hubbard, ch. 6, and Module 1.</li>
+  </ol>
+  <div class="prompt">Riverbend's other five sites have about 240 staff, and 134 of them left in 2025. Suppose rolling out SmartShift lowers each quarter's share leaving by somewhere between 0 and 8 points, most likely around 4. Simulate 10,000 rollouts and give me the number of departures avoided next year: the middle, and a 90 percent range. Then list every assumption you made.<button class="copy">Copy</button></div>
+  <p class="think">How would you say the answer to leadership?</p>
+  <details><summary>What we found</summary>
+    <p>About <strong>40 fewer departures</strong> a year in the middle, and roughly <strong>10 to 65</strong> in a 90 percent range. The range is wide because the estimate is uncertain, and it doesn't yet allow for the fact that the five sites are less ready. A good sentence: "If SmartShift is rolled out to the other five sites, we expect between about 10 and 65 fewer departures next year, assuming its effect there is similar to its effect at the three pilot sites, which were the readiest of their types."</p>
+    <p>Back to card 12 from Module 2's question sort. A leaving model, the umbrella, says <em>which</em> staff to check in with. This forecast, the rain dance, says whether <em>SmartShift</em> is worth rolling out. A real decision often needs both.</p>
+  </details>
+</section>
+
+<section class="card">
+  <h2>Your own project: diagram, rung, forecast (about 35 minutes, after the session)</h2>
+  <p>Fernhill and Riverbend were worked examples. This is yours, and it is work time. <strong>It is not part of the live session: we close at 7:45, and you take this block when you can, tonight or later this week.</strong> Nothing here needs a partner. Some of you will have the time tonight and some won't; <strong>if you have it, keep going past the 35 minutes</strong>. This is the start of your white paper's causal claim, and what you build here is your pod board post, due Saturday night.</p>
+  <div class="step">
+    <div class="step-head"><span class="step-num">W1</span><h3>Build it</h3></div>
+    <p>Build your redrawn paper diagram in DAGitty. Mark the change or decision you're evaluating as the <strong>exposure</strong> and your outcome as the <strong>outcome</strong>.</p>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">W2</span><h3>Mark what you can't see</h3></div>
+    <p>Mark every box you have no data for as <strong>latent</strong> (unobserved). Leave them on the diagram; <em>The Effect</em>, ch. 7, says why.</p>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">W3</span><h3>Read it back in words</h3></div>
+    <p>Write DAGitty's answer as a sentence: "To estimate the effect of [my change] on [my outcome], I would have to compare within …" If it says no comparison of measured variables will do, name the unobserved box that blocks it, and the design that would get around it: a comparison of changes? an experiment?</p>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">W4</span><h3>Ask your AI analyst what's missing</h3></div>
+    <div class="prompt">Here is a causal diagram of part of [my organization, briefly and without confidential details], as DAGitty model code: [paste your model code]. The question is whether [my change] affects [my outcome]. What arrows or variables might be missing from this diagram? For each, say why it might matter and what in my data would show whether it does.<button class="copy">Copy</button></div>
+    <p>Accept one suggestion and reject one, with a reason for each, as you did with measures in Module 1. An AI draws arrows fluently; only you can defend them.</p>
+  </div>
+  <div class="step">
+    <div class="step-head"><span class="step-num">W5</span><h3>Your rung and your forecast</h3></div>
+    <p>Do "Your next rung" (above) for your own project: the rung your evidence reaches, the cheapest design one rung higher, what being wrong costs, and whether it is worth it. Then write your <strong>forecast</strong> for your decision as a range, with its main assumption, using the four ingredients above. These are the last three lines of the pod board post below.</p>
+  </div>
+  <p><strong>If a pod-mate is free,</strong> trade diagrams and play the Skeptic for five minutes each: which arrow would you remove, and which back door is still open? <strong>If not,</strong> the prompt in W4 already asks Gemini to play the Skeptic; take its strongest objection to your pod's board.</p>
+  <div class="notice">Leave out names and confidential details about your workplace. Gemini with your Willamette account keeps your data out of model training, but your employer's rules still apply.</div>
+</section>
+
+<section class="card" id="templates">
+  <h2>The final project</h2>
+  <p>Due <strong>Fri Dec 4, 11:59 pm</strong>: a video, the slide deck you present in it, and a white paper, worth <strong>30 points</strong> together, scored holistically as one argument from a baseline of 10 points for each part. A pre-final version of the white paper and slides is due <strong>Thu Dec 3, 6:00 pm</strong>, for your pod to review in that night's session; it's worth <strong>5 points</strong>, 4 for being complete and on time and 1 for its content. The rubrics for both are on Canvas under Files, in the Rubrics folder. Your drafts are already most of it: Theory from the Brief, Data &amp; Methods, Results, and now Interpretation.</p>
+
+  <h3>The Interpretation section</h3>
+  <p>Copy the outline into your own document and fill it in as you go. Tonight's pod post is sections 1, 3, 4, and 5.</p>
+  <div class="prompt">INTERPRETATION
+
+1. My causal claim
+   In words that claim exactly what the evidence supports (Hernán).
+
+2. My causal diagram
+   The model as boxes and arrows, the rival I took most seriously,
+   and the back door I could or could not close.
+
+3. The rung my evidence reaches
+   Seeing, doing, or imagining, and the design that got me there:
+   a comparison of levels, before and after, a comparison of changes,
+   an experiment, or a simulation from a stated model.
+
+4. What it would take to know more
+   The next step up the ladder, roughly what it would cost, and
+   whether it's worth it, given what being wrong would cost (Hubbard).
+
+5. My forecast for the decision
+   If [decision] is adopted, I expect [outcome] to be between
+   [low] and [high] over [time], assuming [the main assumptions,
+   including whether it travels to where it's adopted].<button class="copy">Copy</button></div>
+
+  <h3>The white paper (2–4 pages)</h3>
+  <p>Written for a decision-maker in your organization, not for me. A suggested order:</p>
+  <ol>
+    <li><strong>The decision and your recommendation</strong>, in the first paragraph.</li>
+    <li><strong>The question and the model</strong> (your Brief).</li>
+    <li><strong>The data</strong>, and how it was gathered or simulated (Data &amp; Methods). Say plainly if it's simulated.</li>
+    <li><strong>What the data shows</strong>: one or two charts, each with "This chart answers: …" (Results).</li>
+    <li><strong>What it means</strong>: your claim, its rung, and your diagram (Interpretation).</li>
+    <li><strong>The forecast</strong>: a range, and what it assumes.</li>
+    <li><strong>What it would take to know more.</strong></li>
+    <li><strong>A note on AI</strong>: what your AI analyst did, and how you checked it.</li>
+  </ol>
+
+  <h3>The slides and the video</h3>
+  <p>About 8 to 10 slides for a talk of the length we agree in class: no more than 15 minutes, and probably about 10. A suggested arc: the decision; the model, as a diagram; the data; the key chart; the claim and its rung; the strongest rival; the forecast's range; what would settle it; the recommendation. Put your biggest limitation in the middle, not in the last bullet of the last slide. Record yourself presenting with Google Meet or Google Slides, upload it to Google Drive with your Willamette account, and <strong>open the share link in a private browser window</strong> before you submit it.</p>
+</section>
+
+<section class="card">
+  <h2>Pod board</h2>
+  <p>Post to your pod's board:</p>
+  <ol>
+    <li><strong>Your diagram</strong>, as a DAGitty screenshot.</li>
+    <li><strong>Your causal claim</strong>, in words that claim exactly what your evidence supports.</li>
+    <li><strong>The rung it reaches.</strong></li>
+    <li><strong>The next step</strong> that would take it one rung higher, and whether it's worth the cost.</li>
+    <li><strong>Your forecast</strong> for the decision, as a range, with its main assumption.</li>
+  </ol>
+  <p class="muted">Catching up? Post by Saturday night and reply to the two pod-mates after you in your pod's list by Sunday night. Your pod's board is linked on Canvas.</p>
+</section>
+
+<section class="card">
+  <h2>What's next</h2>
+  <ul>
+    <li><strong>Module 3 exercise:</strong> Parts 4 and 5 use tonight's ideas, and all six parts are ready now. Due <strong>Sun Nov 22, 11:59 pm</strong>.</li>
+    <li><strong>Thanksgiving week</strong> (Nov 23–27): no class and no deadlines. I'm available online; my calendar is open. A good week to draft the white paper and slides, and to do the light <a href="../readings/#dryrun">dry-run readings</a>.</li>
+    <li><strong>Dry run:</strong> Tue Dec 1 (Salem) or Wed Dec 2 (Portland). Bring your slides, nearly complete, and a full white paper draft. You'll present to your pod at the length we agreed.</li>
+    <li><strong>Pre-final version:</strong> Thu Dec 3, 6:00 pm. <strong>Final project:</strong> Fri Dec 4, 11:59 pm.</li>
+  </ul>
+</section>
+
+<section class="card" id="watch">
+  <h2>Optional: watch or listen</h2>
+  <p>Short pieces from outside the classroom, from the worlds of business, government, and nonprofits. None is required; each comes with one thing to watch or listen for.</p>
+  <div class="tw"><table>
+    <tr><th>Piece</th><th>Sector</th><th>Watch or listen for</th></tr>
+    <tr><td><a href="https://www.gsb.stanford.edu/insights/why-working-home-future-looking-technology">"Why Working from Home Is a 'Future-Looking Technology'"</a><br><span class="muted">Stanford Graduate School of Business, 2017, on Nicholas Bloom's TEDxStanford talk</span></td><td><span class="badge">Business</span></td><td>The earlier experiment behind tonight's reading, at a call center. The company let chance decide who worked from home. What did its managers learn that they could never have learned by comparing the people who chose to?</td></tr>
+    <tr><td><a href="https://www.rogerdooley.com/stefan-thomke-experimentation/">"Stefan Thomke: Experimentation Works"</a><br><span class="muted">Brainfluence podcast, with Roger Dooley, 2020</span></td><td><span class="badge">Business</span></td><td>A Harvard Business School professor on companies that test changes before rolling them out. Which of his practices would Riverbend find easiest? Which would your organization find hardest?</td></tr>
+  </table></div>
+</section>
 <nav class="pager"><a class="prev" href="../../module3/in-person-1/"><span class="dir">← Previous · Tue Nov 17 (Salem) · Wed Nov 18 (Portland)</span><span class="t">Module 3 kick-off</span></a><a class="next" href="../../module3/final-in-person/"><span class="dir">Next · Tue Dec 1 (Salem) · Wed Dec 2 (Portland) →</span><span class="t">Final in-person: dry run</span></a></nav>
 </main>
 <footer class="site"><div class="inner">
