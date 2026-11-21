@@ -1,0 +1,22 @@
+[
+  "data/fernhill_ai_usage.csv",
+  "data/fernhill_v1.csv",
+  "data/fernhill_v2.csv",
+  "data/fernhill_v3.csv",
+  "data/fernhill_v3_pulse.csv",
+  "files/fernhill-infographic-full.jpg",
+  "files/fernhill-infographic.jpg",
+  "files/v1-brief.pdf",
+  "files/v1-data-and-methods.pdf",
+  "files/v1-results.pdf",
+  "files/v2-brief.pdf",
+  "files/v2-data-and-methods.pdf",
+  "files/v2-results.pdf",
+  "files/v3-brief.pdf",
+  "files/v3-data-and-methods.pdf",
+  "files/v3-results.pdf",
+  "index.html",
+  "v1/index.html",
+  "v2/index.html",
+  "v3/index.html"
+]

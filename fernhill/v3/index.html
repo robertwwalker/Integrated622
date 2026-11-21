@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Running example: Fernhill Software | Models &harr; Data</title>
+<!-- Built by fernhill-kb/build_fernhill_page.py; do not edit by hand. -->
+<script>try{var t=localStorage.getItem('i622-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Figtree:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<script src="../../assets/site.js" defer></script>
+<style>
+.fh-ver { font-family:Figtree,sans-serif; font-size:.8rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:.1rem .55rem; margin-left:.4rem; vertical-align:middle; }
+.fh-figure { margin:1rem 0 1.2rem; }
+.fh-figure figcaption { margin-bottom:.4rem; }
+.fh-chart { width:100%; min-width:460px; height:auto; display:block; }
+.fh-chart path:hover, .fh-chart rect:hover + path { opacity:.8; }
+.fh-tick { font:13px Figtree,sans-serif; fill:var(--muted); }
+.fh-axis { font:14px Figtree,sans-serif; fill:var(--muted); }
+.fh-now td { background:var(--reveal); font-weight:600; }
+.fh-earlier { border-top:1px solid var(--border); margin-top:1rem; padding-top:.6rem; }
+#data .badge { margin-right:.6rem; }
+.column-margin { margin:.9rem 0; padding:.5rem .9rem; border-left:3px solid var(--accent); background:var(--reveal); font-size:.9rem; }
+.column-margin p { margin:.25rem 0; }
+@media (min-width:1000px) {
+  .column-margin { float:right; clear:right; width:15rem; margin:.2rem 0 .8rem 1.4rem; }
+  .column-margin + .fh-figure { overflow:hidden; }
+}
+</style>
+<style>
+.fh-chart {min-width:0;max-width:100%}.fh-figure-panel{max-width:100%;overflow-x:auto}
+.fh-figure-panel.fh-enlarged .fh-chart{min-width:720px;max-width:none}
+.fh-infographic{margin:0}.fh-infographic img{display:block;width:100%;height:auto;border:1px solid var(--border)}.fh-infographic figcaption{margin-top:.5rem;color:var(--muted);font-size:.92em}
+.fh-zoom{margin:.3rem 0}.comparison td,.comparison th{overflow-wrap:anywhere;vertical-align:top}
+@media(max-width:700px){.card p,.card a,.card .prompt{overflow-wrap:anywhere}.card table[style]{display:block;max-width:100%;overflow-x:auto}.comparison thead{display:none}.comparison table,.comparison tbody,.comparison tr,.comparison td{display:block;width:100%}
+.comparison tr{border:1px solid var(--border);margin:.8rem 0;padding:.4rem}.comparison td{border:0;padding:.35rem}
+.comparison td:before{display:block;font-weight:700;color:var(--muted)}
+.comparison td:nth-child(1):before{content:'Element'}.comparison td:nth-child(2):before{content:'Version 1'}
+.comparison td:nth-child(3):before{content:'Version 2'}.comparison td:nth-child(4):before{content:'Version 3'}
+.fh-responsive table,.fh-responsive tbody,.fh-responsive tr,.fh-responsive td{display:block;width:100%;min-width:0}
+.fh-responsive .fh-header-row{display:none}.fh-responsive tr{border:1px solid var(--border);margin:.8rem 0;padding:.4rem}
+.fh-responsive td{border:0;padding:.35rem;overflow-wrap:anywhere}.fh-responsive td:before{content:attr(data-label);display:block;font-weight:700;color:var(--muted)}}
+</style></head>
+<body>
+<header>
+<div class="masthead"><div class="inner">
+<a href="../../"><img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA"></a>
+<span class="rule"></span>
+<a class="course" href="../../"><span class="s">GSMPR 622A · Fall 2026 · Data, Statistics, and Decision Science</span><span class="t">Models &harr; Data</span></a>
+<span class="spacer"></span>
+<button class="theme-toggle" type="button" aria-label="Switch day or night theme">Night</button>
+</div></div>
+<div class="sitebar"><div class="inner"><nav class="nav"><a href="../../">Home</a><a href="../../start/">Start</a><a href="../../models/">Models</a><a href="../../syllabus/">Syllabus</a><a href="../../project/">Project</a><a href="../../riverbend/">Riverbend</a><a href="../../module1/">Module 1</a><a href="../../module2/">Module 2</a><a href="../../module3/">Module 3</a></nav></div></div>
+</header>
+<main class="page"><nav class="crumbs"><a href="../../">Home</a> › <a href="../../project/">Project</a> › <a href="../">Fernhill Software</a> › Version 3</nav>
+<div class="page-head" id="version-3"><div class="eyebrow">Running example · Version 3</div><h1>The gold standard</h1></div>
+<section class="card"><h2>Explore this version</h2><p><a href="#v3-brief">Project Brief</a> · <a href="#v3-dm">Data &amp; Methods draft</a> · <a href="#v3-results">Results draft</a> · <a href="#v3-prompts-dm">Work it yourself: the Data &amp; Methods prompts</a> · <a href="#v3-prompts-results">Work it yourself: the Results prompts</a> · <a href="#v3-interp">Interpretation</a> · <a href="#v3-prompts-interp">Work it yourself: the Interpretation prompts</a></p><p><a class="badge" href="../data/fernhill_v3.csv" download>Download the data</a> <a class="badge" href="../files/v3-brief.pdf" download>Project Brief PDF</a> <a class="badge" href="../files/v3-data-and-methods.pdf" download>Data &amp; Methods draft PDF</a> <a class="badge" href="../files/v3-results.pdf" download>Results draft PDF</a></p></section>
+<section class="card fh-responsive">
+  <h2>How to use this page</h2>
+  <ul>
+    <li><strong>It shows the form.</strong> Each draft follows the course template and is written to the rubric, so you can see what a complete section looks like.</li>
+    <li><strong>It is not a solution guide.</strong> Your organization, model and data are your own, so copy the habits and not the content.</li>
+    <li><strong>Its model gets tested.</strong> The current version is careful work, and careful work can still rest on a model that turns out to be incomplete. When the evidence calls for a revision, the revision is posted with what was learned and why.</li>
+    <li><strong>Every number comes from the posted data.</strong> <a href="../data/fernhill_v3.csv" download>Download the file</a> and check any of them with Gemini.</li>
+  </ul>
+  <h3>Where the project stands</h3>
+  <div class="tw"><table><tr><th>When</th><th>What goes up</th><th>Your deliverable that week</th></tr><tr><td>Sat Oct 31<br><span class="muted">Posted</span></td><td>Project Brief and Data &amp; Methods draft (version 1)</td><td>Data &amp; Methods draft due Nov 3 / 4</td></tr><tr><td>Thu Nov 5<br><span class="muted">Posted</span></td><td>A first analysis of what the data say about version 1&#x27;s prediction</td><td></td></tr><tr><td>Tue Nov 10<br><span class="muted">Posted</span></td><td>What we learned, and a revised project (version 2), with its Brief and Data &amp; Methods draft</td><td></td></tr><tr><td>Thu Nov 12<br><span class="muted">Posted</span></td><td>Results draft (version 2)</td><td>Results draft due Nov 17 / 18</td></tr><tr><td>Thu Nov 19<br><span class="muted">Posted</span></td><td>The causal diagram, what we learned, and a second revision (version 3), with its Brief, Data &amp; Methods and Results</td><td></td></tr><tr class=fh-now><td>Fri Nov 20<br><span class="muted">Posted</span></td><td>Interpretation (all three versions)</td><td>Clinics Dec 1 / 2, then the pre-final and a recorded run-through Dec 3</td></tr><tr><td>Thu Dec 3<br><span class="muted">Coming</span></td><td>What was true all along, and how each version fared</td><td>Final project due Dec 4</td></tr></table></div>
+</section>
+<section class="card" id="v3-brief"><h2>Project Brief <span class="fh-ver">version 3</span></h2><p><a class="badge" href="../files/v3-brief.pdf" download>Download the PDF</a> <span class="muted">The same Brief as a two-page document.</span></p><h3 id="the-organization">1. The organization</h3>
+<p>Fernhill Software is a useful fiction, a business-software firm with
+about 1,100 engineers in 120 product teams. It hires engineers on
+technical skill and promotes its strongest into management, where some
+struggle. In 2025, as AI coding tools arrive, an AI enthusiast on the
+leadership team proposes a three-part reorganization. First, hire
+professional managers on people skill instead of promoting engineers.
+Second, make each team’s engineer-manager its technical lead, keeping
+technical judgment but managing no one. Third, let AI fill the manager’s
+technical gaps. <strong>Fernhill runs a one-year pilot</strong> from
+July 2025, assigning its 120 teams by lot to three arms of 40 so the
+reorganization and AI can be told apart. People Operations measures the
+manager–lead relationship from month one.</p>
+<h3 id="the-model">2. The model</h3>
+<p>A team delivers when two jobs get done, coordinating people and
+resolving technical unknowns. The proposal splits those jobs between a
+manager and a lead, with AI assisting both. Splitting a job creates a
+third job, keeping the two roles working together.</p>
+<ol type="1">
+<li><strong>People skill lowers coordination friction.</strong> Less
+work sits blocked on other people, more so in bigger teams.</li>
+<li><strong>Difficulty sets how many unknowns arrive.</strong> AI
+resolves routine ones but helps little on hard ones.</li>
+<li><strong>Escalated unknowns queue at whoever holds technical
+judgment</strong>, the engineer-manager or a tech lead with far more
+time. Near capacity, the wait explodes (Little’s Law).</li>
+<li><strong>Every escalated unknown in the new structure crosses the
+manager–lead relationship.</strong> A weak one adds waiting, rework, and
+overridden estimates, most on hard work.</li>
+<li><strong>The relationship evolves</strong> from the pair’s fit, the
+lead’s lost status, and the manager’s technical grasp (scarce in 2025,
+when that skill commanded a premium), reshaped by results and by
+HR.</li>
+<li><strong>Weak relationships drive departures</strong>, the lead’s
+above all, and each departure lowers the next quarter’s delivery.</li>
+<li><strong>HR can act only on what is measured.</strong> It coaches
+falling pairs and re-pairs those that don’t recover.</li>
+</ol>
+<p><strong>In short,</strong> the relationship decides whether the new
+structure works, above all on hard work.</p>
+<p><strong>For the model to be right,</strong> the relationship score
+must track the working relationship, not politeness. Teams must stay in
+their arm, and teams without AI must go without it. Enough leads must
+exist to make re-pairing possible. Difficulty must be judgeable at
+quarterly planning. <strong>What stays unmeasured</strong> is the pair’s
+fit and the judgment holder’s capacity, seen only through the
+relationship and the waits.</p>
+<h3 id="the-question">3. The question</h3>
+<p>Should Fernhill replace engineer-managers with professional managers
+backed by technical leads and AI? And does HR’s tending of the
+manager–lead relationship matter? The pilot answers with three
+comparisons, with each arm also set against its own eight pre-pilot
+quarters. The first compares <strong>AI, holding structure
+fixed</strong> (engineer-managers with and without AI). The second
+compares <strong>structure, holding AI fixed</strong> (manager + lead
+vs. engineer-manager, both with AI), the decision Fernhill faces. The
+third compares <strong>HR’s response</strong> (within manager + lead, HR
+acting vs. scores sealed), to see whether tending the relationship
+helps.</p>
+<h3 id="the-prediction">4. The prediction</h3>
+<p>Stated before looking at this version’s data:</p>
+<ul>
+<li><strong>AI alone</strong> behaves as in version 2, better on easy
+quarters and flat on hard ones.</li>
+<li><strong>The relationship score</strong> predicts delivery more
+strongly in the new structure than under engineer-managers, and on hard
+quarters than easy ones.</li>
+<li><strong>The new structure</strong> on hard quarters splits by the
+relationship. Strong pairs match or beat engineer-managers with AI, and
+weak pairs fall well behind.</li>
+<li><strong>Lead departures</strong> concentrate in pairs whose score
+fell in the first two quarters.</li>
+<li><strong>Where HR acts</strong>, fewer pairs stay weak and fewer
+leads leave, but a year may be too short to show delivery gains.</li>
+</ul>
+<p>The model is wrong if any of these holds:</p>
+<ul>
+<li>The relationship score predicts nothing beyond the escalation
+load.</li>
+<li>Weak and strong pairs deliver about the same on hard quarters.</li>
+<li>HR raises the scores but not delivery or retention. Then it improves
+the measure, not the work.</li>
+</ul>
+<h3 id="the-data-sketch">5. The data sketch</h3>
+<p><strong>The data.</strong> Fernhill’s records have one row per team
+per quarter, July 2023 to June 2026 (1,440 rows), and they are
+simulated, since Fernhill is fictional. <strong>The variables,</strong>
+by concept. The change is arm and HR’s lot, manager type, and AI
+licenses, with IT’s usage logs. The manager has a people-skill rating on
+the eight Project Oxygen behaviors, the hours work sits blocked on other
+teams, and a technical score at hire. The work has team size, and
+difficulty rated at planning and again at close. Unknowns are
+escalations, the hours each waits, and escalations open at close. The
+relationship has a monthly relational-coordination pulse in every arm,
+overrides of the lead’s estimates, and the lead’s former role. HR and
+people have coaching, re-pairing, and departures. The outcome is the
+share of committed milestones delivered on time.</p>
+<h3 id="the-disciplinary-anchor">6. The disciplinary anchor</h3>
+<p><strong>Whom to promote (organizational management).</strong> Firms
+promote their best performers, who then make worse managers (Peter and
+Hull, 1969; Benson, Li and Shue, 2019). People skill keeps teams
+together (Hoffman and Tadelis, 2021; Garvin, 2013), but so do a boss’s
+technical competence and the prize of promotion (Artz, Goodall and
+Oswald, 2017; Lazear and Rosen, 1981).</p>
+<p><strong>The work itself (operations management).</strong> Unknowns go
+up the hierarchy unless knowledge is cheap, and AI makes only routine
+knowledge cheap (Galbraith, 1974; Garicano, 2000; Brynjolfsson, Li and
+Raymond, 2025; METR, 2025). Waits grow when escalations arrive faster
+than they are cleared (Little’s Law), and firefighting slows recovery
+(Repenning and Sterman, 2001).</p>
+<p><strong>The bridge and the method.</strong> Split roles must be
+integrated (Lawrence and Lorsch, 1967), and relational coordination
+matters more as uncertainty rises (Gittell, 2002). The method follows
+Pearl (2019). The relationship enters only because the diagram, drawn
+before the data, demands it.</p>
+<h3 id="note-on-ai-use">Note on AI use</h3>
+<p>I used Gemini (Willamette account) to diagram how an escalated
+unknown gets resolved and to find a relationship measure. I added an
+override count to the relational-coordination survey it suggested, since
+a score that decides coaching gets gamed. I also chose a second lot over
+its idea of HR acting on every low score, since low scores rise on their
+own.</p>
+</section>
+<section class="card" id="v3-dm"><h2>Data &amp; Methods draft <span class="fh-ver">version 3</span></h2><p><a class="badge" href="../files/v3-data-and-methods.pdf" download>Download the PDF</a> <span class="muted">The same draft as a two-page document, with its charts.</span></p><p class="muted">The data behind every number here: <a href="../data/fernhill_v3.csv" download>fernhill_v3.csv</a>, also in <a href="#data">The data</a> below.</p><h3 id="unit-of-observation">1. Unit of observation</h3>
+<p>One row of my main file is one product team in one quarter, because
+the lot assigns whole teams and delivery is counted by the quarter. The
+relationship belongs to a pair, a manager and a lead, so each row also
+carries a pair ID. There are 1,440 rows, from 120 teams over 12
+quarters, July 2023 to June 2026, eight before the pilot and four during
+it. A pair changes when a lead leaves or HR re-pairs (a mid-quarter
+change is recorded as the quarter’s pair), so the teams hold 219 pairs
+in all. The lot assigned teams, 40 to each of three arms
+(engineer-managers without and with AI, and a manager and lead with AI),
+so arm comparisons rest on 40 teams each, not on 480 team-quarters. A
+second lot, inside the new structure, assigned HR’s response, 20 teams
+HR acts on and 20 sealed. A second file holds the monthly pulses, one
+row per pair per pilot month (1,440 rows). It joins on pair ID and
+quarter together, since on pair ID alone a pair matches all of its
+months, and 480 team-quarters become 5,250 rows.</p>
+<h3 id="variable-table">2. Variable table</h3>
+<div class="tw"><table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Variable</th>
+<th>Kind</th>
+<th>Source</th>
+<th>What it misses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure, AI and HR’s lot</td>
+<td><code>arm</code>, <code>hr_acts</code></td>
+<td>Labels, yes/no</td>
+<td>Pilot register</td>
+<td>Drift from the arm</td>
+</tr>
+<tr>
+<td>Relationship</td>
+<td><code>rc_score</code>, <code>overrides</code></td>
+<td>Measurement (index), count</td>
+<td>Pulse survey, audit log</td>
+<td>Politeness, and gaming once HR acts on it</td>
+</tr>
+<tr>
+<td>Difficulty</td>
+<td><code>hard_plan</code></td>
+<td>Yes/No</td>
+<td>Planning review</td>
+<td>Misjudged quarters</td>
+</tr>
+<tr>
+<td>Waiting</td>
+<td><code>esc_wait_hrs</code></td>
+<td>Measurement (hours)</td>
+<td>Tracker</td>
+<td>Untracked waits</td>
+</tr>
+<tr>
+<td>Departures</td>
+<td><code>lead_departed</code></td>
+<td>Yes/No</td>
+<td>HR system</td>
+<td>Leads who checked out but stayed</td>
+</tr>
+<tr>
+<td>Delivery</td>
+<td><code>delivered_share</code></td>
+<td>Measurement (share)</td>
+<td>Planning tool</td>
+<td>Customer value and renegotiation</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="data-source">3. Data source</h3>
+<p>Fernhill’s pilot register, People Operations’ pulse survey and pair
+register, the planning tool and its audit log, the issue tracker, the
+planning review, and the HR system, read through People Analytics, cover
+all 120 teams for all 12 quarters. The pulse and the overrides begin in
+July 2025, since People Operations measured the relationship from month
+one, in every arm. I use the overrides, a behavior and not an answer,
+only to check the score. Fernhill is a useful fiction, so these records
+are simulated. <strong>These data are simulated from the model described
+above.</strong> Its assumptions, written down before the data were
+generated, are that teams are independent, the lots hold, and AI is
+truly withheld from the no-AI arm. The relationship rests on the pair’s
+unobserved fit, the managers’ skills, and the lead’s lost status, and
+responds to coaching. AI clears routine escalations more than hard ones,
+and escalations queue at whoever holds technical judgment. A firm-wide
+migration lowers delivery for every team from July 2025. The score can
+be gamed once HR acts on it, and overrides cannot. Every measure carries
+random noise.</p>
+<h3 id="quality-concern">4. Quality concern</h3>
+<p>The relationship score is the most likely to mislead, being a survey
+index and the one number HR now acts on. It is
+<strong>mismeasured</strong> where people answer politely, and where HR
+acts on it, since pairs can learn to score higher without working better
+(Goodhart’s law). It is <strong>missing</strong> for 71 of 1,440 pulses
+(5%). If so, I would see scores in the teams HR acts on sitting above
+what their overrides imply, while sealed teams’ scores track them. I
+will report the blanks and never fill them in, average each quarter’s
+answered months (68 of 480 scores rest on one or two pulses), read the
+score beside the overrides, and compare teams HR acts on with sealed
+teams, since the lot decides who is coached.</p>
+<h3 id="first-description">5. First description</h3>
+<p><strong>Delivery (<code>delivered_share</code>).</strong>
+<em>Kind:</em> a measurement, a share from 0 to 1. <em>How many:</em>
+1,440, none blank. <em>Middle, spread and shape:</em> median 0.68, and
+mean 0.64, which a tail of bad quarters pulls down. Half fall between
+0.50 and 0.82, the range is 0 to 1, and the shape is skewed left, with
+19 under 5%. <em>Choice:</em> each team-quarter counts once, whatever
+its size. Weighting by milestones gives 0.64.</p>
+<p><strong>Against my model:</strong> not yet able to say, since one
+variable can’t show whether the arms differ.</p>
+<p><strong>Relationship (<code>rc_score</code>).</strong> <em>Kind:</em>
+a measurement, an index built from ordered labels (the mean of seven 1
+to 5 items, averaged over a quarter’s pulses). <em>How many:</em> 480,
+all in the pilot, with 960 blank before July 2025. The 1,440 monthly
+pulses have 71 blank (5%), from 53 teams, at most 4 each. <em>Middle,
+spread and shape:</em> median 3.4, and mean 3.41. Half fall between 2.9
+and 3.9, the range is 1.3 to 5.0, and the shape is roughly symmetric,
+with 30 pulses at the 1 or 5 limits. The monthly average barely moves
+(3.3 to 3.4), but single pairs wander: in 50 teams the last three months
+sit at least 0.5 from the first three (the chart shows 40 teams at
+random). <em>Choice:</em> blanks left out. A mean of ordered items
+assumes equal steps, so I checked it against the median (3.4), nearly
+the same.</p>
+<figure class="fh-figure"><figcaption><span class="muted">Left, delivery for all 1,440 team-quarters. Middle, the quarterly relationship score for the 480 pilot team-quarters, which is blank before July 2025. Right, the twelve monthly pulses of 40 of the 120 teams, with the mean of all in the dark line. Hover a point for its value.</span></figcaption><div class="tw"><svg viewBox="0 0 720 250" role="img" aria-label="Delivery, the relationship score, and the monthly pulses behind it" class="fh-chart"><text x="42" y="30" class="fh-axis" style="font-weight:600">Delivery, 1,440 team-quarters</text><line x1="42" x2="230" y1="192.0" y2="192.0" style="stroke:var(--border);stroke-width:1"/><text x="37" y="196.0" text-anchor="end" class="fh-tick">0</text><line x1="42" x2="230" y1="121.2" y2="121.2" style="stroke:var(--border);stroke-width:1"/><text x="37" y="125.2" text-anchor="end" class="fh-tick">80</text><line x1="42" x2="230" y1="50.5" y2="50.5" style="stroke:var(--border);stroke-width:1"/><text x="37" y="54.5" text-anchor="end" class="fh-tick">160</text><rect x="43.0" y="175.2" width="7.4" height="16.8" style="fill:var(--accent)"><title>0.00 to 0.05: 19 team-quarters</title></rect><rect x="52.4" y="183.2" width="7.4" height="8.8" style="fill:var(--accent)"><title>0.05 to 0.10: 10 team-quarters</title></rect><rect x="61.8" y="177.0" width="7.4" height="15.0" style="fill:var(--accent)"><title>0.10 to 0.15: 17 team-quarters</title></rect><rect x="71.2" y="171.7" width="7.4" height="20.3" style="fill:var(--accent)"><title>0.15 to 0.20: 23 team-quarters</title></rect><rect x="80.6" y="169.0" width="7.4" height="23.0" style="fill:var(--accent)"><title>0.20 to 0.25: 26 team-quarters</title></rect><rect x="90.0" y="166.3" width="7.4" height="25.7" style="fill:var(--accent)"><title>0.25 to 0.30: 29 team-quarters</title></rect><rect x="99.4" y="151.3" width="7.4" height="40.7" style="fill:var(--accent)"><title>0.30 to 0.35: 46 team-quarters</title></rect><rect x="108.8" y="146.9" width="7.4" height="45.1" style="fill:var(--accent)"><title>0.35 to 0.40: 51 team-quarters</title></rect><rect x="118.2" y="144.2" width="7.4" height="47.8" style="fill:var(--accent)"><title>0.40 to 0.45: 54 team-quarters</title></rect><rect x="127.6" y="141.6" width="7.4" height="50.4" style="fill:var(--accent)"><title>0.45 to 0.50: 57 team-quarters</title></rect><rect x="137.0" y="92.0" width="7.4" height="100.0" style="fill:var(--accent)"><title>0.50 to 0.55: 113 team-quarters</title></rect><rect x="146.4" y="122.1" width="7.4" height="69.9" style="fill:var(--accent)"><title>0.55 to 0.60: 79 team-quarters</title></rect><rect x="155.8" y="92.0" width="7.4" height="100.0" style="fill:var(--accent)"><title>0.60 to 0.65: 113 team-quarters</title></rect><rect x="165.2" y="81.4" width="7.4" height="110.6" style="fill:var(--accent)"><title>0.65 to 0.70: 125 team-quarters</title></rect><rect x="174.6" y="83.2" width="7.4" height="108.8" style="fill:var(--accent)"><title>0.70 to 0.75: 123 team-quarters</title></rect><rect x="184.0" y="87.6" width="7.4" height="104.4" style="fill:var(--accent)"><title>0.75 to 0.80: 118 team-quarters</title></rect><rect x="193.4" y="53.1" width="7.4" height="138.9" style="fill:var(--accent)"><title>0.80 to 0.85: 157 team-quarters</title></rect><rect x="202.8" y="92.9" width="7.4" height="99.1" style="fill:var(--accent)"><title>0.85 to 0.90: 112 team-quarters</title></rect><rect x="212.2" y="96.5" width="7.4" height="95.5" style="fill:var(--accent)"><title>0.90 to 0.95: 108 team-quarters</title></rect><rect x="221.6" y="138.9" width="7.4" height="53.1" style="fill:var(--accent)"><title>0.95 to 1.00: 60 team-quarters</title></rect><text x="42.0" y="208" text-anchor="middle" class="fh-tick">0%</text><text x="136.0" y="208" text-anchor="middle" class="fh-tick">50%</text><text x="230.0" y="208" text-anchor="middle" class="fh-tick">100%</text><text x="136.0" y="242" text-anchor="middle" class="fh-axis">Share delivered on time</text><text x="270" y="30" class="fh-axis" style="font-weight:600">Score, 480 (pilot only)</text><line x1="270" x2="458" y1="192.0" y2="192.0" style="stroke:var(--border);stroke-width:1"/><text x="265" y="196.0" text-anchor="end" class="fh-tick">0</text><line x1="270" x2="458" y1="124.2" y2="124.2" style="stroke:var(--border);stroke-width:1"/><text x="265" y="128.2" text-anchor="end" class="fh-tick">40</text><line x1="270" x2="458" y1="56.5" y2="56.5" style="stroke:var(--border);stroke-width:1"/><text x="265" y="60.5" text-anchor="end" class="fh-tick">80</text><rect x="282.8" y="188.6" width="9.8" height="3.4" style="fill:var(--accent)"><title>1.25 to 1.50: 2 team-quarters</title></rect><rect x="294.5" y="188.6" width="9.8" height="3.4" style="fill:var(--accent)"><title>1.50 to 1.75: 2 team-quarters</title></rect><rect x="306.2" y="183.5" width="9.8" height="8.5" style="fill:var(--accent)"><title>1.75 to 2.00: 5 team-quarters</title></rect><rect x="318.0" y="171.7" width="9.8" height="20.3" style="fill:var(--accent)"><title>2.00 to 2.25: 12 team-quarters</title></rect><rect x="329.8" y="178.4" width="9.8" height="13.6" style="fill:var(--accent)"><title>2.25 to 2.50: 8 team-quarters</title></rect><rect x="341.5" y="110.7" width="9.8" height="81.3" style="fill:var(--accent)"><title>2.50 to 2.75: 48 team-quarters</title></rect><rect x="353.2" y="112.4" width="9.8" height="79.6" style="fill:var(--accent)"><title>2.75 to 3.00: 47 team-quarters</title></rect><rect x="365.0" y="53.1" width="9.8" height="138.9" style="fill:var(--accent)"><title>3.00 to 3.25: 82 team-quarters</title></rect><rect x="376.8" y="110.7" width="9.8" height="81.3" style="fill:var(--accent)"><title>3.25 to 3.50: 48 team-quarters</title></rect><rect x="388.5" y="59.9" width="9.8" height="132.1" style="fill:var(--accent)"><title>3.50 to 3.75: 78 team-quarters</title></rect><rect x="400.2" y="110.7" width="9.8" height="81.3" style="fill:var(--accent)"><title>3.75 to 4.00: 48 team-quarters</title></rect><rect x="412.0" y="109.0" width="9.8" height="83.0" style="fill:var(--accent)"><title>4.00 to 4.25: 49 team-quarters</title></rect><rect x="423.8" y="161.5" width="9.8" height="30.5" style="fill:var(--accent)"><title>4.25 to 4.50: 18 team-quarters</title></rect><rect x="435.5" y="156.4" width="9.8" height="35.6" style="fill:var(--accent)"><title>4.50 to 4.75: 21 team-quarters</title></rect><rect x="447.2" y="171.7" width="9.8" height="20.3" style="fill:var(--accent)"><title>4.75 to 5.00: 12 team-quarters</title></rect><text x="270.0" y="208" text-anchor="middle" class="fh-tick">1</text><text x="317.0" y="208" text-anchor="middle" class="fh-tick">2</text><text x="364.0" y="208" text-anchor="middle" class="fh-tick">3</text><text x="411.0" y="208" text-anchor="middle" class="fh-tick">4</text><text x="458.0" y="208" text-anchor="middle" class="fh-tick">5</text><text x="364.0" y="242" text-anchor="middle" class="fh-axis">Relationship score, 1 to 5</text><text x="498" y="30" class="fh-axis" style="font-weight:600">Monthly pulse, 40 teams</text><line x1="498" x2="686" y1="192.0" y2="192.0" style="stroke:var(--border);stroke-width:1"/><text x="493" y="196.0" text-anchor="end" class="fh-tick">1</text><line x1="498" x2="686" y1="117.0" y2="117.0" style="stroke:var(--border);stroke-width:1"/><text x="493" y="121.0" text-anchor="end" class="fh-tick">3</text><line x1="498" x2="686" y1="42.0" y2="42.0" style="stroke:var(--border);stroke-width:1"/><text x="493" y="46.0" text-anchor="end" class="fh-tick">5</text><polyline points="498.0,118.3 515.1,104.6 532.2,122.5 549.3,98.9 583.5,122.1 617.6,94.8 634.7,100.8 651.8,109.6 668.9,90.6 686.0,71.4" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T001</title></polyline><polyline points="498.0,127.6 515.1,121.9 532.2,103.5 549.3,121.9 566.4,112.3 583.5,119.3 600.5,129.8 617.6,98.5 634.7,134.9 651.8,114.9 668.9,101.2" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T002</title></polyline><polyline points="498.0,86.7 515.1,79.0 532.2,84.9 549.3,110.9 566.4,83.3 583.5,74.5 600.5,110.5 617.6,97.6 634.7,110.9 651.8,104.2 668.9,110.5 686.0,113.0" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T003</title></polyline><polyline points="498.0,95.4 515.1,113.2 532.2,133.5 549.3,113.7 566.4,125.2 583.5,79.4 600.5,119.0 617.6,108.5 634.7,122.8 651.8,111.1 668.9,99.2" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T005</title></polyline><polyline points="498.0,102.4 515.1,103.9 532.2,148.0 549.3,150.9 566.4,121.0 583.5,127.5 600.5,102.2 617.6,96.2 634.7,97.7 651.8,78.4 668.9,70.8 686.0,85.2" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T007</title></polyline><polyline points="498.0,80.3 515.1,97.2 532.2,74.3 549.3,56.2 566.4,66.2 583.5,88.5 600.5,61.2 617.6,45.2 634.7,71.0 651.8,50.4 668.9,45.3 686.0,58.5" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T008</title></polyline><polyline points="498.0,97.1 515.1,77.5 532.2,54.7 549.3,71.1 566.4,104.8 583.5,92.1 600.5,82.0 617.6,75.2 634.7,81.9 651.8,87.3 668.9,88.5 686.0,53.0" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T014</title></polyline><polyline points="498.0,71.6 515.1,88.8 532.2,70.4 549.3,104.7 566.4,101.1 583.5,108.0 600.5,93.7 634.7,77.7 651.8,85.5 668.9,99.9 686.0,101.4" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T016</title></polyline><polyline points="498.0,122.4 515.1,107.4 532.2,132.2 549.3,149.8 566.4,121.7 583.5,143.5 600.5,129.5 617.6,116.2 634.7,143.8 651.8,125.7 668.9,131.2 686.0,122.5" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T020</title></polyline><polyline points="498.0,73.6 515.1,71.7 532.2,78.8 549.3,56.4 566.4,50.8 583.5,82.8 600.5,70.8 617.6,76.4 634.7,79.2 651.8,65.2 668.9,63.4 686.0,61.7" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T021</title></polyline><polyline points="498.0,115.7 515.1,66.1 532.2,88.5 549.3,84.7 566.4,103.5 583.5,64.8 600.5,73.5 617.6,93.7 651.8,72.1 668.9,78.1 686.0,84.1" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T024</title></polyline><polyline points="498.0,97.7 515.1,91.0 532.2,113.4 549.3,79.5 566.4,95.5 583.5,118.1 600.5,87.0 617.6,102.7 634.7,60.6 651.8,80.5 668.9,86.6 686.0,103.9" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T025</title></polyline><polyline points="498.0,94.2 515.1,112.2 532.2,111.3 549.3,101.2 566.4,112.6 583.5,113.6 600.5,116.4 617.6,99.8 634.7,119.2 651.8,119.5 668.9,106.2 686.0,111.7" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T028</title></polyline><polyline points="498.0,142.3 515.1,140.9 532.2,154.4 549.3,146.7 566.4,155.9 583.5,160.6 600.5,99.3 617.6,128.1 634.7,111.1 651.8,119.1 668.9,96.6 686.0,132.6" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T033</title></polyline><polyline points="498.0,117.8 515.1,132.6 532.2,107.6 549.3,102.0 566.4,114.6 583.5,118.1 617.6,116.8 634.7,100.9 668.9,117.8 686.0,100.9" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T036</title></polyline><polyline points="498.0,81.0 515.1,93.1 532.2,98.0 549.3,85.2 566.4,98.8 583.5,87.4 600.5,74.7 617.6,71.8 651.8,80.7 668.9,58.3 686.0,71.3" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T038</title></polyline><polyline points="498.0,105.6 515.1,110.3 532.2,132.7 549.3,112.2 566.4,106.5 583.5,130.7 600.5,119.2 617.6,97.6 634.7,98.1 651.8,112.7 668.9,107.4 686.0,107.5" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T040</title></polyline><polyline points="498.0,74.8 515.1,77.6 532.2,90.4 549.3,49.7 566.4,68.6 600.5,74.2 617.6,68.6 634.7,83.9 651.8,80.3 686.0,66.2" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T041</title></polyline><polyline points="498.0,84.7 515.1,77.2 532.2,93.8 549.3,70.4 566.4,73.9 583.5,75.0 617.6,95.6 634.7,101.9 651.8,112.0 668.9,95.8 686.0,77.4" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T052</title></polyline><polyline points="498.0,67.3 515.1,90.5 532.2,55.4 549.3,65.2 566.4,75.6 583.5,69.7 600.5,54.8 617.6,51.3 634.7,70.7 651.8,64.1 668.9,61.0 686.0,63.6" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T055</title></polyline><polyline points="498.0,139.6 515.1,114.9 532.2,137.6 549.3,94.5 566.4,94.2 583.5,128.0 600.5,96.0 617.6,101.1 634.7,104.1 651.8,112.8 668.9,102.5 686.0,101.6" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T064</title></polyline><polyline points="498.0,67.3 515.1,61.8 549.3,59.9 566.4,70.5 583.5,81.8 600.5,55.7 617.6,95.1 634.7,77.4 651.8,89.0 668.9,88.9 686.0,55.3" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T070</title></polyline><polyline points="498.0,119.1 515.1,126.7 532.2,112.3 549.3,132.7 566.4,110.4 583.5,104.1 600.5,127.7 617.6,141.4 634.7,112.3 651.8,120.5 668.9,104.7 686.0,134.1" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T071</title></polyline><polyline points="515.1,82.1 532.2,113.5 549.3,131.2 566.4,114.4 583.5,121.2 600.5,98.5 617.6,103.9 634.7,98.4 651.8,99.3 668.9,94.4 686.0,84.7" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T073</title></polyline><polyline points="498.0,99.5 515.1,89.8 532.2,96.9 549.3,84.8 566.4,99.6 583.5,99.8 600.5,108.4 617.6,96.8 651.8,75.8 668.9,78.9 686.0,58.2" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T078</title></polyline><polyline points="498.0,94.1 515.1,86.6 532.2,118.5 549.3,92.0 566.4,103.4 583.5,104.7 600.5,106.1 617.6,92.2 634.7,118.2 651.8,120.5 668.9,102.0 686.0,116.9" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T083</title></polyline><polyline points="498.0,111.9 515.1,115.9 532.2,129.0 549.3,99.3 566.4,98.5 583.5,82.2 600.5,105.8 617.6,73.9 634.7,105.7 651.8,93.6 668.9,103.7 686.0,95.8" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T084</title></polyline><polyline points="498.0,62.7 515.1,66.4 532.2,68.5 549.3,80.4 566.4,105.5 583.5,98.2 600.5,102.7 617.6,88.3 634.7,91.9 651.8,90.4 668.9,105.4" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T088</title></polyline><polyline points="498.0,102.6 515.1,126.2 532.2,97.0 549.3,125.0 566.4,108.5 583.5,113.6 600.5,126.5 617.6,118.6 634.7,130.6 651.8,101.5 668.9,111.1 686.0,123.7" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T090</title></polyline><polyline points="498.0,102.7 515.1,89.6 532.2,108.6 549.3,75.7 566.4,76.6 583.5,91.1 600.5,90.6 617.6,54.2 651.8,102.0 668.9,91.1 686.0,91.2" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T095</title></polyline><polyline points="498.0,96.3 515.1,102.2 532.2,97.3 549.3,93.6 566.4,94.4 583.5,111.0 600.5,124.5 617.6,101.5 634.7,111.3 651.8,123.2 668.9,121.9 686.0,128.2" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T099</title></polyline><polyline points="498.0,91.4 515.1,85.0 532.2,91.1 549.3,77.9 566.4,90.7 583.5,88.2 600.5,90.4 617.6,103.9 634.7,69.8 651.8,81.6 668.9,65.1 686.0,74.3" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T102</title></polyline><polyline points="498.0,105.0 515.1,98.6 532.2,106.3 549.3,121.3 566.4,90.6 583.5,111.1 600.5,93.2 617.6,91.4 651.8,105.2 668.9,97.0 686.0,100.1" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T105</title></polyline><polyline points="498.0,117.5 515.1,145.2 532.2,133.7 549.3,119.2 566.4,113.5 583.5,141.0 600.5,133.3 617.6,136.2 634.7,125.5 651.8,123.8 668.9,108.2 686.0,152.1" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T106</title></polyline><polyline points="498.0,121.7 515.1,129.2 532.2,140.2 549.3,74.2 566.4,104.8 583.5,104.6 600.5,111.0 617.6,130.4 634.7,92.0 651.8,88.8 668.9,123.1 686.0,114.4" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T107</title></polyline><polyline points="498.0,74.6 515.1,84.4 532.2,62.5 549.3,86.3 566.4,98.1 583.5,107.9 600.5,85.0 617.6,62.4 634.7,90.8 651.8,79.1 668.9,70.2 686.0,84.0" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T111</title></polyline><polyline points="498.0,120.7 515.1,99.2 532.2,101.9 549.3,93.0 566.4,98.8 583.5,117.4 600.5,79.2 617.6,111.7 634.7,89.0 651.8,74.4 668.9,95.1 686.0,81.3" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T114</title></polyline><polyline points="498.0,115.8 515.1,115.4 532.2,114.0 549.3,127.9 566.4,112.4 583.5,119.2 600.5,117.1 617.6,94.0 634.7,76.7 651.8,106.4 668.9,90.8 686.0,101.8" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T117</title></polyline><polyline points="498.0,72.3 515.1,83.1 532.2,92.8 549.3,77.9 583.5,93.3 600.5,82.0 617.6,80.7 634.7,92.1 651.8,139.2 668.9,123.0 686.0,104.0" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T118</title></polyline><polyline points="498.0,117.5 515.1,100.9 532.2,132.4 549.3,138.9 566.4,138.1 583.5,122.7 600.5,138.7 617.6,147.1 634.7,175.1 651.8,142.6 668.9,173.4 686.0,163.7" style="fill:none;stroke:var(--accent);stroke-opacity:.25;stroke-width:1"><title>T119</title></polyline><polyline points="498.0,100.3 515.1,101.9 532.2,104.9 549.3,101.8 566.4,101.6 583.5,105.5 600.5,102.3 617.6,102.1 634.7,104.7 651.8,100.5 668.9,100.4 686.0,100.6" style="fill:none;stroke:var(--text);stroke-width:2.2"/><text x="498.0" y="208" text-anchor="middle" class="fh-tick">1</text><text x="549.3" y="208" text-anchor="middle" class="fh-tick">4</text><text x="600.5" y="208" text-anchor="middle" class="fh-tick">7</text><text x="651.8" y="208" text-anchor="middle" class="fh-tick">10</text><text x="686.0" y="208" text-anchor="middle" class="fh-tick">12</text><text x="592.0" y="242" text-anchor="middle" class="fh-axis">Month of the pilot (July 2025 = 1)</text></svg></div><details><summary>The numbers behind the chart</summary><div class="tw"><table><tr><th>Panel</th><th>Band or month</th><th>Count or mean</th></tr><tr><td>Delivery</td><td>0.00 to 0.05</td><td>19</td></tr><tr><td>Delivery</td><td>0.05 to 0.10</td><td>10</td></tr><tr><td>Delivery</td><td>0.10 to 0.15</td><td>17</td></tr><tr><td>Delivery</td><td>0.15 to 0.20</td><td>23</td></tr><tr><td>Delivery</td><td>0.20 to 0.25</td><td>26</td></tr><tr><td>Delivery</td><td>0.25 to 0.30</td><td>29</td></tr><tr><td>Delivery</td><td>0.30 to 0.35</td><td>46</td></tr><tr><td>Delivery</td><td>0.35 to 0.40</td><td>51</td></tr><tr><td>Delivery</td><td>0.40 to 0.45</td><td>54</td></tr><tr><td>Delivery</td><td>0.45 to 0.50</td><td>57</td></tr><tr><td>Delivery</td><td>0.50 to 0.55</td><td>113</td></tr><tr><td>Delivery</td><td>0.55 to 0.60</td><td>79</td></tr><tr><td>Delivery</td><td>0.60 to 0.65</td><td>113</td></tr><tr><td>Delivery</td><td>0.65 to 0.70</td><td>125</td></tr><tr><td>Delivery</td><td>0.70 to 0.75</td><td>123</td></tr><tr><td>Delivery</td><td>0.75 to 0.80</td><td>118</td></tr><tr><td>Delivery</td><td>0.80 to 0.85</td><td>157</td></tr><tr><td>Delivery</td><td>0.85 to 0.90</td><td>112</td></tr><tr><td>Delivery</td><td>0.90 to 0.95</td><td>108</td></tr><tr><td>Delivery</td><td>0.95 to 1.00</td><td>60</td></tr><tr><td>Score</td><td>1.25 to 1.50</td><td>2</td></tr><tr><td>Score</td><td>1.50 to 1.75</td><td>2</td></tr><tr><td>Score</td><td>1.75 to 2.00</td><td>5</td></tr><tr><td>Score</td><td>2.00 to 2.25</td><td>12</td></tr><tr><td>Score</td><td>2.25 to 2.50</td><td>8</td></tr><tr><td>Score</td><td>2.50 to 2.75</td><td>48</td></tr><tr><td>Score</td><td>2.75 to 3.00</td><td>47</td></tr><tr><td>Score</td><td>3.00 to 3.25</td><td>82</td></tr><tr><td>Score</td><td>3.25 to 3.50</td><td>48</td></tr><tr><td>Score</td><td>3.50 to 3.75</td><td>78</td></tr><tr><td>Score</td><td>3.75 to 4.00</td><td>48</td></tr><tr><td>Score</td><td>4.00 to 4.25</td><td>49</td></tr><tr><td>Score</td><td>4.25 to 4.50</td><td>18</td></tr><tr><td>Score</td><td>4.50 to 4.75</td><td>21</td></tr><tr><td>Score</td><td>4.75 to 5.00</td><td>12</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 1</td><td>3.44</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 2</td><td>3.40</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 3</td><td>3.32</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 4</td><td>3.41</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 5</td><td>3.41</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 6</td><td>3.31</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 7</td><td>3.39</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 8</td><td>3.40</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 9</td><td>3.33</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 10</td><td>3.44</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 11</td><td>3.44</td></tr><tr><td>Monthly pulse, mean of all teams</td><td>Month 12</td><td>3.44</td></tr></table></div></details></figure>
+<p><strong>Against my model:</strong> not yet able to say, since the
+score tracking delivery takes two variables.</p>
+<p><strong>Waiting (<code>esc_wait_hrs</code>).</strong> <em>Kind:</em>
+a measurement, in hours. <em>How many:</em> 1,399, with 41 blank (3%),
+in the tracker. <em>Middle, spread and shape:</em> median 15.3 hours,
+and mean 26.4, which a few long waits pull up (23 over 100 hours, kept),
+so I report the median. Half fall between 8.4 and 34.5 hours, and the
+range is 3.2 to 759.3. <strong>Against my model:</strong> not yet able
+to say. A long right tail is what any queue produces, and one variable
+can’t show whether the structure changes it.</p>
+<h3 id="note-on-ai-use-2">Note on AI use</h3>
+<p>I used Gemini (Willamette account) for the counts, middles, spreads,
+and histograms. I checked its mean of the score against the median, and
+rejected its offer to fill the blank pulses, since a filled-in month is
+a pulse nobody took.</p>
+</section>
+<section class="card" id="v3-prompts-dm"><h2>Work it yourself: the Data &amp; Methods prompts <span class="fh-ver">version 3</span></h2><p>These are the prompts for the Data &amp; Methods draft above, in
+order. Download <code>fernhill_v3.csv</code> and
+<code>fernhill_v3_pulse.csv</code>, start a new Gemini chat with your
+Willamette account, upload both files, and paste each prompt into the
+same chat. (The Results prompts that follow continue in the same chat,
+and the usage file, <code>fernhill_ai_usage.csv</code>, goes in before
+P18.) <strong>Think about the question before you open “What we
+found.”</strong> Gemini’s wording and charts will differ from ours, but
+the numbers should match. If a number doesn’t, that’s a check worth
+running.</p>
+<p><strong>What is new since version 2.</strong> There are now two
+files, and joining them is the first trap. The model has a box nobody
+measured in versions 1 and 2, the relationship between manager and lead,
+and a score for it that HR acts on, so the question is no longer only
+whether a column is right but whether a number that decides something
+can still be believed. Every number below was recomputed from the files,
+and we ran all twenty prompts in one Gemini chat (the link is below).
+Where Gemini’s answer differed from ours, or added something we did not
+ask for, a line beginning “In our run” says so.</p>
+<p><a class="badge" href="https://gemini.google.com/share/d/1vpB2Icii4hz4KcijTD88JTdaQfpcyjvb?usp=sharing">See exactly how we ran it</a> <span class="muted">Gemini's answers to these prompts, step by step (the shared chat, which opens when you sign in with your Willamette account).</span></p><div class="step"><div class="step-head"><span class="step-num">P1</span><h3>What is a row, and what is compared?</h3></div><div class="prompt">What does one row of fernhill_v3.csv represent? How many rows are there, how many different teams do they cover, how many quarters, and how many teams are in each arm? Within the arm ML_AI, how many teams does hr_acts mark yes and how many no? How many different pair_id values are there, and why are there more of them than teams?<button class="copy" type="button">Copy</button></div><p class="think">The lot assigned teams, and a second lot assigned HR&#x27;s response. How many independent units does each comparison really have, and what is a pair?</p><details><summary>What we found</summary><p>One row is <strong>one product team in one quarter</strong>, with
+<strong>1,440 rows, 120 teams and 12 quarters</strong> (2023Q3 to
+2026Q2), eight before the pilot and four during it. Each arm has
+<strong>40 teams</strong>, and inside the new structure (ML_AI)
+<strong>HR acts on 20 teams and 20 stay sealed</strong>. There are
+<strong>219 different pair IDs</strong>, more than the 120 teams,
+because a pair changes when a lead leaves or HR re-pairs the manager, so
+some teams hold two, three or more pairs over the three years.
+<strong>Arm comparisons rest on 40 teams a side, and the HR comparison
+on 20.</strong> <code>hr_acts</code> is blank outside the new structure,
+and <code>rc_score</code> and <code>overrides</code> exist only from
+July 2025.</p>
+<p>In our run Gemini named the unit a team-quarter, gave every count
+correctly, and explained the 219 pair IDs by counting the three ways a
+pair changes (a lead leaves, the pilot brings a professional manager, a
+manager is re-paired).</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P2</span><h3>Describe the outcome</h3></div><div class="prompt">Describe delivered_share: what kind of variable it is, how many values there are including blanks, the middle (the median, and the mean only if a mean makes sense for this kind of variable), how spread out it is, and its shape, with a histogram in five-point bands. Tell me any choices you made, such as dropping blanks or zeros, and whether each team-quarter counts once or is weighted.<button class="copy" type="button">Copy</button></div><p class="think">Which is larger, the mean or the median? Why?</p><details><summary>What we found</summary><div class="tw"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kind</td>
+<td>A measurement, a share from 0 to 1</td>
+</tr>
+<tr>
+<td>How many</td>
+<td>1,440, none blank</td>
+</tr>
+<tr>
+<td>Middle</td>
+<td>Median 0.68, and mean 0.64</td>
+</tr>
+<tr>
+<td>Spread</td>
+<td>Half fall between 0.50 and 0.82, and the range is 0 to 1</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>Skewed left, with a long tail of quarters that delivered little (19
+are under 5%)</td>
+</tr>
+</tbody>
+</table></div>
+<p>The mean sits below the median because of that tail. <strong>A choice
+worth naming.</strong> Each team-quarter counts once, whatever its size,
+and weighting by milestones gives 0.64.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P3</span><h3>Describe the score, and its monthly path</h3></div><div class="prompt">Describe rc_score the same way. It is the mean of seven 1 to 5 relationship items, averaged over a quarter&#x27;s monthly pulses, and it is blank before July 2025. Tell me how many values are present and blank. Then, using fernhill_v3_pulse.csv, tell me how many monthly pulses are blank and in how many teams, how many sit at exactly 1 or 5, and how the average pulse moves from month to month. For how many teams do the last three months average at least 0.5 away from the first three?<button class="copy" type="button">Copy</button></div><p class="think">A score built from ordered answers is averaged. Is the mean the right summary, and what would you check it against? What would a flat monthly average hide?</p><details><summary>What we found</summary><div class="tw"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kind</td>
+<td>A measurement, an index built from ordered labels</td>
+</tr>
+<tr>
+<td>How many</td>
+<td>480, all in the pilot, with 960 blank before July 2025 (when nobody
+measured it)</td>
+</tr>
+<tr>
+<td>Middle</td>
+<td>Median 3.4, and mean 3.41</td>
+</tr>
+<tr>
+<td>Spread</td>
+<td>Half fall between 2.9 and 3.9, and the range is 1.3 to 5.0</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>Roughly symmetric</td>
+</tr>
+</tbody>
+</table></div>
+<p>The monthly file has <strong>1,440 pulses, 71 blank (5%) from 53
+teams, at most 4 each, and 30 at the 1 or 5 limits.</strong> The
+<strong>average pulse barely moves (3.3 to 3.4 across the twelve
+months), but single pairs wander: in 50 of the 120 teams the last three
+months average at least 0.5 from the first three.</strong> A flat
+average can hide a lot of movement underneath it. The mean of ordered
+items assumes equal steps between answers, which is a choice to defend,
+and the median (3.4) is nearly the same, so here the choice changes
+little. Leave the blank pulses blank.</p>
+<p>In our run Gemini gave every number correctly and left the blank
+pulses blank. Unasked, it split the monthly average by arm, which shows
+the new structure’s score rising from about 3.0 to 3.4 while the other
+two arms drift. That is the first hint that the flat average hides
+something.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P4</span><h3>Join the files, and check the lots</h3></div><div class="prompt">Join the pulse file to the pilot-quarter rows of fernhill_v3.csv on pair_id and quarter together, and tell me how many rows result. Then join on pair_id alone and tell me how many rows result and why the number is different. Last, for the 40 teams in ML_AI, compare hr_acts yes with no on the average delivered_share before the pilot, and on the average rc_score in 2025Q3, the first pilot quarter.<button class="copy" type="button">Copy</button></div><p class="think">Each team-quarter has three months of pulses. What should a join on a pair that lasts several quarters do? If the lot is fair, how alike should the two HR groups be before anything happens?</p><details><summary>What we found</summary><p><strong>Joined on <code>pair_id</code> and <code>quarter</code>, the
+480 pilot team-quarters give 1,440 rows (three months each). Joined on
+<code>pair_id</code> alone they give 5,250,</strong> because a pair that
+lasts several quarters matches all of its months, not only the quarter’s
+three. Before the join, decide what one row of the result should be. For
+the two HR groups, <strong>delivery before the pilot is alike (67.0% for
+the 20 teams HR acts on and 67.8% for the 20 sealed), but the first
+pilot quarter’s score is not (2.90 against 3.06).</strong> A lot is fair
+in expectation and can still be uneven with 20 teams a side, and this
+one gave the HR group weaker pairs to start with (13 of 20 under 3.0
+against 8, a difference chance reaches about one time in five).</p>
+<p>In our run Gemini explained the 5,250 as a many-to-many join within
+each pair and tabulated it by how many quarters a pair lasts. Unasked,
+it ran two t-tests on the HR groups (p = 0.83 and p = 0.22). Both
+readings were fair, and neither is something this prompt asks for.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P5</span><h3>Where could the score mislead you?</h3></div><div class="prompt">My data is Fernhill Software&#x27;s records, one row per product team per quarter. For each of these, say whether it could affect my data and what I would see in the data if it were happening: missing values, mismeasurement, a definition that changed, only some cases recorded, dates or entries shifted. Focus on rc_score, which HR acts on in the 20 ML_AI teams with hr_acts = yes. Then give the average rc_score and the average overrides by quarter, separately for hr_acts yes and no, in ML_AI.<button class="copy" type="button">Copy</button></div><p class="think">A score that decides something can be worked on. What would you see in the score and in the overrides if pairs learned to score well, and which of the two is harder to game?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Average by quarter</th>
+<th>2025Q3</th>
+<th>2025Q4</th>
+<th>2026Q1</th>
+<th>2026Q2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Score, HR acts</td>
+<td>2.90</td>
+<td>3.14</td>
+<td>3.24</td>
+<td>3.40</td>
+</tr>
+<tr>
+<td>Score, sealed</td>
+<td>3.06</td>
+<td>3.11</td>
+<td>3.19</td>
+<td>3.28</td>
+</tr>
+<tr>
+<td>Overrides, HR acts</td>
+<td>2.35</td>
+<td>2.75</td>
+<td>1.90</td>
+<td>2.65</td>
+</tr>
+<tr>
+<td>Overrides, sealed</td>
+<td>2.10</td>
+<td>2.25</td>
+<td>2.15</td>
+<td>1.75</td>
+</tr>
+</tbody>
+</table></div>
+<p>Several of the five apply to <code>rc_score</code>. It is
+<strong>missing</strong> for 960 rows and for 5% of its monthly pulses.
+It is <strong>mismeasured</strong> wherever people answer politely, and
+<strong>where HR acts on it</strong>, since once a score decides
+coaching, pairs can learn to score higher without working better
+(Goodhart’s law). <strong>The score rose faster where HR acts (up 0.50,
+against 0.22), but overrides did not fall there (2.65 in the last
+quarter, against 1.75 for sealed teams).</strong> An override is a
+behavior, so it is harder to game than an answer. The draft picks one
+concern, says what it would see (HR-acts scores sitting above what the
+overrides imply) and what it will do (read the score beside the
+overrides, and compare against the sealed teams).</p>
+<p>In our run Gemini gave every quarterly average correctly and named
+four of the five concerns with what each would look like. It described
+HR’s rule as strict, coaching whenever a score falls below 3.0, but in
+the data only 17 of the 24 low scores were followed by coaching. Check a
+rule it states in general terms.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P6</span><h3>Hold it up against the prediction</h3></div><div class="prompt">My model predicts that the relationship score tracks delivery more in the new structure and on hard quarters, that the new structure&#x27;s hard quarters split by the relationship, and that where HR acts fewer pairs stay weak and fewer leads leave. Based only on the descriptions above, does the data look the way the model says it should? What can a description of one variable at a time not tell me?<button class="copy" type="button">Copy</button></div><p class="think">What would you write for each of the three predictions, using only what you have described so far?</p><details><summary>What we found</summary><p><strong>From the descriptions alone, not yet able to say, for all
+three.</strong> Each description is of one variable at a time, and none
+can show how the score relates to delivery, whether hard quarters split,
+or what HR’s response did. <strong>Gemini may not stop there.</strong>
+Asked to use only the descriptions, it may go back to the file and
+compare groups itself, which is the Results draft arriving early. Read
+any verdict it gives against what the Results prompts find, and notice
+any “significantly” with no test behind it, any causal verb (“HR raised
+the scores”), and any average of the score that ignores the lot.</p>
+<p>In our run Gemini stayed with the descriptions. It said it could not
+tell for three of the four predictions and called the fourth partly
+consistent but inconclusive. It named regression to the mean and
+selection as things a one-variable description cannot rule out.</p>
+</details></div></section>
+<section class="card" id="v3-results"><h2>Results draft <span class="fh-ver">version 3</span></h2><p><a class="badge" href="../files/v3-results.pdf" download>Download the PDF</a> <span class="muted">The same draft as a two-page document, with its charts.</span></p><p class="muted">The data behind every number here: <a href="../data/fernhill_v3.csv" download>fernhill_v3.csv</a>, also in <a href="#data">The data</a> below.</p><h3 id="the-question-and-the-prediction">1. The question and the
+prediction</h3>
+<p>My question is causal, in two parts. Does the relationship between a
+team’s manager and its lead decide whether the new structure works,
+above all on hard work, and does HR’s tending of it matter? Delivery is
+the share of a team’s committed milestones delivered by their dates. The
+two lots, one for the arms and one for HR’s response, would let me call
+those differences effects, but nobody assigned the relationship, so what
+I say about it is an association, and this draft leaves the causal claim
+for Module 3. My model predicts that the relationship score tracks
+delivery more in the new structure and on hard quarters, that the new
+structure’s hard quarters split by it, with strong pairs matching
+engineer-managers with AI and weak pairs well behind, that lead
+departures follow weak pairs, and that where HR acts fewer pairs stay
+weak and fewer leads leave, though a year may be too short to show
+delivery gains.</p>
+<h3 id="the-charts">2. The charts</h3>
+<div class="column-margin">
+<p><strong>This chart answers:</strong> how do hard quarters deliver in
+each arm, and, in the new structure, by the relationship score?</p>
+<p>Delivery is a measurement (a share), the arm is a label, and the
+score is an index of ordered labels, split into thirds within the new
+structure at 2.9 and 3.5. Each dot is a group’s average over its pilot
+hard quarters, with their count in brackets.</p>
+</div>
+<figure class="fh-figure"><figcaption><span class="muted">The thirds of the relationship score are within the new structure's hard quarters, cut at 2.9 and 3.5. The dashed line marks engineer-managers with AI. Hover a point for its value.</span></figcaption><div class="tw"><svg viewBox="0 0 600 300" role="img" aria-label="Hard-quarter delivery by arm, and in the new structure by the relationship score" class="fh-chart"><line x1="442.7" x2="442.7" y1="36" y2="250" style="stroke:var(--muted);stroke-width:1.2;stroke-dasharray:5 3"/><text x="442.7" y="26" text-anchor="middle" class="fh-tick">engineer-managers with AI</text><text x="220" y="52" text-anchor="end" class="fh-axis" style="font-weight:600">Engineer-manager, no AI (66)</text><line x1="230" x2="376.0" y1="48" y2="48" style="stroke:var(--border);stroke-width:2"/><circle cx="376.0" cy="48" r="7" fill="#d4912e" stroke="#fff" stroke-width="1.5"><title>Engineer-manager, no AI: 45.8% over 66 hard quarters</title></circle><text x="388.0" y="52" class="fh-axis" style="fill:var(--text)">45.8</text><text x="220" y="86" text-anchor="end" class="fh-axis" style="font-weight:600">Engineer-manager, AI (70)</text><line x1="230" x2="442.7" y1="82" y2="82" style="stroke:var(--border);stroke-width:2"/><circle cx="442.7" cy="82" r="7" fill="#2f5d8a" stroke="#fff" stroke-width="1.5"><title>Engineer-manager, AI: 55.3% over 70 hard quarters</title></circle><text x="454.7" y="86" class="fh-axis" style="fill:var(--text)">55.3</text><text x="220" y="120" text-anchor="end" class="fh-axis" style="font-weight:600">Manager + lead, AI, all (74)</text><line x1="230" x2="405.7" y1="116" y2="116" style="stroke:var(--border);stroke-width:2"/><circle cx="405.7" cy="116" r="7" fill="#b8432f" stroke="#fff" stroke-width="1.5"><title>Manager + lead, AI, all: 50.0% over 74 hard quarters</title></circle><text x="417.7" y="120" class="fh-axis" style="fill:var(--text)">50.0</text><text x="232" y="172" text-anchor="end" class="fh-axis" style="font-weight:400">Weakest third of the score (26)</text><line x1="230" x2="286.0" y1="168" y2="168" style="stroke:var(--border);stroke-width:2"/><circle cx="286.0" cy="168" r="7" fill="#e7b3a8" stroke="#fff" stroke-width="1.5"><title>Weakest third of the score: 33.0% over 26 hard quarters</title></circle><text x="298.0" y="172" class="fh-axis" style="fill:var(--text)">33.0</text><text x="232" y="206" text-anchor="end" class="fh-axis" style="font-weight:400">Middle third (25)</text><line x1="230" x2="443.1" y1="202" y2="202" style="stroke:var(--border);stroke-width:2"/><circle cx="443.1" cy="202" r="7" fill="#d38a7a" stroke="#fff" stroke-width="1.5"><title>Middle third: 55.4% over 25 hard quarters</title></circle><text x="455.1" y="206" class="fh-axis" style="fill:var(--text)">55.4</text><text x="232" y="240" text-anchor="end" class="fh-axis" style="font-weight:400">Strongest third (23)</text><line x1="230" x2="500.1" y1="236" y2="236" style="stroke:var(--border);stroke-width:2"/><circle cx="500.1" cy="236" r="7" fill="#b8432f" stroke="#fff" stroke-width="1.5"><title>Strongest third: 63.5% over 23 hard quarters</title></circle><text x="512.1" y="240" class="fh-axis" style="fill:var(--text)">63.5</text><text x="265.1" y="276" text-anchor="middle" class="fh-tick">30%</text><text x="335.3" y="276" text-anchor="middle" class="fh-tick">40%</text><text x="405.5" y="276" text-anchor="middle" class="fh-tick">50%</text><text x="475.7" y="276" text-anchor="middle" class="fh-tick">60%</text><text x="546.0" y="276" text-anchor="middle" class="fh-tick">70%</text><text x="395.0" y="294" text-anchor="middle" class="fh-axis">Average share delivered on time, hard quarters</text></svg></div><details><summary>The numbers behind the chart</summary><div class="tw"><table><tr><th>Group</th><th>Hard quarters</th><th>Average delivered</th></tr><tr><td>Engineer-manager, no AI</td><td>66</td><td>45.8%</td></tr><tr><td>Engineer-manager, AI</td><td>70</td><td>55.3%</td></tr><tr><td>Manager + lead, AI, all</td><td>74</td><td>50.0%</td></tr><tr><td>Weakest third of the score</td><td>26</td><td>33.0%</td></tr><tr><td>Middle third</td><td>25</td><td>55.4%</td></tr><tr><td>Strongest third</td><td>23</td><td>63.5%</td></tr></table></div></details></figure>
+<div class="column-margin">
+<p><strong>This chart answers:</strong> where HR acts on the score, do
+the teams differ from sealed ones, and does the score show it?</p>
+<p>Each pair of dots compares 20 teams HR acts on with 20 whose scores
+stay sealed. Delivery and the share rated hard at planning are shares,
+the score is an index, and overrides are counts a team’s manager
+made.</p>
+</div>
+<figure class="fh-figure"><figcaption><span class="muted">Each pair of dots compares the 20 new-structure teams HR acts on (filled) with the 20 whose scores stay sealed (open), the same teams and the same pilot year. Hover a point for its value.</span></figcaption><div class="tw"><svg viewBox="0 0 600 250" role="img" aria-label="Teams HR acts on against sealed teams: delivery before the pilot, hard quarters, the relationship score and overrides" class="fh-chart"><text x="40" y="30" class="fh-axis" style="font-weight:600">Delivery before the pilot (%)</text><line x1="40" x2="270" y1="74" y2="74" style="stroke:var(--border);stroke-width:1.5"/><line x1="154.7" x2="186.6" y1="60" y2="60" style="stroke:var(--border);stroke-width:2.5"/><circle cx="154.7" cy="60" r="7" fill="#b8432f"><title>HR acts: 67.0</title></circle><circle cx="186.6" cy="60" r="6" style="fill:var(--card)" stroke="#b8432f" stroke-width="2.4"><title>Sealed: 67.8</title></circle><text x="154.7" y="46" text-anchor="middle" class="fh-tick" style="fill:var(--text)">67.0</text><text x="186.6" y="46" text-anchor="middle" class="fh-tick" style="fill:var(--text)">67.8</text><text x="330" y="30" class="fh-axis" style="font-weight:600">Rated hard at planning (%)</text><line x1="330" x2="560" y1="74" y2="74" style="stroke:var(--border);stroke-width:1.5"/><line x1="491.0" x2="404.8" y1="60" y2="60" style="stroke:var(--border);stroke-width:2.5"/><circle cx="491.0" cy="60" r="7" fill="#b8432f"><title>HR acts: 50.0</title></circle><circle cx="404.8" cy="60" r="6" style="fill:var(--card)" stroke="#b8432f" stroke-width="2.4"><title>Sealed: 42.5</title></circle><text x="491.0" y="46" text-anchor="middle" class="fh-tick" style="fill:var(--text)">50.0</text><text x="404.8" y="46" text-anchor="middle" class="fh-tick" style="fill:var(--text)">42.5</text><text x="40" y="130" class="fh-axis" style="font-weight:600">Relationship score, pilot mean</text><line x1="40" x2="270" y1="174" y2="174" style="stroke:var(--border);stroke-width:1.5"/><line x1="162.5" x2="159.6" y1="160" y2="160" style="stroke:var(--border);stroke-width:2.5"/><circle cx="162.5" cy="160" r="7" fill="#b8432f"><title>HR acts: 3.17</title></circle><circle cx="159.6" cy="160" r="6" style="fill:var(--card)" stroke="#b8432f" stroke-width="2.4"><title>Sealed: 3.16</title></circle><text x="162.5" y="146" text-anchor="middle" class="fh-tick" style="fill:var(--text)">3.17</text><text x="159.6" y="188" text-anchor="middle" class="fh-tick" style="fill:var(--text)">3.16</text><text x="330" y="130" class="fh-axis" style="font-weight:600">Overrides, pilot mean</text><line x1="330" x2="560" y1="174" y2="174" style="stroke:var(--border);stroke-width:1.5"/><line x1="479.0" x2="405.8" y1="160" y2="160" style="stroke:var(--border);stroke-width:2.5"/><circle cx="479.0" cy="160" r="7" fill="#b8432f"><title>HR acts: 2.41</title></circle><circle cx="405.8" cy="160" r="6" style="fill:var(--card)" stroke="#b8432f" stroke-width="2.4"><title>Sealed: 2.06</title></circle><text x="479.0" y="146" text-anchor="middle" class="fh-tick" style="fill:var(--text)">2.41</text><text x="405.8" y="146" text-anchor="middle" class="fh-tick" style="fill:var(--text)">2.06</text><circle cx="190" cy="236" r="6" fill="#b8432f"/><text x="202" y="240" class="fh-tick">HR acts (20 teams)</text><circle cx="340" cy="236" r="5.5" style="fill:var(--card)" stroke="#b8432f" stroke-width="2.4"/><text x="352" y="240" class="fh-tick">sealed (20 teams)</text></svg></div><details><summary>The numbers behind the chart</summary><div class="tw"><table><tr><th>Measure</th><th>HR acts</th><th>Sealed</th></tr><tr><td>Delivery before the pilot (%)</td><td>67.0</td><td>67.8</td></tr><tr><td>Rated hard at planning (%)</td><td>50.0</td><td>42.5</td></tr><tr><td>Relationship score, pilot mean</td><td>3.17</td><td>3.16</td></tr><tr><td>Overrides, pilot mean</td><td>2.41</td><td>2.06</td></tr></table></div></details></figure>
+<h3 id="the-association">3. The association</h3>
+<p><strong>AI alone is version 2’s result, to the decimal</strong> (10.7
+points on easy quarters and 9.5 on hard, raw),</p>
+<p><strong>The relationship splits the new structure’s hard
+quarters.</strong> They delivered 33.0% in the weakest third of the
+score, 55.4% in the middle, and 63.5% in the strongest, against 55.3%
+under engineer-managers with AI. The 74 quarters come from 35 teams, 16
+to 19 a third, and resampling whole teams puts the
+strongest-against-weakest gap (30.5 points) between 16 and 44. Halves
+give 39.1% and 62.2%. The score tracks delivery most on hard quarters in
+the new structure (correlation 0.49, against 0.34 on easy ones), but
+just as well on hard quarters under engineer-managers without AI (0.49),
+so “more in the new structure” only half holds. Leads left in 15.3% of
+team-quarters in the weak third, 4.8% in the middle and none in the
+strongest (same cuts, all 160 team-quarters), though a fall in the score
+over the first two quarters marked them less well (5 of 14 teams,
+against 7 of 26).</p>
+<p><strong>HR’s response can’t be read from 20 teams a side.</strong>
+Teams HR acts on delivered 60.3% in the pilot against 67.4% for sealed
+teams, after delivering alike before it (67.0% and 67.8%). The lot also
+gave them more hard quarters (50.0% rated hard at planning, against
+42.5%) and weaker pairs (13 of 20 scored under 3.0 in the first quarter,
+against 8). By difficulty the gap is 2.0 points on hard quarters and 8.1
+on easy ones. Fewer pairs were still under 3.0 at the end where HR acts
+(3 against 7), and fewer leads left (5.0% a quarter against 10.0%). The
+score rose more there (2.90 to 3.40, against 3.06 to 3.28) while
+overrides did not fall (2.65 in the last quarter, against 1.75).
+<strong>But none of this stands out from chance.</strong> Shuffling the
+HR labels among the 40 teams reaches a delivery gap this large (7.2
+points by team) about one time in five, the score’s rise one time in
+eight, and last-quarter overrides one in six.</p>
+<p><strong>AI use is chosen, not assigned.</strong> Among licensed
+teams, heavy users (at or above the median use) delivered 65.5% and
+light users 65.1%, as if use did nothing, but on easy quarters heavy
+users delivered 78.5% against 73.3%, on hard ones 52.3% against 53.0%,
+and heavy users drew more hard quarters (49.7% against 40.3%), which
+hides the easy-quarter gain in the pooled figure.</p>
+<h3 id="against-the-model">4. Against the model</h3>
+<p>The Brief named three ways the model would be wrong. The score
+predicts delivery beyond the escalation load (about 24 points per point
+of score on hard quarters in the new structure, with or without the load
+held fixed), so the first doesn’t hold. Weak and strong pairs deliver
+33.0% and 63.5% on hard quarters, so the second doesn’t hold. The third
+I can’t judge. Where HR acts the score rose and leads stayed, but
+delivery was no better, overrides did not fall, and none of it is
+outside chance.</p>
+<h3 id="what-this-does-not-establish">5. What this does not
+establish</h3>
+<p><strong>Nobody assigned the relationship.</strong> Results feed back,
+so last quarter’s delivery predicts this quarter’s score (correlation
+0.30) about as well as last quarter’s score predicts delivery (0.34),
+and the thirds sort quarters by a score measured in the same quarter as
+the delivery. A team’s capability, which no column holds, can move both.
+Across all pilot teams the slope falls from 12.4 to 8.5 points per point
+of score once each team’s own before-period delivery is held fixed,
+though not in the new structure alone (17.8 to 18.1). That is an
+association.</p>
+<p><strong>The lot for HR’s response is too small to tell.</strong>
+Difficulty rated at planning is the right adjustment, since it was set
+before the work, but it doesn’t close the gap on easy quarters, and none
+is outside chance.</p>
+<p><strong>My Data &amp; Methods concern, the score gamed once HR acts
+on it,</strong> would show as scores rising where overrides don’t, and a
+little does, though within chance. The two groups’ scores averaged alike
+(3.17 and 3.16) while overrides ran higher where HR acts (2.41 against
+2.06).</p>
+<p><strong>What would settle it is the Interpretation in Module
+3:</strong> which rung each comparison reaches, what coaching pairs by
+lot would add, and a forecast with a range for the decision.</p>
+<h3 id="note-on-ai-use-3">Note on AI use</h3>
+<p>I used Gemini (Willamette account) for the comparisons, the thirds,
+and the charts. It compared HR’s teams with sealed ones on delivery
+alone, and I added the lot’s hard quarters, first-quarter scores and
+overrides. It pooled heavy and light users, and I split them by
+difficulty.</p>
+</section>
+<section class="card" id="v3-prompts-results"><h2>Work it yourself: the Results prompts <span class="fh-ver">version 3</span></h2><p>These are the prompts for the Results draft above, in order, in the
+same chat as the Data &amp; Methods prompts (or a new one with
+<code>fernhill_v3.csv</code> and <code>fernhill_v3_pulse.csv</code>
+uploaded again, and <code>fernhill_ai_usage.csv</code> before P18).
+<strong>Think about the question before you open “What we
+found.”</strong> Gemini’s charts and wording will differ from ours, but
+the numbers should match. If a number doesn’t, that’s a check worth
+running.</p>
+<p><strong>This model is the biggest yet.</strong> Two lots, a
+relationship nobody assigned, a score that can be gamed and a usage
+record chosen by teams make a dozen analyses in a two-page draft, so the
+prompts ask for every number the draft needs and say exactly what each
+chart must show. Three habits recur. Split by <code>hard_plan</code>,
+rated at planning, never <code>hard_close</code>, rated after the
+outcome. Say what one dot is. And separate what a lot lets you claim
+(the arms, and HR’s response) from what nobody assigned (the
+relationship, and AI use). We ran all twenty prompts in one Gemini chat,
+and where its answer differed from ours, or added something we did not
+ask for, a line beginning “In our run” says so.</p>
+<p><a class="badge" href="https://gemini.google.com/share/d/1vpB2Icii4hz4KcijTD88JTdaQfpcyjvb?usp=sharing">See exactly how we ran it</a> <span class="muted">Gemini's answers to these prompts, step by step (the shared chat, which opens when you sign in with your Willamette account).</span></p><div class="step"><div class="step-head"><span class="step-num">P7</span><h3>Where the arms stand</h3></div><div class="prompt">For the pilot quarters, give the average delivered_share for each arm separately for easy quarters (hard_plan = no) and hard quarters (hard_plan = yes), with the number of team-quarters behind each of the six averages.<button class="copy" type="button">Copy</button></div><p class="think">Version 2&#x27;s AI result is unchanged because the engineer-manager arms are the same teams. What is different about the new structure&#x27;s hard quarters from version 2&#x27;s 46.3%?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Easy quarters</th>
+<th>Hard quarters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EM_noAI</td>
+<td>64.9% (94)</td>
+<td>45.8% (66)</td>
+</tr>
+<tr>
+<td>EM_AI</td>
+<td>75.6% (90)</td>
+<td>55.3% (70)</td>
+</tr>
+<tr>
+<td>ML_AI</td>
+<td>75.8% (86)</td>
+<td>50.0% (74)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The first two rows are version 2’s, to the decimal.</strong>
+The new structure’s hard quarters are 50.0% here against 46.3% in
+version 2, because HR now acts on the scores in half of those teams and
+the file measures the relationship. Easy quarters are level with
+engineer-managers with AI, as before.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P8</span><h3>Do hard quarters split by the relationship?</h3></div><div class="prompt">In ML_AI, take the pilot quarters rated hard at planning and split rc_score into thirds (cut at 2.9 and 3.5, so the thirds are 2.9 or less, above 2.9 up to 3.5, and above 3.5). Give the number of team-quarters and the average delivered_share in each third, and set them beside the average for EM_AI hard quarters.<button class="copy" type="button">Copy</button></div><p class="think">The model says weak pairs fall well behind and strong ones match or beat engineer-managers with AI. Do the three thirds look like that?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Hard quarters, new structure</th>
+<th>Team-quarters</th>
+<th>Average delivered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weakest third (2.9 or less)</td>
+<td>26</td>
+<td>33.0%</td>
+</tr>
+<tr>
+<td>Middle third</td>
+<td>25</td>
+<td>55.4%</td>
+</tr>
+<tr>
+<td>Strongest third</td>
+<td>23</td>
+<td>63.5%</td>
+</tr>
+<tr>
+<td>(EM_AI, all hard quarters)</td>
+<td>70</td>
+<td>55.3%</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The new structure’s hard quarters split.</strong> The
+strongest pairs beat engineer-managers with AI and the weakest fall 22
+points behind. This is the prediction the Brief made, and it describes
+pairs sorted by a score nobody assigned, which is the caveat that runs
+through the draft. Gemini may cut the thirds at slightly different
+points, and the numbers will move a little with them.</p>
+<p>In our run Gemini cut the thirds where we asked, so every number
+matched.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P9</span><h3>The first chart</h3></div><div class="prompt">Make one dot plot. Put six rows on the y axis, from the top: EM_noAI, EM_AI, ML_AI (all hard quarters), then three rows indented under ML_AI for the weakest, middle and strongest third of rc_score (cut at 2.9 and 3.5). Put the average delivered_share on the x axis, from 25% to 72%, using only the pilot quarters rated hard at planning. Label every point with its value, put the number of team-quarters in brackets after each row&#x27;s name, draw a dashed vertical line at the EM_AI average, and tell me what one dot represents.<button class="copy" type="button">Copy</button></div><p class="think">Which dot would you look at first, and what would you want the reader to see without reading the numbers?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Hard quarters</th>
+<th>Average delivered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EM_noAI</td>
+<td>66</td>
+<td>45.8%</td>
+</tr>
+<tr>
+<td>EM_AI</td>
+<td>70</td>
+<td>55.3%</td>
+</tr>
+<tr>
+<td>ML_AI, all</td>
+<td>74</td>
+<td>50.0%</td>
+</tr>
+<tr>
+<td>Weakest third</td>
+<td>26</td>
+<td>33.0%</td>
+</tr>
+<tr>
+<td>Middle third</td>
+<td>25</td>
+<td>55.4%</td>
+</tr>
+<tr>
+<td>Strongest third</td>
+<td>23</td>
+<td>63.5%</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>One dot is the average delivery of one group’s pilot hard
+quarters.</strong> The new structure’s single row (50.0%) hides what the
+three thirds show, which is the draft’s first finding. If Gemini draws
+the dots from every quarter, or splits by <code>hard_close</code>, they
+will be wrong. Ask again and say which column and which rows.</p>
+<p>In our run Gemini drew the six rows with every label, the counts in
+brackets and the dashed line, and gave every value correctly. It
+produced the chart twice, and the first copy showed empty boxes where
+the indent characters should be, so look at the last one.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P10</span><h3>Does the score track delivery, and where?</h3></div><div class="prompt">For each arm in the pilot, give the correlation between rc_score and delivered_share separately for hard and easy quarters (hard_plan), with the number of team-quarters in each.<button class="copy" type="button">Copy</button></div><p class="think">The model says the score tracks delivery more in the new structure and on hard quarters. Which of those does this table support?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Correlation of score with delivery</th>
+<th>Hard quarters</th>
+<th>Easy quarters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ML_AI</td>
+<td>0.49 (74)</td>
+<td>0.34 (86)</td>
+</tr>
+<tr>
+<td>EM_AI</td>
+<td>0.33 (70)</td>
+<td>0.38 (90)</td>
+</tr>
+<tr>
+<td>EM_noAI</td>
+<td>0.49 (66)</td>
+<td>0.44 (94)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The score tracks delivery most on hard quarters in the new
+structure, but just as well on hard quarters under engineer-managers
+without AI,</strong> and on easy quarters it tracks delivery least in
+the new structure. So “more in the new structure” holds against one
+engineer-manager arm and not the other, and the honest sentence says so.
+Notice that a correlation is a description of how two columns move
+together, not a claim about what moves what.</p>
+<p>In our run Gemini gave every correlation correctly and noted that the
+no-AI arm tracks as closely as the new structure on hard quarters (0.495
+against 0.490). It added Spearman correlations and p-values nobody asked
+for.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P11</span><h3>Do leads leave from weak pairs?</h3></div><div class="prompt">In ML_AI, over all 160 pilot team-quarters, give the share with lead_departed = yes in each third of rc_score (2.9 or less, above 2.9 up to 3.5, above 3.5), with the counts. Then, for the 40 ML_AI teams, split them by whether rc_score fell from 2025Q3 to 2025Q4, and give how many in each group had a lead leave at any point.<button class="copy" type="button">Copy</button></div><p class="think">The Brief predicted that departures concentrate in pairs whose score fell in the first two quarters. Which of the two cuts fits that better?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Lead left in</th>
+<th>Team-quarters</th>
+<th>Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weakest third</td>
+<td>9 of 59</td>
+<td>15.3%</td>
+</tr>
+<tr>
+<td>Middle third</td>
+<td>3 of 63</td>
+<td>4.8%</td>
+</tr>
+<tr>
+<td>Strongest third</td>
+<td>0 of 38</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Teams whose score <strong>fell</strong> from 2025Q3 to 2025Q4:
+<strong>5 of 14 had a lead leave</strong>, against <strong>7 of
+26</strong> whose score did not fall. <strong>Departures follow weak
+pairs far more clearly than they follow an early fall in the
+score,</strong> so the Brief’s wording needs a caveat. Reporting a
+prediction that only half fits is part of the work.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P12</span><h3>Does the score add anything beyond the escalation load?</h3></div><div class="prompt">In ML_AI, for the pilot quarters rated hard at planning, fit delivered_share on rc_score alone and then on rc_score and escalations together. Give the coefficient on rc_score each time in points of delivery per point of score, and the number of team-quarters.<button class="copy" type="button">Copy</button></div><p class="think">The Brief says the model is wrong if the score predicts nothing beyond the escalation load. Which result would make you say that?</p><details><summary>What we found</summary><p><strong>On the 74 new-structure hard quarters, delivery rises 25.1
+points per point of score alone and 24.4 points with escalations held
+fixed.</strong> The score hardly changes when the load is added (the two
+are almost uncorrelated), so the first of the Brief’s three ways to be
+wrong does not hold. Gemini may show this as a table of coefficients or
+as correlations. Ask for the points per point of score, so the units are
+the ones in the draft.</p>
+<p>In our run Gemini gave 25.1 and 24.4 points per point of score on 74
+team-quarters from 35 teams, in the wording “associated with”. It added
+team-clustered standard errors on its own.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P13</span><h3>HR acts against sealed</h3></div><div class="prompt">For the 40 ML_AI teams, compare hr_acts yes with no on: the average delivered_share before the pilot (the eight pre quarters) and in the pilot; the share of pilot team-quarters rated hard at planning; how many pairs had rc_score under 3.0 in 2025Q3 and in 2026Q2; the share of pilot team-quarters with lead_departed = yes; and how many team-quarters have hr_coaching = yes and repaired = yes.<button class="copy" type="button">Copy</button></div><p class="think">HR&#x27;s teams delivered less in the pilot. Before you call that HR&#x27;s effect, what would you want to know about how the lot happened to fall?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>HR acts (20)</th>
+<th>Sealed (20)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delivery before the pilot</td>
+<td>67.0%</td>
+<td>67.8%</td>
+</tr>
+<tr>
+<td>Delivery in the pilot</td>
+<td>60.3%</td>
+<td>67.4%</td>
+</tr>
+<tr>
+<td>Quarters rated hard at planning</td>
+<td>50.0%</td>
+<td>42.5%</td>
+</tr>
+<tr>
+<td>Pairs under 3.0, first quarter</td>
+<td>13</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Pairs under 3.0, last quarter</td>
+<td>3</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Lead left, a quarter</td>
+<td>5.0%</td>
+<td>10.0%</td>
+</tr>
+<tr>
+<td>Coachings and re-pairings</td>
+<td>17 and 4</td>
+<td>0 and 0</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The raw gap is 7.1 points against HR, but the lot drew HR’s
+teams more hard quarters and weaker pairs.</strong> Before the pilot the
+two groups delivered alike, which is what a fair lot promises. Fewer
+HR-acts pairs were still weak at the end and fewer leads left, which is
+HR’s response as it was practiced. <strong>With 20 teams a side, none of
+these differences stands out from chance (P19 shows how often a shuffle
+reaches them),</strong> and a year may be too short for the delivery to
+follow.</p>
+<p>In our run Gemini gave every number in the table correctly and
+described the 7.2-point gap without calling it an effect of HR. It did
+not say that 20 teams a side is too few to read a gap that size, which
+is what the next question is for.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P14</span><h3>The same comparison by difficulty</h3></div><div class="prompt">For the same 40 teams, give the average delivered_share for hr_acts yes and no separately for hard and easy quarters (hard_plan), with the number of team-quarters.<button class="copy" type="button">Copy</button></div><p class="think">Rated-at-planning difficulty is the legitimate adjustment, since it was set before the work. Does adjusting for it close the gap?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Pilot quarters</th>
+<th>HR acts</th>
+<th>Sealed</th>
+<th>Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hard</td>
+<td>49.1% (40)</td>
+<td>51.1% (34)</td>
+<td>2.0 points</td>
+</tr>
+<tr>
+<td>Easy</td>
+<td>71.4% (40)</td>
+<td>79.5% (46)</td>
+<td>8.1 points</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Adjusting for difficulty shrinks the gap on hard quarters to
+2.0 points but leaves 8.1 on easy ones.</strong> The planning rating is
+noisy, and nothing here says the HR teams’ hard quarters were no harder
+than the sealed teams’ in a way the rating can’t see. This year can’t
+say what HR’s response did to delivery, and the draft says so.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P15</span><h3>Does the score show it? Goodhart</h3></div><div class="prompt">For the 40 ML_AI teams, give the pilot average of rc_score and of overrides for hr_acts yes and no, and the average overrides in 2026Q2 for each.<button class="copy" type="button">Copy</button></div><p class="think">If HR&#x27;s coaching made relationships better, what would you expect to see in the scores and in the overrides? If it only taught pairs to score well?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>HR acts</th>
+<th>Sealed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Score, pilot average</td>
+<td>3.17</td>
+<td>3.16</td>
+</tr>
+<tr>
+<td>Overrides, pilot average</td>
+<td>2.41</td>
+<td>2.06</td>
+</tr>
+<tr>
+<td>Overrides, last quarter</td>
+<td>2.65</td>
+<td>1.75</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The scores look alike (3.17 and 3.16) while overrides run
+higher where HR acts.</strong> The two groups started with different
+scores (P4), so averages over the whole year hide the path, and the
+quarter-by-quarter table in P5 shows the HR group’s score rising faster
+while its overrides didn’t fall. That is the pattern a gamed score would
+leave, and the draft reads it as a reason to trust the overrides over
+the score.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P16</span><h3>The second chart</h3></div><div class="prompt">Make a small multiples chart with four panels, each comparing the 20 ML_AI teams with hr_acts = yes (a filled dot) against the 20 with hr_acts = no (an open dot) on one measure: the average delivered_share before the pilot, the share of pilot team-quarters rated hard at planning, the pilot average of rc_score, and the pilot average of overrides. Label every dot with its value and add a legend.<button class="copy" type="button">Copy</button></div><p class="think">Which panel shows the lot&#x27;s bad luck, which shows the score&#x27;s trouble, and what does the first panel tell you about whether the groups were comparable?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>HR acts</th>
+<th>Sealed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delivery before the pilot</td>
+<td>67.0%</td>
+<td>67.8%</td>
+</tr>
+<tr>
+<td>Rated hard at planning</td>
+<td>50.0%</td>
+<td>42.5%</td>
+</tr>
+<tr>
+<td>Score, pilot average</td>
+<td>3.17</td>
+<td>3.16</td>
+</tr>
+<tr>
+<td>Overrides, pilot average</td>
+<td>2.41</td>
+<td>2.06</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The first panel says the groups were comparable on delivery,
+the second says they were not on difficulty, and the last two say the
+score and the behavior disagree.</strong> If the two dots nearly
+coincide (the score panel), label one above and one below so both
+numbers show.</p>
+<p>In our run Gemini gave every value correctly, but the text said HR
+teams had a “significantly higher share of hard quarters”, and nothing
+had been tested. The first panel’s axis labels also ran together. Ask it
+to remove the word, and to tidy the axis, before you use the chart.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P17</span><h3>What does this not establish?</h3></div><div class="prompt">In ML_AI, compute the correlation between rc_score in a quarter and delivered_share in the previous quarter, and between delivered_share in a quarter and rc_score in the previous quarter, for quarters 2025Q4 to 2026Q2. Then, for all pilot team-quarters with a score, give the slope of delivered_share on rc_score in points per point of score, first alone and then with each team&#x27;s average delivered_share over the eight pre quarters held fixed, and do the same for ML_AI alone.<button class="copy" type="button">Copy</button></div><p class="think">The model says results feed back into the relationship, and that team capability could drive both. What would each of those look like in these numbers?</p><details><summary>What we found</summary><p><strong>Last quarter’s score predicts this quarter’s delivery (0.34)
+about as well as last quarter’s delivery predicts this quarter’s score
+(0.30), on 120 team-quarters.</strong> A good quarter sours or sweetens
+the pair, so the arrow runs both ways. For the slope, <strong>across all
+pilot teams it falls from 12.4 to 8.5 points per point of score once
+each team’s own before-period delivery is held fixed, but in the new
+structure alone it barely moves (17.8 and 18.1).</strong> Part of the
+link across arms is team capability, which moves both, and nothing in
+this file holds it directly. All of this is an association, the first
+rung, and it is why the draft leaves the causal claim for Module 3.</p>
+<p>In our run Gemini labelled the two lagged correlations correctly
+(0.34 and 0.30) and gave both sets of slopes. It added p-values and the
+words “statistically significant” unasked, and it did not read the
+lagged correlations as causal.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P18</span><h3>AI use is chosen, not assigned</h3></div><div class="prompt">Join fernhill_ai_usage.csv to the pilot quarters of fernhill_v3.csv on team_id and quarter. Among the team-quarters with ai_access = yes, call a team-quarter a heavy user if its ai_active_share is at or above the median of ai_active_share, and a light user otherwise. Give the average delivered_share of heavy and light users overall and separately for hard and easy quarters (hard_plan), and the share of each group&#x27;s quarters rated hard. Also tell me the largest ai_active_share among the teams with ai_access = no.<button class="copy" type="button">Copy</button></div><p class="think">The lot assigned licenses, not use. If heavy users did no better overall, does that mean use does nothing? What would you split by before deciding?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Licensed pilot team-quarters</th>
+<th>Heavy (161)</th>
+<th>Light (159)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average delivered, all</td>
+<td>65.5%</td>
+<td>65.1%</td>
+</tr>
+<tr>
+<td>Easy quarters</td>
+<td>78.5%</td>
+<td>73.3%</td>
+</tr>
+<tr>
+<td>Hard quarters</td>
+<td>52.3%</td>
+<td>53.0%</td>
+</tr>
+<tr>
+<td>Rated hard at planning</td>
+<td>49.7%</td>
+<td>40.3%</td>
+</tr>
+</tbody>
+</table></div>
+<p>The median use is 0.77. <strong>Overall, heavy and light users
+delivered the same, but on easy quarters heavy users delivered 5.2
+points more and on hard ones 0.7 fewer, and heavy users drew many more
+hard quarters, which hides the easy-quarter gain in the pooled
+number.</strong> Use is chosen by teams after the lot, so a comparison
+of heavy against light users mixes a real effect with selection. The
+no-AI arm’s largest use is 0, so that arm did stay off licensed tools.
+Splitting by <code>hard_plan</code> is what shows the pooled link
+hiding, the same pattern as Berkeley’s departments.</p>
+<p>In our run Gemini gave every number correctly and explained why the
+pooled averages hide the easy-quarter gain. It did not say that teams
+chose how much to use the tool, which is the caveat to add. Part way
+through the chat it also lost the attached <code>fernhill_v3.csv</code>,
+and asked for it again. If yours says a file is missing, attach it again
+and repeat the prompt.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P19</span><h3>Is that more than chance?</h3></div><div class="prompt">For the 40 ML_AI teams, take each team&#x27;s average delivered_share over its four pilot quarters. Shuffle the hr_acts labels among the 40 teams 10,000 times, 20 yes and 20 no each time, and tell me how often the difference between the two groups&#x27; averages is at least as large as the real one (60.3% against 67.4% at the quarter level, 7.2 points by team). Then do the same for the change in each team&#x27;s rc_score from 2025Q3 to 2026Q2, and for each team&#x27;s rc_score and overrides in 2026Q2. Then do the same for each team&#x27;s share of pilot quarters rated hard at planning.<button class="copy" type="button">Copy</button></div><p class="think">The lot makes the groups comparable in expectation, with only 20 teams a side. How big a gap can a shuffle alone produce?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Shuffled labels reach a gap as large as the real one</th>
+<th>About</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average delivery by team (7.2 points)</td>
+<td>1 time in 5</td>
+</tr>
+<tr>
+<td>The score’s rise, 2025Q3 to 2026Q2 (0.28)</td>
+<td>1 time in 8</td>
+</tr>
+<tr>
+<td>The score in 2026Q2 (0.115)</td>
+<td>1 time in 2</td>
+</tr>
+<tr>
+<td>Overrides in 2026Q2 (0.9)</td>
+<td>1 time in 6</td>
+</tr>
+<tr>
+<td>The share of quarters rated hard (7.5 points)</td>
+<td>1 time in 2</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>None of the HR comparisons stands out from chance.</strong>
+That is the honest reading of a lot with 20 teams a side, and it is why
+the draft says this year can’t tell what HR’s response did. Gemini may
+run fewer shuffles or report a p-value without saying what it counts;
+ask it to say. A shuffle is a way of asking what luck alone would
+do.</p>
+<p>In our run Gemini made all 10,000 shuffles and gave 20% for the team
+delivery gap, 12% for the score’s rise, 16% for the last quarter’s
+overrides, 50% for the last quarter’s score and 50% for the share of
+quarters rated hard. It read them correctly, that none of the four
+clears the usual 5% mark with 20 teams a side. It called the shuffle
+“exact” when it was a random draw, and it gave both one-sided and
+two-sided figures.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P20</span><h3>How firm is the split by relationship?</h3></div><div class="prompt">In ML_AI, for the pilot quarters rated hard at planning, resample whole teams with replacement 4,000 times and, each time, compute the average delivered_share in the strongest third of rc_score minus the average in the weakest third (cut at 2.9 and 3.5). Give the middle 95% of those differences, and the number of teams behind each third. Then give the average delivered_share in the two halves of rc_score split at its median.<button class="copy" type="button">Copy</button></div><p class="think">Several team-quarters come from one team. Does the gradient survive resampling teams and not quarters, and does it need thirds?</p><details><summary>What we found</summary><p><strong>The 74 quarters come from 35 teams, with 16, 19 and 16 teams
+in the weak, middle and strong thirds.</strong> The strongest third
+delivers 30.5 points more than the weakest, and <strong>resampling whole
+teams puts that gap between about 16 and 44 points.</strong> Halves of
+the score give 39.1% and 62.2%, so the gradient doesn’t depend on the
+cut. This is the split the draft rests on, and it is firm in a way the
+HR comparisons are not. It remains an association, because nobody
+assigned the relationship.</p>
+<p>In our run Gemini resampled whole teams, found 16, 19 and 16 teams in
+the three thirds, and gave a middle 95% of 14.9 to 43.6 points around
+the 30.5 gap. Your interval will differ by a point or two, since the
+resamples are random. The halves of the score gave 39.1% and 62.2%.</p>
+</details></div></section>
+<section class="card" id="v3-interp"><h2>Interpretation <span class="fh-ver">version 3</span></h2><h3 id="my-causal-claim">1. My causal claim</h3>
+<p><strong>Giving AI to teams run by engineer-managers raised their
+delivery.</strong> With each team set against its own eight quarters
+before the pilot, the lot puts the gain at 4.3 points (a 90% range of
+about 0 to 9), on easy quarters (4.2) and hard ones (3.1) alike.
+<strong>Replacing engineer-managers with a professional manager and a
+technical lead, both with AI, did not raise delivery on
+average.</strong> The new structure delivered 3.4 points less than
+engineer-managers with AI (about −10 to 3), 3.4 less on hard quarters
+and 1.4 more on easy ones, and its teams spread much further apart.
+<strong>The person holding technical judgment left more often in the new
+structure</strong>, a lead in 12 of 160 team-quarters against the most
+senior engineer in 5 of 160 under engineer-managers with AI (shuffling
+the arm labels across teams reaches that gap about one time in twenty).
+<strong>Within the new structure, pairs with a strong relationship
+delivered well on hard work and weak pairs badly</strong>, but nobody
+assigned the relationship, so that part is an association.
+<strong>Whether HR’s tending of the relationship helps, this year cannot
+say.</strong></p>
+<h3 id="my-causal-diagram">2. My causal diagram</h3>
+<figure class="fh-figure"><div class="tw"><svg viewBox="0 0 960 410" role="img" aria-label="Version 3&#x27;s Interpretation diagram: the lot sets structure and AI, the relationship sits on the path to the escalation wait and delivery, and the team&#x27;s own capability, never measured, reaches both the relationship and delivery" class="fh-chart"><defs><marker id="fh-v3-interpretation-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><path d="M144.4,150.0 Q207.0,119.0 269.6,88.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-v3-interpretation-arrow)"/><path d="M406.0,64.0 Q428.0,64.0 450.0,64.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-v3-interpretation-arrow)"/><path d="M358.0,88.0 Q443.0,139.0 528.0,190.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-v3-interpretation-arrow)"/><path d="M403.7,260.0 Q443.0,249.0 482.3,238.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-v3-interpretation-arrow)"/><path d="M568.0,88.0 Q568.0,139.0 568.0,190.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-v3-interpretation-arrow)"/><text x="632.0" y="135.0" text-anchor="middle" class="fh-tick" style="font-size:11px;font-style:italic;paint-order:stroke;stroke:var(--card);stroke-width:4px">every escalation crosses it</text><path d="M656.0,214.0 Q693.0,214.0 730.0,214.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-v3-interpretation-arrow)"/><path d="M818.2,340.0 Q704.0,214.0 589.8,88.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-v3-interpretation-arrow)"/><path d="M836.5,340.0 Q829.0,289.0 821.5,238.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-v3-interpretation-arrow)"/><path d="M740.0,364.0 Q698.0,364.0 656.0,364.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-v3-interpretation-arrow)"/><path d="M778.0,190.0 Q708.4,113.3 608.0,88.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;stroke-dasharray:6 4;" marker-end="url(#fh-v3-interpretation-arrow)"/><text x="738.4" y="109.3" text-anchor="middle" class="fh-tick" style="font-size:11px;font-style:italic;paint-order:stroke;stroke:var(--card);stroke-width:4px">results feed back</text><rect x="8" y="150" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="96.0" y="172.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Arm, by lot</text><text x="96.0" y="188.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">arm</text><rect x="230" y="40" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="318.0" y="62.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Structure and AI</text><text x="318.0" y="78.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">manager_type, ai_access</text><rect x="230" y="260" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="318.0" y="282.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Difficulty at planning</text><text x="318.0" y="298.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">hard_plan</text><rect x="450" y="40" width="236" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="568.0" y="62.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">The manager–lead relationship</text><text x="568.0" y="78.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">rc_score, overrides</text><rect x="480" y="190" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="568.0" y="212.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Escalation wait</text><text x="568.0" y="228.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">esc_wait_hrs</text><rect x="730" y="190" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="818.0" y="212.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Delivery</text><text x="818.0" y="228.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">delivered_share</text><rect x="740" y="340" width="200" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5;stroke-dasharray:5 4"/><text x="840.0" y="362.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Team&#x27;s own capability</text><text x="840.0" y="378.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">never measured (the rival)</text><rect x="480" y="340" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="568.0" y="362.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Delivery before the pilot</text><text x="568.0" y="378.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">period = pre</text></svg></div><figcaption><span class=muted>The lot leaves no back door into the arm comparisons. Into the relationship two stay open, the team's own capability (dashed, never measured) and results feeding back (dashed arrow). Delivery before the pilot stands in for capability only in part.</span></figcaption></figure>
+<p>The lot set who got which structure and AI, so no back door reaches
+the arm comparisons. The relationship sits on the path from the new
+structure to delivery, since every escalated unknown crosses it, and the
+escalation wait is the step I can measure. On the new structure’s hard
+quarters the median wait was 61.2 hours in the weakest third of the
+score, 27.2 in the middle and 13.3 in the strongest, against 27.8 under
+engineer-managers with AI. <strong>The rival I took most seriously is
+the team’s own capability</strong>, which no column holds. A capable
+team builds a good relationship and also delivers, and its delivery
+feeds back into the score. That back door stays open. Holding each
+team’s delivery before the pilot fixed closes part of it across all
+teams (the slope falls from 12.4 to 8.5 points per point of score), but
+not in the new structure alone (17.8 to 18.1), so I can’t close it with
+these data.</p>
+<h3 id="the-rung-my-evidence-reaches">3. The rung my evidence
+reaches</h3>
+<p><strong>The arm comparisons reach doing, the second rung.</strong>
+The lot is an experiment, and setting each team against its own
+before-period makes it a comparison of changes inside one. Forty teams a
+side keep the ranges wide, so I am fairly sure of AI’s direction and not
+of its size, and the structure’s net effect could have either sign.
+<strong>The relationship reaches seeing, the first rung.</strong> It is
+well measured from the first month, and the waits fall where the model
+says they should, but nobody assigned it. <strong>HR’s response was
+designed to reach doing,</strong> but 20 teams a side cannot speak, as
+the Results draft found (a shuffle reaches its gap about one time in
+five). <strong>Imagining, what a given team would have delivered with a
+different lead, is out of reach.</strong></p>
+<p><strong>What I tried.</strong> For this section I compared the arms
+twelve ways, AI and the structure, raw and against each team’s
+before-period, over all quarters, easy ones and hard ones, and I added
+the lead departures and the waits by third, fourteen comparisons in all.
+I report the before-period version of every arm comparison, whichever
+way it moved the number, because the lot left AI’s two arms apart before
+the pilot (61.5% against 66.9%). Raw, AI’s gain is 9.7 points, about
+twice what I report. The relationship’s cut is the Results draft’s
+thirds, and halves tell the same story (39.1% against 62.2%).</p>
+<h3 id="what-it-would-take-to-know-more">4. What it would take to know
+more</h3>
+<p><strong>The next rung for the relationship is to assign what builds
+it.</strong> Fernhill can’t assign how well two people work together,
+but it can assign coaching and re-pairing by lot, which is what HR’s lot
+tried on 20 teams a side. With the spread of this year’s team changes
+(20.3 points), seeing a 5-point gain in delivery with fair confidence
+would take about 260 teams a side, more teams than Fernhill has. So the
+affordable step is to measure the step the effect runs through. The
+score, the overrides, the waits and lead departures all move within a
+quarter or two, and they can be read on every new pair from its first
+month, with coaching assigned by lot. <strong>Is it worth it?</strong>
+Moving all 120 teams to the new structure is costly to undo, since leads
+who lose a manager’s role leave, and the evidence allows a loss of 10
+points. Waiting costs little, because AI can go to the
+engineer-managers’ teams now. So more information is worth buying before
+restructuring, and not before giving AI.</p>
+<h3 id="my-forecast-for-the-decision">5. My forecast for the
+decision</h3>
+<p><strong>I recommend giving AI to every engineer-manager’s team now,
+and growing the new structure only as an experiment.</strong></p>
+<p>If Fernhill gives AI to all its engineer-managers’ teams, I expect
+delivery between about 0 and 9 points higher over the next year than
+without it, most likely about 4, or up to about 870 more of the roughly
+9,700 milestones a year’s teams commit (about 420 most likely). This
+assumes the gain travels from the 40 pilot teams to the other 80, the
+licensed tools stay as they are, and the 2025 customer migration was a
+one-off shared by every team.</p>
+<p>If instead Fernhill moved all 120 teams to the new structure, I
+expect delivery between about 10 points lower and 3 points higher than
+engineer-managers with AI, most likely about 3 lower (about 970 fewer to
+290 more milestones a year), with more teams far from the average and
+more leads leaving. This assumes the professional managers hired for 120
+teams are as good as the 40 hired for the pilot, enough leads stay to
+fill the role, and about 44% of quarters stay hard. A thinner pool of
+managers at scale would move this range down, not up.</p>
+<p><strong>For whom or when might it not hold?</strong> The new
+structure’s range is widest on hard work, where weak pairs delivered
+33.0% and strong ones 63.5%, so teams with mostly hard work and newly
+formed pairs are where it is most likely to fail, and teams with mostly
+easy work are where it might help (1.4 points, about −5 to 7). The Brief
+named difficulty before looking, since the model says unknowns arrive
+with hard work. The relationship I can only describe, so I don’t
+forecast by it.</p>
+<h3 id="note-on-ai-use-4">Note on AI use</h3>
+<p>I used Gemini (Willamette account) for every comparison above, with
+the prompts below (P21 to P25), and checked its numbers against the
+course’s script. It computed the ranges in P21 from a formula instead of
+resampling, which it disclosed, and they agree with resampling within a
+few tenths. I added the two caveats it left out, that the departures
+compare a lead with a senior engineer and that turning points into
+milestones assumes next year looks like this one. It claimed no cause
+from the relationship, and I kept it that way.</p>
+</section>
+<section class="card" id="v3-prompts-interp"><h2>Work it yourself: the Interpretation prompts <span class="fh-ver">version 3</span></h2><p>These are the prompts for the Interpretation above, in the same chat
+as the Results prompts (or a new one with <code>fernhill_v3.csv</code>
+uploaded again). <strong>Think about the question before you open “What
+we found.”</strong> Gemini’s wording will differ from ours, but the
+numbers should match, apart from the ranges, which come from random
+resampling and move by a few tenths from run to run.</p>
+<p><strong>We ran all five on Thu Nov 19 in a fresh chat on Gemini 4
+Hydrogen Thinking, with <code>fernhill_v3.csv</code> attached.</strong>
+Every number matched the course’s script. The notes after each step say
+where Gemini took a different road or left out a caveat you should
+add.</p>
+<p>Two habits carry over from the Results prompts. Compare teams, not
+team-quarters, since the lot assigned teams. And set each team against
+its own eight quarters before the pilot, as we did for SmartShift,
+because the lot can leave arms unequal by chance.</p>
+<p><a class="badge" href="https://gemini.google.com/share/d/1hC-A9Vm1n4S5TaKaX8DR7u6ZxynNifTr?usp=sharing">See exactly how we ran it</a> <span class="muted">Gemini's answers to these prompts, step by step (the shared chat, which opens when you sign in with your Willamette account).</span></p><div class="step"><div class="step-head"><span class="step-num">P21</span><h3>Each arm against its own before-period</h3></div><div class="prompt">For each of the 120 teams in fernhill_v3.csv, compute its average delivered_share over the eight pre quarters and over the four pilot quarters, and the change (pilot minus pre), in percentage points. Then compare arms by their teams&#x27; average change, EM_AI minus EM_noAI (the AI comparison) and ML_AI minus EM_AI (the structure comparison). Do the same using only the pilot quarters rated hard at planning (hard_plan = yes), and only the easy ones, still against each team&#x27;s whole before-period. For each of the six comparisons, resample whole teams within each arm 10,000 times and give the middle 90% of the difference. Also give each arm&#x27;s average before the pilot, the raw pilot gap for AI with no before-period, and the standard deviation of the teams&#x27; changes in ML_AI and EM_AI.<button class="copy" type="button">Copy</button></div><p class="think">The lot assigned teams to arms, so why set each team against its own past at all? Look at the arms before the pilot before you decide.</p><details><summary>What we found</summary><div class="tw"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Comparison, against each team’s before-period</th>
+<th>All quarters</th>
+<th>Easy quarters</th>
+<th>Hard quarters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI (EM_AI minus EM_noAI)</td>
+<td>4.3 (about 0 to 9)</td>
+<td>4.2 (about −1 to 9)</td>
+<td>3.1 (about −3 to 10)</td>
+</tr>
+<tr>
+<td>Structure (ML_AI minus EM_AI)</td>
+<td>−3.4 (about −10 to 3)</td>
+<td>1.4 (about −5 to 7)</td>
+<td>−3.4 (about −11 to 4)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The lot left AI’s two arms apart before the pilot</strong>,
+61.5% (EM_noAI) against 66.9% (EM_AI), with ML_AI at 67.4%. Raw, AI’s
+pilot gap is 9.7 points by team, about twice the 4.3 that remains once
+each team is set against its own past. The structure’s ranges cross zero
+everywhere, and its teams spread far more (a standard deviation of 20.3
+points in the new structure against 12.7 under engineer-managers with
+AI). The hard and easy comparisons rest on 35 and 38 to 39 teams an arm,
+the teams that had such quarters.</p>
+<p>In our run Gemini gave every average, both spreads (20.34 and 12.75)
+and the raw gap (9.69) correctly, and noticed on its own that more than
+half of the raw gap was there before the pilot. <strong>It did not
+resample.</strong> It said it had reached its limit for running code and
+computed the ranges from a formula instead, and said so in a note, which
+is the right thing to do. Its ranges land within a few tenths of ours
+(for example about −0.4 to 8.9 for AI, against our 0 to 9). If yours
+resamples, it will differ by a few tenths too. If it neither resamples
+nor says what it did instead, ask.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P22</span><h3>Does the person holding technical judgment leave more often?</h3></div><div class="prompt">In the pilot quarters of EM_AI and ML_AI, count the team-quarters with lead_departed = yes in each arm, out of 160. Then take each of the 80 teams&#x27; share of quarters with a departure, shuffle the arm labels among the 80 teams 20,000 times, and tell me how often the shuffled ML_AI minus EM_AI gap is at least as large as the real one.<button class="copy" type="button">Copy</button></div><p class="think">Under engineer-managers, lead_departed records the most senior engineer leaving. Is that the same role as a lead? What does the comparison still tell you?</p><details><summary>What we found</summary><div class="tw"><table>
+<thead>
+<tr>
+<th>Pilot team-quarters</th>
+<th>Departures</th>
+<th>Of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ML_AI (the lead left)</td>
+<td>12</td>
+<td>160</td>
+</tr>
+<tr>
+<td>EM_AI (the most senior engineer left)</td>
+<td>5</td>
+<td>160</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Shuffling the labels reaches a gap this large about one time
+in twenty.</strong> The roles differ, a lead who once managed and a
+senior engineer who never did, so read it as “the person holding
+technical judgment left more often”, by lot.</p>
+<p>In our run Gemini counted 12 and 5, ran all 20,000 shuffles, and gave
+5.0%. It also said that each team had at most one departure. It did not
+say that the two arms’ departures are different roles, which is the
+caveat to add.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P23</span><h3>Does the effect run through the escalation wait?</h3></div><div class="prompt">In ML_AI, take the pilot quarters rated hard at planning and split rc_score into the same thirds as P8 (2.9 or less, above 2.9 up to 3.5, above 3.5). For each third give the number of team-quarters, how many have esc_wait_hrs recorded, the median esc_wait_hrs, and the average overrides. Set beside them the median esc_wait_hrs for EM_AI&#x27;s hard pilot quarters.<button class="copy" type="button">Copy</button></div><p class="think">The model says every escalated unknown crosses the relationship. If that is how it works, where should the long waits be?</p><details><summary>What we found</summary><div class="tw"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Hard quarters</th>
+<th>Team-quarters (waits recorded)</th>
+<th>Median wait, hours</th>
+<th>Average overrides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New structure, weakest third</td>
+<td>26 (25)</td>
+<td>61.2</td>
+<td>3.2</td>
+</tr>
+<tr>
+<td>New structure, middle third</td>
+<td>25 (25)</td>
+<td>27.2</td>
+<td>2.2</td>
+</tr>
+<tr>
+<td>New structure, strongest third</td>
+<td>23 (23)</td>
+<td>13.3</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>EM_AI, all hard quarters</td>
+<td>70 (69)</td>
+<td>27.8</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The waits fall as the relationship strengthens, as the model
+says</strong>, and the overrides with them. It is still the first rung,
+since nobody assigned the relationship, and a capable team could produce
+short waits and a good score together.</p>
+<p>In our run Gemini gave every number in the table, kept to describing
+them, and claimed no cause. That restraint is worth copying. The rung is
+yours to add.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P24</span><h3>What would it take to assign it?</h3></div><div class="prompt">In ML_AI, take each team&#x27;s change in delivered_share (pilot minus its own pre average, in percentage points) and give its standard deviation. Using the rule of thumb that a comparison of two groups of n teams each sees a gap of d points with about 80% power when n is 2 × (2.8 × sd / d) squared, how many teams a side would a lot need to see a 5-point gain in delivery from coaching? How does that compare with the number of teams Fernhill has?<button class="copy" type="button">Copy</button></div><p class="think">HR&#x27;s lot had 20 teams a side. What did that buy, and what would a fair test cost?</p><details><summary>What we found</summary><p><strong>The standard deviation is 20.3 points, so a 5-point gain
+needs about 260 teams a side</strong>, more than Fernhill’s 120 teams in
+all. That is why the Interpretation turns to the step the effect runs
+through, the score, overrides, waits and departures, which move faster
+and can be read on every new pair.</p>
+<p>In our run Gemini gave 20.34 and about 260 teams a side (259.5 before
+rounding up), against Fernhill’s 120 in all and HR’s 20 a side. It also
+gave a slightly smaller answer, 254, from a second way of computing the
+spread. Either way the conclusion is the same.</p>
+</details></div><div class="step"><div class="step-head"><span class="step-num">P25</span><h3>The forecast in milestones</h3></div><div class="prompt">Sum milestones_committed over the 480 pilot team-quarters. Then turn the AI comparison (4.3 points, about 0 to 9) and the structure comparison (−3.4 points, about −10 to 3) into milestones a year at that scale, and give the share of pilot quarters rated hard at planning.<button class="copy" type="button">Copy</button></div><p class="think">A decision-maker counts milestones, not percentage points. Which assumptions does turning one into the other add?</p><details><summary>What we found</summary><p><strong>The pilot year committed 9,701 milestones.</strong> AI’s 4.3
+points is about 420 more delivered on time a year (0 to about 870), and
+the structure’s −3.4 is about 330 fewer (about 970 fewer to 290 more).
+Of the pilot quarters, 43.8% were rated hard at planning. Turning points
+into milestones assumes the firm keeps committing about as many, and
+that the next year’s mix of hard work looks like this one’s.</p>
+<p>In our run Gemini gave 9,701, the 43.75% of quarters rated hard, and
+about 417 and 330 milestones (0 to 873, and 970 fewer to 291 more). It
+did not say what the conversion assumes, which is the THINK question’s
+answer and belongs in your forecast sentence.</p>
+</details></div></section>
+<section class="card" id="data"><h2>The data <span class="fh-ver">version 3</span></h2><p><a class="badge" href="../data/fernhill_v3.csv" download>Download fernhill_v3.csv</a> <span class="muted">1,440 rows × 27 columns, with one row per team per quarter, July 2023 to June 2026.</span></p><p>Fernhill is a useful fiction, so these records are simulated. Every number in the drafts above comes from this file, so you can check any of them with Gemini.</p><details><summary>What each column records</summary><div class="tw"><table><tr><th>Column</th><th>Kind</th><th>What it records</th></tr><tr><td><code>team_id</code></td><td>Labels</td><td>The team, T001 to T120</td></tr><tr><td><code>pair_id</code></td><td>Labels</td><td>The manager and lead (or manager and most senior engineer) working together. It changes when either changes</td></tr><tr><td><code>quarter</code></td><td>Dates and times</td><td>2023Q3 to 2026Q2</td></tr><tr><td><code>period</code></td><td>Labels</td><td>pre means July 2023 to June 2025, and pilot is Fernhill&#x27;s planning label for July 2025 onward</td></tr><tr><td><code>arm</code></td><td>Labels</td><td>The arm the team was assigned by lot, either EM_noAI, EM_AI or ML_AI</td></tr><tr><td><code>hr_acts</code></td><td>Yes/No</td><td>Whether HR acts on the team&#x27;s relationship scores (assigned by lot, for new-structure teams only)</td></tr><tr><td><code>ai_access</code></td><td>Yes/No</td><td>AI tools licensed to the team</td></tr><tr><td><code>team_size</code></td><td>Counts</td><td>Engineers on the team</td></tr><tr><td><code>manager_type</code></td><td>Labels</td><td>engineer (an engineer promoted to manager) or professional (a manager hired on people skill)</td></tr><tr><td><code>tech_score</code></td><td>Measurement</td><td>The manager&#x27;s technical assessment at hire, 0 to 100 (a coding test for engineers, and a literacy test for professional managers)</td></tr><tr><td><code>people_rating</code></td><td>Measurement (a share)</td><td>Share of favorable answers about the manager on the eight Project Oxygen behaviors, from the team&#x27;s upward feedback survey. It is blank if the team didn&#x27;t answer</td></tr><tr><td><code>lead_former_manager</code></td><td>Yes/No</td><td>Whether the team&#x27;s technical lead used to be its manager. It is blank where there is no lead</td></tr><tr><td><code>hard_plan</code></td><td>Yes/No</td><td>Work rated hard at quarterly planning, before it started. It is blank before July 2025</td></tr><tr><td><code>hard_close</code></td><td>Yes/No</td><td>Work rated hard at the quarter-close review, after it ended</td></tr><tr><td><code>escalations</code></td><td>Counts</td><td>Technical questions the team sent up for a decision</td></tr><tr><td><code>esc_open_at_close</code></td><td>Counts</td><td>Escalations still unanswered at the quarter&#x27;s close</td></tr><tr><td><code>esc_wait_hrs</code></td><td>Measurement</td><td>Typical hours an escalation waited for an answer. A few are blank</td></tr><tr><td><code>blocked_hours</code></td><td>Measurement</td><td>Typical hours a ticket sat blocked on another team</td></tr><tr><td><code>rc_score</code></td><td>Measurement (an index of ordered labels)</td><td>Manager–lead relationship, 1 to 5, from a monthly pulse survey. It is blank before July 2025</td></tr><tr><td><code>overrides</code></td><td>Counts</td><td>Times the manager overrode the lead&#x27;s estimate, for the new structure only</td></tr><tr><td><code>hr_coaching</code></td><td>Yes/No</td><td>HR coached the pair this quarter</td></tr><tr><td><code>repaired</code></td><td>Yes/No</td><td>HR paired the manager with a new lead this quarter</td></tr><tr><td><code>lead_departed</code></td><td>Yes/No</td><td>The lead (or, under an engineer-manager, the most senior engineer) left this quarter</td></tr><tr><td><code>eng_departures</code></td><td>Counts</td><td>Other engineers who left this quarter</td></tr><tr><td><code>milestones_committed</code></td><td>Counts</td><td>Milestones the team committed to at planning</td></tr><tr><td><code>milestones_delivered</code></td><td>Counts</td><td>Of those, milestones delivered by their dates</td></tr><tr><td><code>delivered_share</code></td><td>Measurement (a share)</td><td>Delivered ÷ committed, the outcome</td></tr></table></div></details><p><a class="badge" href="../data/fernhill_ai_usage.csv" download>Download fernhill_ai_usage.csv</a> <span class="muted">IT's usage logs, with one row per team per pilot quarter (480 rows × 3 columns). <code>ai_active_share</code> is the share of a team's engineers active on licensed AI tools in a typical week, and it is 0 where a team has no license. Join it to the main file on <code>team_id</code> and <code>quarter</code>.</span></p><p><a class="badge" href="../data/fernhill_v3_pulse.csv" download>Download fernhill_v3_pulse.csv</a> <span class="muted">The monthly relationship pulses behind <code>rc_score</code>, with one row per team per month of the pilot year (1,440 rows × 6 columns). A quarter's <code>rc_score</code> is the mean of that quarter's answered pulses, rounded to 0.1. Join it to the main file on <code>pair_id</code> <strong>and</strong> <code>quarter</code>. On <code>pair_id</code> alone, a pair that lasts several quarters matches all of its months, and the 480 pilot team-quarters become 5,250 rows.</span></p><details><summary>What each column of the pulse file records</summary><div class="tw"><table><tr><th>Column</th><th>Kind</th><th>What it records</th></tr><tr><td><code>team_id</code></td><td>Labels</td><td>The team, T001 to T120. Joins to the main file</td></tr><tr><td><code>pair_id</code></td><td>Labels</td><td>The manager and lead (or manager and most senior engineer) working together that quarter. A pair that changes mid-quarter is recorded as the quarter's pair</td></tr><tr><td><code>quarter</code></td><td>Labels</td><td>2025Q3 to 2026Q2. Joins with <code>pair_id</code> to the main file</td></tr><tr><td><code>month</code></td><td>Dates and times</td><td>The calendar month, 2025-07 to 2026-06</td></tr><tr><td><code>pilot_month</code></td><td>Counts</td><td>The month of the pilot, 1 to 12, since People Operations measured from month one</td></tr><tr><td><code>rc_pulse</code></td><td>Measurement (an index of ordered labels)</td><td>That month's relationship pulse, 1 to 5. It is blank for a month nobody answered, about 5% of them, and a few sit at the limits of 1 or 5</td></tr></table></div></details><p><strong>Work it yourself:</strong> the prompts used to write the drafts are with their drafts. Do Gemini's numbers match the draft? If not, find out why before you trust either.</p></section>
+<section class="card" id="v3-diagrams"><h2>Three diagrams, one firm <span class="fh-ver">version 3</span></h2><p>Every version of Fernhill’s analysis rests on a diagram, whether or
+not anyone drew it. The enthusiast never drew one, so the first drawing
+is reconstructed from what its file collects and what it compares. The
+trial designer drew the second, and the gold standard drew the
+third.</p>
+<p>Each box names a concept and, in small type, the column of that
+firm’s file that records it. <strong>A box with no column is a box the
+firm never measured.</strong> Draw yours before you look at the data,
+because the data can never supply a box nobody drew.</p>
+<h3 id="the-enthusiasts-diagram">The enthusiast’s diagram</h3>
+<figure class="fh-figure"><div class="tw"><svg viewBox="0 0 720 220" role="img" aria-label="The enthusiast&#x27;s diagram: a reorganization raises people skill, which raises delivery, and AI covers the technical gap" class="fh-chart"><defs><marker id="fh-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><path d="M200.0,64.0 Q235.0,64.0 270.0,64.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow)"/><path d="M446.0,77.4 Q483.0,83.0 520.0,88.6" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow)"/><path d="M441.3,150.0 Q480.2,128.4 524.7,126.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow)"/><text x="446.2" y="124.4" text-anchor="middle" class="fh-tick" style="font-size:11px;font-style:italic;paint-order:stroke;stroke:var(--card);stroke-width:4px">covers the gap</text><rect x="10" y="40" width="190" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="105.0" y="62.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Professional manager</text><text x="105.0" y="78.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">manager_type, period</text><rect x="270" y="40" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="358.0" y="62.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">People skill</text><text x="358.0" y="78.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">people_rating</text><rect x="520" y="78" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="608.0" y="100.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Delivery</text><text x="608.0" y="116.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">delivered_share</text><rect x="270" y="150" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="358.0" y="172.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">AI covers the gap</text><text x="358.0" y="188.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">ai_access</text></svg></div><figcaption><span class=muted>No time, no relationship, no comparison group.</span></figcaption></figure>
+<p>One path from the reorganization to delivery, through people skill,
+and AI covering the manager’s technical gap. There is no time, no
+comparison group, and no place for where a technical question goes. The
+file holds escalations, waits and lead departures, but the diagram gives
+no reason to look at them.</p>
+<h3 id="the-trial-designers-diagram">The trial designer’s diagram</h3>
+<figure class="fh-figure"><div class="tw"><svg viewBox="0 0 880 340" role="img" aria-label="The trial designer&#x27;s diagram: a lot sets structure and AI, escalations queue into a wait, and delivery follows, moderated by difficulty" class="fh-chart"><defs><marker id="fh-arrow-v3-2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><path d="M167.0,100.0 Q213.0,84.0 259.0,68.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-2)"/><path d="M167.0,148.0 Q213.0,164.0 259.0,180.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-2)"/><path d="M416.0,63.1 Q443.0,69.0 470.0,74.9" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-2)"/><path d="M416.0,217.4 Q443.0,221.5 470.0,225.6" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-2)"/><path d="M416.0,273.0 Q443.0,266.5 470.0,260.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-2)"/><path d="M558.0,215.0 Q558.0,166.5 558.0,118.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-2)"/><path d="M646.0,110.0 Q668.0,114.0 690.0,118.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-2)"/><path d="M416.0,61.6 Q560.8,49.8 690.0,116.4" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-2)"/><rect x="10" y="100" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="98.0" y="122.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Arm, by lot</text><text x="98.0" y="138.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">arm</text><rect x="240" y="20" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="328.0" y="42.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Structure</text><text x="328.0" y="58.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">manager_type</text><rect x="240" y="180" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="328.0" y="202.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">AI</text><text x="328.0" y="218.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">ai_access</text><rect x="240" y="270" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="328.0" y="292.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Difficulty at planning</text><text x="328.0" y="308.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">hard_plan</text><rect x="470" y="215" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="558.0" y="237.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Escalations</text><text x="558.0" y="253.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">escalations</text><rect x="470" y="70" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="558.0" y="92.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Escalation wait</text><text x="558.0" y="108.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">esc_wait_hrs</text><rect x="690" y="110" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="778.0" y="132.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Delivery</text><text x="778.0" y="148.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">delivered_share</text></svg></div><figcaption><span class=muted>Randomized, and moderated by difficulty, but the relationship between manager and lead is missing.</span></figcaption></figure>
+<p>A lot sets who gets which structure and AI, escalations queue into a
+wait, and delivery follows, moderated by how hard the quarter is. It can
+say what the arms do. It cannot say why the new structure fails on hard
+work, because the box where a manager and a lead must agree is not
+there.</p>
+<h3 id="the-gold-standards-diagram">The gold standard’s diagram</h3>
+<figure class="fh-figure"><div class="tw"><svg viewBox="0 0 920 560" role="img" aria-label="The gold standard&#x27;s diagram: the manager–lead relationship sits between the manager&#x27;s and lead&#x27;s traits and the escalation wait, and results and HR feed back into it" class="fh-chart"><defs><marker id="fh-arrow-v3-3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><path d="M123.5,200.0 Q199.0,134.0 274.5,68.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M141.8,200.0 Q199.0,170.0 256.2,140.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M184.0,208.6 Q199.0,206.0 214.0,203.4" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M96.0,248.0 Q96.0,329.0 96.0,410.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M390.0,44.0 Q410.0,44.0 430.0,44.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M558.9,68.0 Q663.0,129.0 767.1,190.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M343.9,68.0 Q415.4,109.0 486.9,150.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M387.6,140.0 Q408.8,146.0 430.0,151.9" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M390.0,186.9 Q410.0,186.7 430.0,186.4" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M380.7,236.0 Q407.0,228.0 433.2,220.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M612.5,150.0 Q688.1,109.0 763.7,68.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M808.0,68.0 Q808.0,129.0 808.0,190.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M184.0,434.0 Q307.0,434.0 430.0,434.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M518.0,490.0 Q518.0,474.0 518.0,458.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M606.0,434.0 Q663.0,434.0 720.0,434.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M584.5,220.0 Q683.7,315.0 782.9,410.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><text x="683.7" y="311.0" text-anchor="middle" class="fh-tick" style="font-size:11px;font-style:italic;paint-order:stroke;stroke:var(--card);stroke-width:4px">every escalation crosses it</text><path d="M808.0,410.0 Q808.0,324.0 808.0,238.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M390.0,334.0 Q410.0,334.0 430.0,334.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><path d="M541.0,220.0 Q508.4,260.3 522.8,310.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;" marker-end="url(#fh-arrow-v3-3)"/><text x="446.4" y="256.3" text-anchor="middle" class="fh-tick" style="font-size:11px;font-style:italic;paint-order:stroke;stroke:var(--card);stroke-width:4px">the score decides</text><path d="M522.8,310.0 Q555.4,269.7 541.0,220.0" style="fill:none;stroke:var(--muted);stroke-width:1.6;stroke-dasharray:6 4;" marker-end="url(#fh-arrow-v3-3)"/><path d="M720.0,204.2 Q688.8,238.9 666.0,198.2" style="fill:none;stroke:var(--muted);stroke-width:1.6;stroke-dasharray:6 4;" marker-end="url(#fh-arrow-v3-3)"/><text x="688.8" y="234.9" text-anchor="middle" class="fh-tick" style="font-size:11px;font-style:italic;paint-order:stroke;stroke:var(--card);stroke-width:4px">results feed back</text><rect x="8" y="200" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="96.0" y="222.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Arm, by lot</text><text x="96.0" y="238.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">arm</text><rect x="214" y="20" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="302.0" y="42.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Manager&#x27;s people skill</text><text x="302.0" y="58.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">people_rating</text><rect x="214" y="92" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="302.0" y="114.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Manager&#x27;s technical skill</text><text x="302.0" y="130.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">tech_score</text><rect x="214" y="164" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="302.0" y="186.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Lead&#x27;s lost status</text><text x="302.0" y="202.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">lead_former_manager</text><rect x="214" y="236" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5;stroke-dasharray:5 4"/><text x="302.0" y="258.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Pair&#x27;s fit</text><text x="302.0" y="274.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">never measured</text><rect x="430" y="20" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="518.0" y="42.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Blocked work</text><text x="518.0" y="58.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">blocked_hours</text><rect x="430" y="150" width="236" height="70" rx="9" style="fill:var(--card);stroke:var(--accent);stroke-width:3"/><text x="548.0" y="183.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">The manager–lead relationship</text><text x="548.0" y="199.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">rc_score, overrides</text><rect x="720" y="20" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="808.0" y="42.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Departures</text><text x="808.0" y="58.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">lead_departed</text><rect x="720" y="190" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="808.0" y="212.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Delivery</text><text x="808.0" y="228.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">delivered_share</text><rect x="214" y="310" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="302.0" y="332.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">HR acts, by lot</text><text x="302.0" y="348.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">hr_acts</text><rect x="430" y="310" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="518.0" y="332.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">HR coaching or re-pairing</text><text x="518.0" y="348.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">hr_coaching, repaired</text><rect x="8" y="410" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="96.0" y="432.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Structure and AI</text><text x="96.0" y="448.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">manager_type, ai_access</text><rect x="430" y="410" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="518.0" y="432.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Escalated unknowns</text><text x="518.0" y="448.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">escalations</text><rect x="430" y="490" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="518.0" y="512.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Difficulty</text><text x="518.0" y="528.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">hard_plan</text><rect x="720" y="410" width="176" height="48" rx="9" style="fill:var(--card);stroke:var(--muted);stroke-width:1.5"/><text x="808.0" y="432.0" text-anchor="middle" class="fh-axis" style="font-weight:600;fill:var(--text)">Escalation wait</text><text x="808.0" y="448.0" text-anchor="middle" class="fh-tick" style="font-size:11.5px">esc_wait_hrs</text></svg></div><figcaption><span class=muted>The box in the middle, outlined in the accent color, is the one no earlier version drew. Dashed boxes were never measured, and dashed arrows are feedback.</span></figcaption></figure>
+<p>The relationship enters because drawing how an escalated unknown
+actually gets resolved in the new structure forces a box between the
+manager and the lead. Their traits and the pair’s fit shape it, every
+escalation crosses it, results and HR reshape it, and weak ones drive
+leads out. Two things follow that students are meant to find.
+<strong>Good teams build good relationships</strong>, so the score
+tracks delivery even where the relationship matters little, because
+delivery feeds back into it. And <strong>a manager’s people skill drives
+both</strong> the relationship and blocked work, so the score can look
+like it causes delivery when a common cause is at work.</p>
+<p>This drawing is a deliberate simplification. It leaves out team size,
+the judgment holder’s capacity and the backlog, the 2025 customer
+migration, each team’s latent capability, and the two readings of
+difficulty, though the file records some of them.</p>
+<h3 id="where-each-box-lives-in-each-file">Where each box lives in each
+file</h3>
+<div class="tw"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Enthusiast’s file</th>
+<th>Trial designer’s file</th>
+<th>Gold standard’s file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arm, assigned by lot</td>
+<td>Not collected</td>
+<td><code>arm</code></td>
+<td><code>arm</code></td>
+</tr>
+<tr>
+<td>Who manages, and AI</td>
+<td><code>manager_type</code>, <code>ai_access</code></td>
+<td><code>manager_type</code>, <code>ai_access</code></td>
+<td><code>manager_type</code>, <code>ai_access</code></td>
+</tr>
+<tr>
+<td>Manager’s people skill</td>
+<td><code>people_rating</code></td>
+<td><code>people_rating</code></td>
+<td><code>people_rating</code></td>
+</tr>
+<tr>
+<td>Manager’s technical skill</td>
+<td><code>tech_score</code></td>
+<td><code>tech_score</code></td>
+<td><code>tech_score</code></td>
+</tr>
+<tr>
+<td>Lead’s lost status</td>
+<td><code>lead_former_manager</code></td>
+<td><code>lead_former_manager</code></td>
+<td><code>lead_former_manager</code></td>
+</tr>
+<tr>
+<td>Difficulty</td>
+<td><code>hard_close</code> only</td>
+<td><code>hard_plan</code>, <code>hard_close</code></td>
+<td><code>hard_plan</code>, <code>hard_close</code></td>
+</tr>
+<tr>
+<td>Escalated unknowns, and the wait</td>
+<td>In the file, unused</td>
+<td><code>escalations</code>, <code>esc_wait_hrs</code></td>
+<td><code>escalations</code>, <code>esc_wait_hrs</code>,
+<code>esc_open_at_close</code></td>
+</tr>
+<tr>
+<td>Blocked work</td>
+<td><code>blocked_hours</code></td>
+<td><code>blocked_hours</code></td>
+<td><code>blocked_hours</code></td>
+</tr>
+<tr>
+<td>The manager–lead relationship</td>
+<td>Not collected</td>
+<td>Not collected</td>
+<td><code>rc_score</code>, <code>overrides</code>, and the monthly pulse
+file</td>
+</tr>
+<tr>
+<td>The pair</td>
+<td>Not collected</td>
+<td>Not collected</td>
+<td><code>pair_id</code></td>
+</tr>
+<tr>
+<td>HR acts, by lot, and what it does</td>
+<td>Not collected</td>
+<td>Not collected</td>
+<td><code>hr_acts</code>, <code>hr_coaching</code>,
+<code>repaired</code></td>
+</tr>
+<tr>
+<td>Departures</td>
+<td>In the file, unused</td>
+<td>In the file, unused</td>
+<td><code>lead_departed</code>, <code>eng_departures</code></td>
+</tr>
+<tr>
+<td>Delivery</td>
+<td><code>delivered_share</code></td>
+<td><code>delivered_share</code></td>
+<td><code>delivered_share</code></td>
+</tr>
+<tr>
+<td>The pair’s fit</td>
+<td>Never measured</td>
+<td>Never measured</td>
+<td>Never measured</td>
+</tr>
+</tbody>
+</table></div>
+<p>Notice what the weaker firms hold but never use. The enthusiast’s
+file has escalations, waits and lead departures, and the trial
+designer’s has open escalations and lead departures. The columns are
+there, and the models give no reason to look.</p>
+</section>
+<nav class="card" aria-label="Other versions"><a href="../">Fernhill overview</a> · <a href="../v2/">Version 2</a></nav><script>
+(function(){document.querySelectorAll('.fh-responsive table').forEach(function(table){
+ var headers=table.querySelectorAll('tr:first-child th');if(!headers.length)return;
+ headers[0].parentElement.classList.add('fh-header-row');
+ table.querySelectorAll('tr').forEach(function(row){row.querySelectorAll('td').forEach(function(cell,i){
+ if(headers[i])cell.setAttribute('data-label',headers[i].textContent.trim())})})
+});document.querySelectorAll('figure.fh-figure').forEach(function(fig,index){
+ var svg=fig.querySelector('svg'), box=svg&&svg.parentElement;
+ if(!box)return; box.classList.add('fh-figure-panel'); box.tabIndex=0; box.id='fh-figure-view-'+(index+1);
+ var btn=document.createElement('button');btn.type='button';btn.className='fh-zoom';
+ btn.textContent='Open a larger view';btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-controls',box.id);
+ btn.addEventListener('click',function(){var on=box.classList.toggle('fh-enlarged');
+ btn.setAttribute('aria-expanded',String(on));btn.textContent=on?'Close the larger view':'Open a larger view';
+ box.setAttribute('aria-label',on?'Larger figure. Scroll sideways to see the whole image.':'Figure');});
+ box.parentNode.insertBefore(btn,box);
+});})();</script></main>
+<footer class="site"><div class="inner">
+<img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA">
+<div>Models &harr; Data · GSMPR 622A, the integrated course · Data, Statistics, and Decision Science · Fall 2026<br>
+Willamette University · Atkinson Graduate School of Management<br>
+Robert W. Walker · <a href="mailto:rwalker@willamette.edu">rwalker@willamette.edu</a> · I eagerly await your puzzles.</div>
+</div></footer>
+</body>
+</html>
